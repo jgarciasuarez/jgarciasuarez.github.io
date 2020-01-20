@@ -1,5 +1,4 @@
 # Joaquin Garcia-Suarez
-
 ## About me
 
 I am a post-doctoral scholar in the department of Civil and Mechanical Engineering (MCE) of Caltech, working under joint supervision of Prof. Chiara Daraio and Prof. Domniki Asimaki. 
