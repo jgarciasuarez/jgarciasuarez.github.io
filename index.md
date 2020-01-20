@@ -45,4 +45,4 @@ Moreover, I have had the chance to deliver one special lecture on Dimensional An
 
 - Talentia Scholarship (2015)
 - Tyson Fellowship (2019)
-- Registrar’s office best TA recognition (based on student’s survey) Fall 2017
+- Registrar office's best TAs recognition (based on results of student surveys) Fall 2017
