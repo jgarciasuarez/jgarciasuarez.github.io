@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+# Joaquin Garcia-Suarez
 
-You can use the [editor on GitHub](https://github.com/jgarciasuarez/jgarciasuarez.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## About me
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am a post-doctoral scholar in the department of Civil and Mechanical Engineering (MCE) of Caltech, working under joint supervision of Prof. Chiara Daraio and Prof. Domniki Asimaki. 
 
-### Markdown
+I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology (GALCIT) with a minor in Applied Mathematics, as well as a Master’s in Space Engineering from the same institution. I received my “Ingeniero Industrial” diploma from the University of Seville (Spain) in 2013.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+My PhD work, supervised primarily by Prof. Domniki Asimaki (MCE) and to a lesser degree by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (currently at University of Nevada at Reno, UNR).
 
-```markdown
-Syntax highlighted code block
+Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general insterest lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
-# Header 1
-## Header 2
-### Header 3
+## Projects
 
-- Bulleted
-- List
+- **Application of Path-Independent Integrals to Soil-Structure Interaction (Jun. 2016 – Dec. 2019)** //
+My PhD work focused on studying the potential of the path-independent integrals of Continuum Mechanics, customary tools mostly used in the context of Fracture Mechanics, to provide a new approach to problems in Soil-Structure Interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on rigid walls: the exact solution of the classic problem considered by Veletsos and Younan as well as its first comprehensive simplified model were provided.
 
-1. Numbered
-2. List
+- **One-dimensional Site Response Analysis (Oct. 2018 – Present)** //
+This ongoing collaboration with Prof. Seylabi (UNR) represents a research effort to gain understanding on the mechanics of ground deformation during earthquake events, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic codes. Currently we are considering the linear, small-strain regime, but our goal is to obtain results relevant to intense shaking that can trigger non-linear soil response.
 
-**Bold** and _Italic_ and `Code` text
+- **Realistic Seismic Metamaterials (Jan. 2020 – Present)** //
+I plan to tackle the problem of design of seismic metamaterials, which has already received wide attention in recent years, accounting for characteristic features of large-amplitude transient soil response that had been left unaccounted for until now. These traits include the transient characters of seismic loading, the heterogeneity intrinsic to the upper layer of the earth crust and the non-linear behavior of soil when subjected to intense loads.  
+This project will also include the development of new features for Asimaki’s in-house, open FEM code, Seismo Virtual Lab (SVL). 
 
-[Link](url) and ![Image](src)
-```
+## Publications 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Thesis and Journal Papers
 
-### Jekyll Themes
+1. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [pdf](https://thesis.library.caltech.edu/13587/9/GarciaSuarez_Joaquin_2019_v1.pdf)
+2. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique, forthcoming.
+3. Garcia-Suarez, J., & Asimaki, D. (2018). A Quasi-Static Displacement-Based Approximation of Seismic Earth Pressures on Rigid Walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jgarciasuarez/jgarciasuarez.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Preprints
+1. Garcia-Suarez, J., & Asimaki, D. (2019). Exact solution of the Younan-Veletsos problem. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
+2. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Exact solution of the Younan-Veletsos problem. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
+3. Garcia-Suarez, J., & Asimaki, D. (2019). On the fundamental resonant mode of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/rqfsp/)
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Teaching experience
+
+I have been a Graduate Teaching Assistant for Prof. Asimaki’s class AM/CE 151a Dynamics and Vibrations (Fall 2017, Fall 2018 and Fall 2019).
+
+Moreover, I have had the chance to deliver one special lecture on Dimensional Analysis (Prof. Asimaki’s class ME 12b Mechanics, Winter 2019) and another one on Dynamic Fracture Mechanics (Prof. Rosakis’ class Ae265a Static and Dynamic Failure of Brittle Solids and Interfaces, Fall 2019). 
+
+## Awards
+
+- Talentia Scholarship (2015)
+- Tyson Fellowship (2019)
+- Registrar’s office best TA recognition (based on student’s survey) Fall 2017
