@@ -5,9 +5,9 @@ I am a post-doctoral scholar in the department of Civil and Mechanical Engineeri
 
 I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology (GALCIT) with a minor in Applied Mathematics, as well as a Master’s in Space Engineering from the same institution. I received my “Ingeniero Industrial” diploma from the University of Seville (Spain) in 2013.
 
-My PhD work, supervised primarily by Prof. Domniki Asimaki (MCE) and to a lesser degree by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (currently at University of Nevada at Reno, UNR).
+My PhD work, supervised primarily by Prof. Domniki Asimaki (MCE) and to a lesser degree by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (now at University of Nevada at Reno, UNR).
 
-Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general insterest lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
+Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general insterests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
 ## Projects
 
@@ -18,7 +18,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 This ongoing collaboration with Prof. Seylabi (UNR) represents a research effort to gain understanding on the mechanics of ground deformation during earthquake events, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic codes. Currently we are considering the linear, small-strain regime, but our goal is to obtain results relevant to intense shaking that can trigger non-linear soil response.
 
 - **Realistic Seismic Metamaterials (Jan. 2020 – Present)** //
-I plan to tackle the problem of design of seismic metamaterials, which has already received wide attention in recent years, accounting for characteristic features of large-amplitude transient soil response that had been left unaccounted for until now. These traits include the transient characters of seismic loading, the heterogeneity intrinsic to the upper layer of the earth crust and the non-linear behavior of soil when subjected to intense loads.  
+I intend tackling the problem of design of seismic metamaterials, which has already received wide attention in recent years, accounting for characteristic features of large-amplitude transient soil response that had been left unaccounted for until now. These traits include the transient character of seismic loading, the heterogeneity intrinsic to the upper layers of the Earth crust and the non-linear behavior of soils when subjected to intense loads.  
 This project will also include the development of new features for Asimaki’s in-house, open FEM code, Seismo Virtual Lab (SVL). 
 
 ## Publications 
