@@ -1,7 +1,7 @@
 # Joaquin Garcia-Suarez
 ## About me
 
-I am a post-doctoral scholar in the department of Civil and Mechanical Engineering (MCE) of Caltech, working under joint supervision of Prof. Chiara Daraio and Prof. Domniki Asimaki. 
+I am a postdoctoral scholar in the department of Civil and Mechanical Engineering (MCE) of Caltech, working under joint supervision of Prof. Chiara Daraio and Prof. Domniki Asimaki. 
 
 I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology (GALCIT) with a minor in Applied Mathematics, as well as a Master’s in Space Engineering from the same institution. I received my “Ingeniero Industrial” diploma from the University of Seville (Spain) in 2013.
 
