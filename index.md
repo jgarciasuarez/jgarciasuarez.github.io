@@ -5,9 +5,9 @@ I am a post-doctoral scholar in the department of Civil and Mechanical Engineeri
 
 I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology (GALCIT) with a minor in Applied Mathematics, as well as a Master’s in Space Engineering from the same institution. I received my “Ingeniero Industrial” diploma from the University of Seville (Spain) in 2013.
 
-My PhD work, supervised primarily by Prof. Domniki Asimaki (MCE) and to a lesser degree by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (now at University of Nevada at Reno, UNR).
+My PhD work, supervised by Prof. Domniki Asimaki (MCE) and closely followed also by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (now at University of Nevada at Reno, UNR).
 
-Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general insterests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
+Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
 ## Projects
 
@@ -30,8 +30,8 @@ This project will also include the development of new features for Asimaki’s i
 3. Garcia-Suarez, J., & Asimaki, D. (2018). A Quasi-Static Displacement-Based Approximation of Seismic Earth Pressures on Rigid Walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
 
 ### Preprints
-1. Garcia-Suarez, J., & Asimaki, D. (2019). Exact solution of the Younan-Veletsos problem. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
-2. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Exact solution of the Younan-Veletsos problem. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
+1. Garcia-Suarez, J., & Asimaki, D. (2019). Younan-Veletsos retaining wall: The exact solution. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
+2. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Dimensional Analysis: Overview and applications to problems of Soil-Structure Interaction. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
 3. Garcia-Suarez, J., & Asimaki, D. (2019). On the fundamental resonant mode of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/rqfsp/)
 
 
