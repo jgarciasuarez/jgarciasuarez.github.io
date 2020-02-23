@@ -7,7 +7,7 @@ I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the Ca
 
 My PhD work, supervised by Prof. Domniki Asimaki (MCE) and closely followed also by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the realm of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (now at University of Nevada at Reno, UNR).
 
-Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lay at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
+Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
 ## Projects
 
