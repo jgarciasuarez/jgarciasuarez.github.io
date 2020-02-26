@@ -32,7 +32,7 @@ This project will also include the development of new features for Asimaki’s i
 
 1. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [pdf](https://thesis.library.caltech.edu/13587/9/GarciaSuarez_Joaquin_2019_v1.pdf)
 2. Garcia-Suarez, J., & Asimaki, D. (2020), Exact solution of Younan-Veletsos rigid retaining wall problem, International Journal for Numerical and Analytical Methods in Geomechanics, forthcoming.
-3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique, accepted. DOI: 10.1680/jgeot.19.P.042.[linl](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
+3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique, accepted. DOI: 10.1680/jgeot.19.P.042.[link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
 3. Garcia-Suarez, J., & Asimaki, D. (2018). A Quasi-Static Displacement-Based Approximation of Seismic Earth Pressures on Rigid Walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
 
 ### Preprints
