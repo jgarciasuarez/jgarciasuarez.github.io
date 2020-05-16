@@ -9,7 +9,7 @@ My PhD work, supervised by Prof. Domniki Asimaki (MCE) and closely followed also
 
 Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
-You will find similar information about me in my [CV](https://drive.google.com/file/d/18udox0qxRjYDpIobtoMBVT6ZDYpMtuJw/view?usp=sharing).
+You can find more information about me in my [CV](https://drive.google.com/file/d/18udox0qxRjYDpIobtoMBVT6ZDYpMtuJw/view?usp=sharing).
 
 ## Projects
 
@@ -31,15 +31,15 @@ This project will also include the development of new features for Asimaki’s i
 ### Thesis and Journal Papers
 
 1. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [pdf](https://thesis.library.caltech.edu/13587/9/GarciaSuarez_Joaquin_2019_v1.pdf)
-2. Garcia-Suarez, J., & Asimaki, D. (2020), Exact solution of Younan-Veletsos rigid retaining wall problem, International Journal for Numerical and Analytical Methods in Geomechanics, forthcoming.
-3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique, accepted. DOI: 10.1680/jgeot.19.P.042.[link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
-3. Garcia-Suarez, J., & Asimaki, D. (2018). A Quasi-Static Displacement-Based Approximation of Seismic Earth Pressures on Rigid Walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
+2. Garcia-Suarez, J., & Asimaki, D. (2019). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
+3. Garcia-Suarez, J., & Asimaki, D. (2020), Exact seismic response of smooth rigid retaining walls resting on stiff soil, International Journal for Numerical and Analytical Methods in Geomechanics, forthcoming.
+4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique. DOI: 10.1680/jgeot.19.P.042.[link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
+5. Garcia-Suarez, J., & Asimaki, D. (2018). A Quasi-Static Displacement-Based Approximation of Seismic Earth Pressures on Rigid Walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
 
 ### Preprints
 1. Garcia-Suarez, J., & Asimaki, D. (2019). Younan-Veletsos retaining wall: The exact solution. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
 2. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Dimensional Analysis: Overview and applications to problems of Soil-Structure Interaction. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
-3. Garcia-Suarez, J., & Asimaki, D. (2019). On the fundamental resonant mode of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/rqfsp/)
-4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Geometrical Optics applied to 1D Site Response of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/db7jv/)
+3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Geometrical Optics applied to 1D Site Response of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/db7jv/)
 
 ## Teaching experience
 
