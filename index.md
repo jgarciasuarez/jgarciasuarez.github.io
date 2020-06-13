@@ -31,7 +31,7 @@ This project will also include the development of new features for Asimaki’s i
 1. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [pdf](https://thesis.library.caltech.edu/13587/9/GarciaSuarez_Joaquin_2019_v1.pdf)
 2. Garcia-Suarez, J., & Asimaki, D. (2020). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
 3. Garcia-Suarez, J., & Asimaki, D. (2020), Exact seismic response of smooth rigid retaining walls resting on stiff soil, International Journal for Numerical and Analytical Methods in Geomechanics, [link](https://onlinelibrary-wiley-com.clsproxy.library.caltech.edu/doi/abs/10.1002/nag.3082).
-4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique. DOI: 10.1680/jgeot.19.P.042.[link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
+4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Seismic harmonic response of inhomogeneous soil: scaling analysis, Géotechnique.[link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
 5. Garcia-Suarez, J., & Asimaki, D. (2018). A quasi-static displacement-based approximation of seismic earth pressures on rigid walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
 
 ### Preprints
