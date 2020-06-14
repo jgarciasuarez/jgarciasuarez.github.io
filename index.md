@@ -9,6 +9,8 @@ My PhD work, supervised by Prof. Domniki Asimaki (MCE) and closely followed also
 
 Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
 
+My CV (as of June 2020) can be found [here](https://drive.google.com/file/d/1kmDbwcGcBcXpmRN0eYiECuokjbr9zzF8/view?usp=sharing).
+
 ## Projects
 
 - **Application of Path-Independent Integrals to Soil-Structure Interaction (Jun. 2016 – Dec. 2019)**    
