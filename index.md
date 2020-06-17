@@ -39,7 +39,7 @@ This project will also include the development of new features for Asimaki’s i
 1. Garcia-Suarez, J., & Asimaki, D. (2019). Younan-Veletsos retaining wall: The exact solution. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
 2. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Dimensional Analysis: Overview and applications to problems of Soil-Structure Interaction. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
 3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Geometrical Optics applied to 1D Site Response of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/db7jv/)
-4. Garcia-Suarez, J., & Asimaki, D. (2020). Linear one-dimensional Site Response Analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. GitHub (to appear on EngrXiv.org soon). [pdf](https://github.com/jgarciasuarez/1DSR_stiffnessless_surface/blob/master/1DSR_stiffnessless_top_GarciaSuarezAndAsimaki2020.pdf)
+4. Garcia-Suarez, J., & Asimaki, D. (2020). Linear one-dimensional Site Response Analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. EngrXiv. [pdf](https://engrxiv.org/8fqat/)
 
 ### Conference papers
 1. Garcia-Suarez, J., & Asimaki, D. (2018). A quasi-static displacement-based approximation of seismic earth pressures on rigid walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
