@@ -12,7 +12,7 @@ I approach problems as an engineer but without shying away from the theoretical 
 The tools I use to tackle problems are Numerical Methods and Applied Mathematics.
 
 
-## A partial list of research topics I’m interested in:
+## Research topics I’m interested in:
 
 - **Numerical simulation of tribological surfaces**
 
