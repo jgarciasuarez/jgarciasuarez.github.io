@@ -1,9 +1,9 @@
 # Joaquin Garcia-Suarez
 ## About me
 
-I currently hold a post-doc position at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
+I currently hold a post-doc position at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in Aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
 
-I am a (continuum) mechanician with a leaning towards —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I’m very interested in everything concerning earthquakes. 
+I am a (continuum) mechanician with a leaning towards —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I am very interested in everything concerning earthquakes. 
 
 Oftentimes I also make excursions into Tribology (wear and friction) and Applied Mechanics (wave propagation in layered periodic media). 
 
