@@ -1,11 +1,11 @@
 # Joaquin Garcia-Suarez
 ## About me
 
-I currently hold a post-doc position at EPFL, namely at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group. I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
+I currently hold a post-doc position at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
 
-I am a (continuum) mechanician with a leaning to —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I’m very interested in everything concerning earthquakes. 
+I am a (continuum) mechanician with a leaning towards —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I’m very interested in everything concerning earthquakes. 
 
-Oftentimes I also make excursions to Tribology (wear and friction) and Applied Mechanics (wave propagation in layered periodic media). 
+Oftentimes I also make excursions into Tribology (wear and friction) and Applied Mechanics (wave propagation in layered periodic media). 
 
 I approach problems as an engineer but without shying away from the theoretical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
@@ -20,7 +20,7 @@ Utilizing numerical simulations to capture the micro and nano phenomena that con
 
 - **Geophysics problems involving discrete particles: fault gouge**
 
-There are a number of open problems in geophysics that would benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media. In particular, one of such problems is the mechanics of fault gouge: the ability to simulate faithfully its evolution can bring about deep insights on earthquake sources. 
+There are a number of recurrent themes in geophysics that would benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the ability to simulate faithfully its evolution can bring about deep insights on earthquake sources. 
 
 - **Wave propagation in layered media**
 
