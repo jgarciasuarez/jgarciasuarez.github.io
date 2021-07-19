@@ -1,13 +1,15 @@
 # Joaquin Garcia-Suarez
 ## About me
 
-I am a postdoctoral scholar in the department of Civil and Mechanical Engineering of Caltech (Prof. Domniki Asimaki's group). 
+I currently hold a post-doc position at EPFL, namely at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group. I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
 
-I received a PhD in Aeronautics at the Graduate Aerospace Laboratories at the California Institute of Technology (GALCIT) with a minor in Applied and Computational Mathematics, as well as a Master’s in Space Engineering from the same institution. I received my “Ingeniero Industrial” diploma from the University of Seville (Spain) in 2013.
+I am a (continuum) mechanician with a leaning to —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I’m very interested in everything concerning earthquakes. 
 
-My PhD work, supervised by Prof. Domniki Asimaki (MCE) and closely followed also by Prof. Michael Ortiz (GALCIT), focused mostly on exploring applications of the path-independent integrals of Continuum Mechanics (as the renowned J-integral of Fracture Mechanics) in the field of Soil-Structure Interaction. Additionally, I also worked in the area of 1D Site Response Analysis, where I collaborated with Prof. Elnaz E. Seylabi (now at University of Nevada at Reno, UNR).
+Oftentimes I also make excursions to Tribology (wear and friction) and Applied Mechanics (wave propagation in layered periodic media). 
 
-Currently, I am studying the feasibility of seismic meta-materials in realistic scenarios by bringing up the actual nuances of earthquake engineering (heterogeneous medium, non-linear soil response, transient loading) to the picture. My general interests lie at the intersection of Geomechanics, Theoretical Solid Mechanics and Applied Mathematics.
+I approach problems as an engineer but without shying away from the theoretical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
+
+The tools I use to tackle problems are Numerical Methods and Applied Mathematics.
 
 
 ## A partial list of research topics I’m interested in:
