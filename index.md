@@ -48,20 +48,23 @@ How to engineer the soil around a structure in order to protect it from seismic 
 
 ### Peer-reviewed articles and PhD thesis
 
-1. Garcia-Suarez, J., Asimaki, D., & Ortiz, M. (2021). Applications of the J-integral to dynamical problems in geotechnical engineering. Journal of the Mechanics and Physics of Solids. [link](https://www.sciencedirect.com/science/article/pii/S002250962100051X)
-2. Garcia-Suarez, J., & Asimaki, D. (2020). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
-3. Garcia-Suarez, J., & Asimaki, D. (2020). Exact seismic response of smooth rigid retaining walls resting on stiff soil. International Journal for Numerical and Analytical Methods in Geomechanics. [link](https://onlinelibrary.wiley.com/doi/abs/10.1002/nag.3082)
-4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Seismic harmonic response of inhomogeneous soil: scaling analysis. Géotechnique. [link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
-5. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Linear one-dimensional Site Response Analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726120311568)
-6. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [link](https://thesis.library.caltech.edu/13587/)
+1. Garcia-Suarez, J. (2022). Harmonic decomposition of the trace of 1D transfer matrices in layered media. Journal of the Mechanics and Physics of Solids, 163, 104830. [link](https://www.sciencedirect.com/science/article/pii/S0022509622000461)
+2. Donnellan, A., Garcia‐Suarez, J., McPhillips, D., Asimaki, D., Goulet, C., Meng, X., Devine, S., & Lyzenga, G. (2022). Toppling of a Trona Pinnacles Spire following the M w 5.5 Ridgecrest Aftershock of June 2020. Seismological Society of America, 93(3), 1768-1776. [link](https://pubs.geoscienceworld.org/ssa/srl/article-abstract/93/3/1768/612853/Toppling-of-a-Trona-Pinnacles-Spire-following-the)
+3. Garcia-Suarez, J., Asimaki, D., & Ortiz, M. (2021). Applications of the J-integral to dynamical problems in geotechnical engineering. Journal of the Mechanics and Physics of Solids. [link](https://www.sciencedirect.com/science/article/pii/S002250962100051X)
+4. Garcia-Suarez, J., & Asimaki, D. (2020). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
+5. Garcia-Suarez, J., & Asimaki, D. (2020). Exact seismic response of smooth rigid retaining walls resting on stiff soil. International Journal for Numerical and Analytical Methods in Geomechanics. [link](https://onlinelibrary.wiley.com/doi/abs/10.1002/nag.3082)
+6. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Seismic harmonic response of inhomogeneous soil: scaling analysis. Géotechnique. [link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
+7. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Linear one-dimensional Site Response Analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726120311568)
+8. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [link](https://thesis.library.caltech.edu/13587/)
 
 
 ### Preprints
-1. Garcia-Suarez, J. (2021), Trace spectrum of 1D Transfer Matrices for wave propagation in layered media. EngrXiv. [pdf](https://engrxiv.org/ygt8z)
-2. Garcia-Suarez, J. (2021), Utilizing analytical transfer functions to gauge the effect of velocity reversals. EngrXiv. [pdf](https://engrxiv.org/vt6jq/)
-3. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Geometrical Optics applied to 1D Site Response of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/db7jv/)
-4. Garcia-Suarez, J., & Asimaki, D. (2019). Younan-Veletsos retaining wall: The exact solution. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
-5. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Dimensional Analysis: Overview and applications to problems of Soil-Structure Interaction. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
+1. Garcia-Suarez, J., & Asimaki, D. (2022), Analytical 1D Transfer functions for layered soils. EngrXiv. [pdf](https://engrxiv.org/preprint/view/2005)
+2. Garcia-Suarez, J. (2021), Trace spectrum of 1D Transfer Matrices for wave propagation in layered media. EngrXiv. [pdf](https://engrxiv.org/ygt8z)
+3. Garcia-Suarez, J. (2021), Utilizing analytical transfer functions to gauge the effect of velocity reversals. EngrXiv. [pdf](https://engrxiv.org/vt6jq/)
+4. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020), Geometrical Optics applied to 1D Site Response of inhomogeneous soil deposits. EngrXiv. [pdf](https://engrxiv.org/db7jv/)
+5. Garcia-Suarez, J., & Asimaki, D. (2019). Younan-Veletsos retaining wall: The exact solution. EngrXiv. [pdf](https://engrxiv.org/a8fmx/)
+6. Kusanovic, D., Garcia-Suarez, J., & Asimaki, D. (2019). Dimensional Analysis: Overview and applications to problems of Soil-Structure Interaction. EngrXiv. [pdf](https://engrxiv.org/m3ycp/)
 
 
 ### Conference papers
