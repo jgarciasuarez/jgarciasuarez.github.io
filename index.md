@@ -57,8 +57,8 @@ My PhD work focused on studying the potential of the path-independent integrals 
 9. Garcia-Suarez, J., & Asimaki, D. (2020). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
 10. Garcia-Suarez, J., & Asimaki, D. (2020). Exact seismic response of smooth rigid retaining walls resting on stiff soil. International Journal for Numerical and Analytical Methods in Geomechanics. [link](https://onlinelibrary.wiley.com/doi/abs/10.1002/nag.3082)
 11. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Seismic harmonic response of inhomogeneous soil: scaling analysis. Géotechnique. [link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
-12. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Linear one-dimensional Site Response Analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726120311568)
-13. Garcia-Suarez, J. (2020). Application of Path-Independent Integrals to Soil-Structure Interaction. Caltech PhD Thesis. [link](https://thesis.library.caltech.edu/13587/)
+12. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Linear one-dimensional site response analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726120311568)
+13. Garcia-Suarez, J. (2020). Application of path-independent integrals to soil-structure interaction. Caltech PhD Thesis. [link](https://thesis.library.caltech.edu/13587/)
 
 
 ### Preprints
