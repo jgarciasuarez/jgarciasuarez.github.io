@@ -12,7 +12,7 @@ The tools I use to tackle problems are numerical methods and applied mathematics
 
 ## Research topics I’m interested in:
 
-- **Numerical simulation of tribological surfaces**
+- **Tribology**
 
 Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friciton during sliding of contacting surfaces. 
 
