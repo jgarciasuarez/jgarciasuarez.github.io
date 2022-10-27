@@ -66,7 +66,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 2. Garcia-Suarez, J., Brink, T., & Molinari, J.-F. (2022). Breakdown of Reye's theory in nanoscale wear. [preprint link](https://arxiv.org/abs/2207.09561)
 
 ### Recent research in poster format
-1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven c-refinement: a proof-of-concept (IUTAM data-driven symposium, October 26-28 2022, Arts et Métiers ParisTech, Paris, France). [link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
+1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven c-refinement: a proof-of-concept (IUTAM symposium on data-driven mechanics and surrogate modeling, October 26-28 2022, Arts et Métiers ParisTech, Paris, France). [link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
 
 
 ### Conference papers
