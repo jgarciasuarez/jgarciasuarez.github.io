@@ -10,7 +10,7 @@ I approach problems as an engineer but without shying away from the theoretical 
 The tools I use to tackle problems are numerical methods and applied mathematics.
 
 
-## Research topics I’m interested in:
+## Research topics I’m currently interested in:
 
 - **Tribology**
 
@@ -22,17 +22,21 @@ There are a number of recurrent themes in geophysics that can benefit enormously
 
 - **Wave propagation in layered media**
 
-Being able to comprehend how the mechanical properties of the layering of a certain system affects the propagation of linear elastic waves in it can impact a number of (apparently) very different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions in these fields, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.
+The goal is to comprehend how the mechanical properties of the layering of a certain system affect the propagation of waves in it. This can impact a number of (apparently) different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.
 
-- **Seismic Response of Rock Pinnacles**
+- **Data-driven computational mechanics**
+
+Phenomenological constitutive laws have traditionally been used to model material response for successive computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that (to add insult to injury) require  
+
+- **Seismic response of rock pinnacles**
 
 Understanding the mechanics of seismic response of rock towers (a certain kind of fragile geological feature) using FEM simulations along with structural engineering models, to later update Seismic Hazard estimations. 
 
-- **One-dimensional Site Response Analysis**   
+- **Site response analysis**   
 
 Assessing ground deformation during earthquake events under idealized conditions, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic codes.
 
-- **Application of Path-Independent Integrals to Soil-Structure Interaction**    
+- **Application of path-independent integrals to soil-structure interaction**    
 
 My PhD work focused on studying the potential of the path-independent integrals of Continuum Mechanics to provide a new approach to problems in Soil-Structure Interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
 
