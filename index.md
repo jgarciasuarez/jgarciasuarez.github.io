@@ -24,9 +24,9 @@ There are a number of recurrent themes in geophysics that can benefit enormously
 
 The goal is to comprehend how the mechanical properties of the layering of a certain system affect the propagation of waves in it. This can impact a number of (apparently) different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.
 
-- **Data-driven computational mechanics**
+- **Data-driven mechanics**
 
-Phenomenological constitutive laws have traditionally been used to model material response for successive computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that (to add insult to injury) require  
+Phenomenological constitutive laws have traditionally been used to model material response for successive computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that (to add insult to injury) require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether. 
 
 - **Seismic response of rock pinnacles**
 
@@ -62,7 +62,8 @@ My PhD work focused on studying the potential of the path-independent integrals 
 
 
 ### Preprints
-1. Garcia-Suarez, J., Brink, T., & Molinari, J.-F. (2022). Breakdown of Reye's theory in nanoscale wear. Submitted to Journal of the Mechanics and Physics of Solids. [preprint link](arxiv.org/abs/2207.09561)
+1. Garcia-Suarez, J., Cornet, A., Wattel, S., & Molinari, J.-F. (2022). Data-driven numerical site response. [preprint link](https://arxiv.org/abs/2209.12800) 
+2. Garcia-Suarez, J., Brink, T., & Molinari, J.-F. (2022). Breakdown of Reye's theory in nanoscale wear. [preprint link](https://arxiv.org/abs/2207.09561)
 
 ### Recent research in poster format
 1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven c-refinement: a proof-of-concept (IUTAM data-driven symposium, Arts et Métiers ParisTech, Pris, France)[link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
