@@ -38,7 +38,7 @@ Assessing ground deformation during earthquake events under idealized conditions
 
 - **Application of path-independent integrals to soil-structure interaction**    
 
-My PhD work focused on studying the potential of the path-independent integrals of Continuum Mechanics to provide a new approach to problems in Soil-Structure Interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
+My PhD work focused on studying the potential of the path-independent integrals of continuum mechanics to provide a new approach to problems in soil-structure interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
 
 
 
