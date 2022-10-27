@@ -3,13 +3,11 @@
 
 I currently hold a post-doc position at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in Aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in Applied and Computational Mathematics).
 
-I am a (continuum) mechanician with a leaning towards —almost— all things “geo”: geomechnics, geophysics and geotechnical engineering (geology not yet though). I am very interested in everything concerning earthquakes. 
-
-Oftentimes I also make excursions into Tribology (wear and friction) and Applied Mechanics (wave propagation in layered periodic media). 
+I am a mechanician with a leaning towards dynamics (wave propagation, structural vibrations) that also makes excursions into tribology (wear and friction) and data-driven mechanics. 
 
 I approach problems as an engineer but without shying away from the theoretical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
-The tools I use to tackle problems are Numerical Methods and Applied Mathematics.
+The tools I use to tackle problems are numerical methods and applied mathematics.
 
 
 ## Research topics I’m interested in:
@@ -20,11 +18,11 @@ Utilizing numerical simulations to capture the micro and nano phenomena that con
 
 - **Geophysics problems involving discrete particles: fault gouge**
 
-There are a number of recurrent themes in geophysics that would benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the ability to simulate faithfully its evolution can bring about deep insights on earthquake sources. 
+There are a number of recurrent themes in geophysics that can benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the capacity to simulate faithfully its evolution can bring about new insights on earthquake sources. 
 
 - **Wave propagation in layered media**
 
-Being able to comprehend how the mechanical properties of the layering of a certain system affects the propagation of linear elastic waves in it can have a large impact in a number of (apparently) very different fields: for instance, it can help design dispersion relation in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Trace spectrum of 1D Transfer Matrices for wave propagation in layered media") could resolve open questions in these fields.
+Being able to comprehend how the mechanical properties of the layering of a certain system affects the propagation of linear elastic waves in it can impact a number of (apparently) very different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions in these fields, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.
 
 - **Seismic Response of Rock Pinnacles**
 
@@ -37,10 +35,6 @@ Assessing ground deformation during earthquake events under idealized conditions
 - **Application of Path-Independent Integrals to Soil-Structure Interaction**    
 
 My PhD work focused on studying the potential of the path-independent integrals of Continuum Mechanics to provide a new approach to problems in Soil-Structure Interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
-
-- **Realistic Seismic Metamaterials**
-
-How to engineer the soil around a structure in order to protect it from seismic waves (both sufarce and bulk waves).
 
 
 
