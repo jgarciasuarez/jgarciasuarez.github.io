@@ -50,7 +50,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 2. Garcia-Suarez, J., Seylabi, E., & Asimaki, D. (2022). Application of ray methods to one-dimensional site response of inhomogeneous soil deposits. Géotechnique, 1-12. [link](https://doi.org/10.1680/jgeot.21.00164)
 3. Garcia-Suarez, J., González-Carbajal, J., & Asimaki, D. (2022). Analytical 1D transfer functions for layered soils. Soil Dynamics and Earthquake Engineering, 163, 107532. [link](https://www.sciencedirect.com/science/article/pii/S0267726122003773)
 4. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Understanding the mechanisms of adhesive wear for heterogeneous materials through atomistic simulations. Extreme Mechanics Letters (in press). [link](https://doi.org/10.1016/j.eml.2022.101913)
-5. 3. Voisin-Leprince, M., Garcia‐Suarez, J., Anciaux, G., & Molinari, J.-F. (2022). FEM-DEM bridging coupling for the modeling of gouge. International Journal for Numerical Methods in Engineering (accepted). [preprint link](https://engrxiv.org/preprint/view/2581)
+5. Voisin-Leprince, M., Garcia‐Suarez, J., Anciaux, G., & Molinari, J.-F. (2022). FEM-DEM bridging coupling for the modeling of gouge. International Journal for Numerical Methods in Engineering (accepted). [preprint link](https://engrxiv.org/preprint/view/2581)
 6. Subhash, G., Garcia‐Suarez, J., Cheenady, A., Bavdekar, S., Whittington, W., & Molinari, J.-F. (2022). Stress wave propagation through a 180° bend junction in a square cross-sectional bar. International Journal of Engineering Science, 180, 103748.. [link](https://doi.org/10.1016/j.ijengsci.2022.103748)
 7. Donnellan, A., Garcia‐Suarez, J., McPhillips, D., Asimaki, D., Goulet, C., Meng, X., Devine, S., & Lyzenga, G. (2022). Toppling of a Trona Pinnacles Spire following the M w 5.5 Ridgecrest Aftershock of June 2020. Seismological Society of America, 93(3), 1768-1776. [link](https://pubs.geoscienceworld.org/ssa/srl/article-abstract/93/3/1768/612853/Toppling-of-a-Trona-Pinnacles-Spire-following-the)
 8. Garcia-Suarez, J., Asimaki, D., & Ortiz, M. (2021). Applications of the J-integral to dynamical problems in geotechnical engineering. Journal of the Mechanics and Physics of Solids. [link](https://www.sciencedirect.com/science/article/pii/S002250962100051X)
@@ -66,7 +66,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 2. Garcia-Suarez, J., Brink, T., & Molinari, J.-F. (2022). Breakdown of Reye's theory in nanoscale wear. [preprint link](https://arxiv.org/abs/2207.09561)
 
 ### Recent research in poster format
-1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven c-refinement: a proof-of-concept (IUTAM symposium on data-driven mechanics and surrogate modeling, October 26-28 2022, Arts et Métiers ParisTech, Paris, France). [link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
+1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven d-refinement: a proof-of-concept (IUTAM symposium on data-driven mechanics and surrogate modeling, October 26-28 2022, Arts et Métiers ParisTech, Paris, France). [link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
 
 
 ### Conference papers
@@ -75,7 +75,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 
 ## Teaching experience
 
-I have been a Graduate Teaching Assistant for Prof. Asimaki’s class AM/CE 151a Dynamics and Vibrations (Fall 2017, Fall 2018 and Fall 2019).
+I have been a teaching assistant for Prof. Asimaki’s class AM/CE 151a Dynamics and Vibrations (Fall 2017, Fall 2018 and Fall 2019).
 
 Moreover, I have had a chance to teach one special lecture on Dimensional Analysis (Prof. Asimaki’s class ME 12b Mechanics, Winter 2019) and another one on Dynamic Fracture Mechanics (Prof. Rosakis’ class Ae265a Static and Dynamic Failure of Brittle Solids and Interfaces, Fall 2019). 
 
