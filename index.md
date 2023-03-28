@@ -3,22 +3,15 @@
 
 I currently hold a post-doc position at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in applied and computational mathematics).
 
-I am a mechanician with a leaning towards dynamics (wave propagation, structural vibrations) that also makes excursions into tribology (wear and friction) and data-driven mechanics. 
+I am a mechanician working on topics pertaining to geotechnical earthquake engineering, multiscale data-driven modeling of materials, wave propagation and tribology... and the intersections thereof.
 
-I approach problems as an engineer but without shying away from the theoretical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
+I approach problems as an engineer but without shying away from the theoretical and numerical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
 The tools I use to tackle problems are numerical methods and applied mathematics.
 
 
 ## Research topics I’m currently interested in:
 
-- **Tribology**
-
-Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friciton during sliding of contacting surfaces. 
-
-- **Geophysics problems involving discrete particles: fault gouge**
-
-There are a number of recurrent themes in geophysics that can benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the capacity to simulate faithfully its evolution can bring about new insights on earthquake sources. 
 
 - **Wave propagation in layered media**
 
@@ -36,13 +29,21 @@ Understanding the mechanics of seismic response of rock towers (a certain kind o
 
 Assessing ground deformation during earthquake events under idealized conditions, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic codes.
 
+- **Tribology**
+
+Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friciton during sliding of contacting surfaces. 
+
+- **Geophysics problems involving discrete particles: fault gouge**
+
+There are a number of recurrent themes in geophysics that can benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the capacity to simulate faithfully its evolution can bring about new insights on earthquake sources. 
+
 - **Application of path-independent integrals to soil-structure interaction**    
 
 My PhD work focused on studying the potential of the path-independent integrals of continuum mechanics to provide a new approach to problems in soil-structure interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
 
 
 
-## Publications 
+## Publications (as of 2022)
 
 ### Peer-reviewed articles and PhD thesis
 
