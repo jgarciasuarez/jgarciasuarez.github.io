@@ -7,7 +7,7 @@ I am a mechanician working on topics pertaining to geotechnical earthquake engin
 
 I approach problems as an engineer but without shying away from the theoretical and numerical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
-The tools I use to tackle problems are numerical methods and applied mathematics.
+The tools I use to tackle problems are numerical methods and applied mathematics. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my Github profile (just click the banner on the left); in general, each reposotory corresponds to one publication. 
 
 
 ## Research topics I’m currently interested in:
