@@ -16,7 +16,7 @@ For a comprehensive up-to-date list of publications, please visit my [Google Sch
 
 - **Data-driven: friction and mechanics**
 
-Phenomenological constitutive laws have traditionally been used to model both frictional phemona and material mechanical response for computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that (to add insult to injury) require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether. 
+Phenomenological constitutive laws have traditionally been used to model both frictional phenomena and material mechanical response, particularly for computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether. 
 
 Wattel, S., Molinari, J. F., Ortiz, M., & Garcia-Suarez, J. (2023). Mesh d-refinement: a data-based computational framework to account for complex material response. Mechanics of Materials, 180, 104630. [link](https://www.sciencedirect.com/science/article/pii/S0167663623000765)
 
@@ -24,7 +24,7 @@ Garcia‐Suarez, J., Cornet, A., Wattel, S., & Molinari, J. F. (2023). Data‐dr
 
 - **Tribology**
 
-Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friciton during sliding of contacting surfaces. 
+Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces. 
 
 Garcia-Suarez, J., Brink, T., & Molinari, J. F. (2023). Breakdown of Reye’s theory in nanoscale wear. Journal of the Mechanics and Physics of Solids, 173, 105236. [link](https://www.sciencedirect.com/science/article/pii/S0022509623000406)
 
@@ -36,13 +36,13 @@ Garcia-Suarez, J. (2022). Harmonic decomposition of the trace of 1D transfer mat
 
 - **Seismic response of rock pinnacles**
 
-Understanding the mechanics of seismic response of rock towers (a certain kind of fragile geological feature) using FEM simulations along with structural engineering models, to later update Seismic Hazard estimations. 
+Understanding the mechanics of seismic response of rock towers (a certain kind of fragile geological feature) using FEM simulations along with structural engineering models, to later update seismic hazard estimations. 
 
 Donnellan, A., Garcia‐Suarez, J., McPhillips, D., Asimaki, D., Goulet, C., Meng, X., Devine, S., & Lyzenga, G. (2022). Toppling of a Trona Pinnacles Spire following the M w 5.5 Ridgecrest Aftershock of June 2020. Seismological Society of America, 93(3), 1768-1776. [link](https://pubs.geoscienceworld.org/ssa/srl/article-abstract/93/3/1768/612853/Toppling-of-a-Trona-Pinnacles-Spire-following-the)
 
 - **Site response analysis**   
 
-Assessing ground deformation during earthquake events under idealized conditions, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic codes.
+Assessing ground deformation during earthquake events under idealized conditions, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic design codes.
 
 Garcia-Suarez, J., Seylabi, E., & Asimaki, D. (2022). Application of ray methods to one-dimensional site response of inhomogeneous soil deposits. Géotechnique, 1-12. [link](https://doi.org/10.1680/jgeot.21.00164)
 
