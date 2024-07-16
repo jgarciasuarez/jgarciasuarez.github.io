@@ -1,3 +1,9 @@
+---
+layout: home
+title: Home
+permalink: /
+---
+
 # About me
 ## Joaquin Garcia-Suarez
 
