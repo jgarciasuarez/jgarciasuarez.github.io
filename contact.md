@@ -6,4 +6,4 @@ permalink: /contact/
 
 # Contact
 
-You can reach me at myemail@example.com.
+You can reach me at joaquin\[dot\]garciasuarez\[at\]epfl\[dot\]ch
