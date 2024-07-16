@@ -1,2 +1,25 @@
 # theme: jekyll-theme-minimal
 remote_theme: "mmistakes/minimal-mistakes"
+
+title: Garcia-Suarez Homepage
+description: >-
+  Online repository of my research work
+url: "https://jgarciasuarez.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+theme: jekyll-theme-cayman
+
+# Adding navigation links
+header_pages:
+  - index.md
+  - about_v2.md
+  - projects.md
+  - contact.md
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
