@@ -9,6 +9,28 @@ baseurl: ""
 markdown: kramdown
 
 remote_theme: "mmistakes/minimal-mistakes" # Ensure this theme is correctly referenced
+
+# Theme settings
+minimal_mistakes_skin: dark 
+
+# Social media links (if needed)
+author:
+  name: "Joaquin Garcia-Suarez"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Your bio"
+  location: "Lausanne (Switzerland)"
+  # email: "your-email@example.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/jgarciasuarez"
+    - label: "Twitter"
+      icon: "fab fa-twitter"
+      url: "https://x.com/jgs_research"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/ajgarciasuarez/"
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -23,5 +45,4 @@ header_pages:
 sass:
   style: compressed
 
-# Theme settings
-minimal_mistakes_skin: dark # or another skin that you prefer
+
