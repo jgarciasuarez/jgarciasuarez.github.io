@@ -22,3 +22,6 @@ header_pages:
 
 sass:
   style: compressed
+
+# Theme settings
+minimal_mistakes_skin: dark # or another skin that you prefer
