@@ -45,4 +45,6 @@ header_pages:
 sass:
   style: compressed
 
+include:
+  - assets/css/custom.css
 
