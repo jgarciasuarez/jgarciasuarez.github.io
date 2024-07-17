@@ -8,16 +8,17 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 
-theme: jekyll-theme-cayman
-
-# Adding navigation links
-header_pages:
-  - index.md
-  - about_v2.md
-  - projects.md
-  - contact.md
-
-# Plugins
+remote_theme: "mmistakes/minimal-mistakes" # Ensure this theme is correctly referenced
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache
+
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - contact.md
+
+sass:
+  style: compressed
