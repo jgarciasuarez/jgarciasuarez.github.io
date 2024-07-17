@@ -1,28 +1,64 @@
----
-layout: default
----
+body {
+  font-family: 'Arial', sans-serif;
+}
 
-<div class="home-intro">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
-</div>
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-<div class="home-sections">
-  <section>
-    <h2>About</h2>
-    <p>Learn more about me.</p>
-    <a href="{{ '/about/' | relative_url }}" class="btn btn--primary">Learn More</a>
-  </section>
+.home-intro {
+  text-align: center;
+  margin: 2em 0;
+}
 
-  <section>
-    <h2>Projects</h2>
-    <p>See my projects.</p>
-    <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View Projects</a>
-  </section>
+.home-intro h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
 
-  <section>
-    <h2>Contact</h2>
-    <p>Get in touch with me.</p>
-    <a href="{{ '/contact/' | relative_url }}" class="btn btn--primary">Contact Me</a>
-  </section>
-</div>
+.home-intro p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.home-sections {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.home-sections section {
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.home-sections section h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.home-sections section p {
+  font-size: 1em;
+  color: #555;
+}
+
+.home-sections section .btn {
+  margin-top: 1em;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background: #007acc;
+  color: #fff;
+}
+
+.home-sections section .btn:hover {
+  background: #005f99;
+}
