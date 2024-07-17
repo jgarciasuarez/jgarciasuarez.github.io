@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home-intro">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</div>
+
+<div class="home-sections">
+  <section>
+    <h2>About</h2>
+    <p>Learn more about me.</p>
+    <a href="{{ '/about/' | relative_url }}" class="btn btn--primary">Learn More</a>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p>See my projects.</p>
+    <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View Projects</a>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Get in touch with me.</p>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn--primary">Contact Me</a>
+  </section>
+</div>
