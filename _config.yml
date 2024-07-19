@@ -36,11 +36,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
 
-header_pages:
-  - index.md
-  - about.md
-  - projects.md
-  - contact.md
+# header_pages:
+#   - index.md
+#   - about.md
+#   - projects.md
+#   - contact.md
 
 sass:
   style: compressed
