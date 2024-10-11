@@ -1,10 +1,8 @@
 ---
 layout: about
-title: About
+title: About me
 permalink: /about/
 ---
-
-# About Me
 
 ## Joaquin Garcia-Suarez
 

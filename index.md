@@ -4,4 +4,3 @@ title: Home
 permalink: /
 ---
 
-# Welcome!

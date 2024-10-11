@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Garcia-Suarez Homepage</title>
+  <title>About me - Garcia-Suarez Homepage</title>
 
   <!-- Google Fonts for a classic, scientific typography -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -16,18 +16,25 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/projects/">Projects</a></li>
+        <li><a href="/visual_portfolio/">Visual Portfolio</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="container">
-    <main class="about-section">
-      <!-- Contenido de la página About con imagen a la derecha -->
-      <div class="about-content">
-        <h1 id="about-me">About Me</h1>
+    <main>
+      <!-- Sección de dos columnas: título a la izquierda y avatar a la derecha -->
+      <div class="header-section">
+        <h1>About me</h1>
+        <div class="about-avatar">
+          <img src="/assets/images/avatar.jpg" alt="Mi imagen" class="avatar-rect">
+        </div>
+      </div>
 
-<h2 id="joaquin-garcia-suarez">Joaquin Garcia-Suarez</h2>
+      <!-- Texto que ocupa ambas columnas debajo del título y avatar -->
+      <div class="about-content">
+        <h2 id="joaquin-garcia-suarez">Joaquin Garcia-Suarez</h2>
 
 <p>As of January 2024, I am a SNSF Ambizione Fellow at the <a href="https://www.epfl.ch/labs/lsms/">Computational Solid Mechanics Laboratory</a>, Prof. Molinari’s group at EPFL. I received a PhD in aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology (<a href="https://galcit.caltech.edu/">GALCIT</a>, minor in applied and computational mathematics).</p>
 
@@ -141,16 +148,11 @@ My PhD work focused on studying the potential of the path-independent integrals 
 </ul>
 
       </div>
-
-      <!-- Sección para la imagen alineada a la derecha -->
-      <div class="about-avatar">
-        <img src="/assets/images/avatar.jpg" alt="Mi imagen" class="avatar-rect">
-      </div>
     </main>
   </div>
 
   <footer>
-    <div>&copy; 2024 Garcia-Suarez Homepage.</div>
+    <div>&copy; 2024 Garcia-Suarez Homepage. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
   </footer>
 </body>
 </html>

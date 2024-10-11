@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
 
   <!-- Google Fonts for a classic, scientific typography -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -24,18 +23,15 @@
 
   <div class="container">
     <main>
-      <!-- Sección de dos columnas: título a la izquierda y avatar a la derecha -->
-      <div class="header-section">
-        <h1>{{ page.title }}</h1>
-        <div class="about-avatar">
-          <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Mi imagen" class="avatar-rect">
-        </div>
-      </div>
 
-      <!-- Texto que ocupa ambas columnas debajo del título y avatar -->
-      <div class="about-content">
-        {{ content }}
-      </div>
+      <!-- Cita central (si aplica a la página) -->
+      {% if page.title == "Home" %}
+        <div class="quote">
+          "Science is a way of thinking much more than it is a body of knowledge." - Carl Sagan
+        </div>
+      {% endif %}
+
+      {{ content }}
     </main>
   </div>
 

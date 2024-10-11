@@ -170,3 +170,39 @@ footer a:hover {
   object-fit: cover;
 }
 
+/* Estilo para la sección del título y avatar en paralelo */
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.header-section h1 {
+  font-size: 3.5rem; /* Aumenta el tamaño del título */
+  margin-right: 2rem;
+  flex: 2;
+}
+
+.about-avatar {
+  flex: 1;
+  text-align: right;
+}
+
+.about-avatar img.avatar-rect {
+  width: 200px; /* Aumenta el ancho de la imagen */
+  height: 200px; /* Aumenta la altura de la imagen */
+  border-radius: 8px;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+
+/* Estilo para el texto de abajo que ocupa toda la anchura */
+.about-content {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 2rem;
+}
+
