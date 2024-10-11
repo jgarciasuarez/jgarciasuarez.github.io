@@ -56,7 +56,25 @@ h1 {
   font-size: 1.5rem;
   margin: 2rem 0;
   color: #555;
+  position: relative;
+  z-index: 2;
 }
+
+.quote::before {
+  content: "";
+  background-image: url('/assets/images/imagenHome.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Ajusta la opacidad para que el texto sea legible */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Asegúrate de que esté detrás del texto */
+  border-radius: 8px; /* Si deseas un borde redondeado */
+}
+
 
 .home-sections {
   margin-top: 3rem;
@@ -120,3 +138,35 @@ footer a:hover {
     padding: 0 1rem;
   }
 }
+
+/* Estilo para el avatar en la página About */
+/* Estilo para la sección de About con imagen a la derecha */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.about-content {
+  flex: 2;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-avatar {
+  flex: 1;
+  text-align: right;
+}
+
+.about-avatar img.avatar-rect {
+  width: 100%;
+  max-width: 250px; /* Tamaño máximo de la imagen */
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+

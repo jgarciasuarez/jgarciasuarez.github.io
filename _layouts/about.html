@@ -22,17 +22,16 @@
   </header>
 
   <div class="container">
-    <main>
-      <h1>{{ site.title }}</h1>
+    <main class="about-section">
+      <!-- Contenido de la página About con imagen a la derecha -->
+      <div class="about-content">
+        {{ content }}
+      </div>
 
-      <!-- Cita central (si aplica a la página) -->
-      {% if page.title == "Home" %}
-        <div class="quote">
-          "Science is a way of thinking much more than it is a body of knowledge." - Carl Sagan
-        </div>
-      {% endif %}
-
-      {{ content }}
+      <!-- Sección para la imagen alineada a la derecha -->
+      <div class="about-avatar">
+        <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Mi imagen" class="avatar-rect">
+      </div>
     </main>
   </div>
 

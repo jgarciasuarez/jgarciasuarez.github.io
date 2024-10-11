@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Garcia-Suarez Homepage</title>
+
+  <!-- Google Fonts for a classic, scientific typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="about-section">
+      <!-- Contenido de la página About con imagen a la derecha -->
+      <div class="about-content">
+        <h1 id="about-me">About Me</h1>
+
+<h2 id="joaquin-garcia-suarez">Joaquin Garcia-Suarez</h2>
+
+<p>As of January 2024, I am a SNSF Ambizione Fellow at the <a href="https://www.epfl.ch/labs/lsms/">Computational Solid Mechanics Laboratory</a>, Prof. Molinari’s group at EPFL. I received a PhD in aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology (<a href="https://galcit.caltech.edu/">GALCIT</a>, minor in applied and computational mathematics).</p>
+
+<p>I am a mechanician working on topics pertaining to multiscale data-driven modeling of friction (mainly) and material deformation, tribology and interface phenomena, wave propagation, earthquake engineering… and the intersections thereof.</p>
+
+<p>I approach problems as an engineer but without shying away from the theoretical and numerical aspects; in the words of <a href="https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf">Prof. Hans Liepmann</a>: “understanding of fundamentals with an appreciation for applications”.</p>
+
+<p>The tools I use to tackle problems are numerical methods, applied mathematics and data-based approaches. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my Github profile (just click the banner on the left); in general, each reposotory corresponds to one publication.</p>
+
+<h2 id="research-topics-im-currently-interested-in-and-relevant-contributions">Research topics I’m currently interested in and relevant contributions:</h2>
+
+<p>For a comprehensive up-to-date list of publications, please visit my <a href="https://scholar.google.com/citations?user=TwRZ6qsAAAAJ&amp;hl=en">Google Scholar profile</a>.</p>
+
+<ul>
+  <li><strong>Data-driven: friction and mechanics</strong></li>
+</ul>
+
+<p>Phenomenological constitutive laws have traditionally been used to model both frictional phenomena and material mechanical response, particularly for computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether.</p>
+
+<p>Wattel, S., Molinari, J. F., Ortiz, M., &amp; Garcia-Suarez, J. (2023). Mesh d-refinement: a data-based computational framework to account for complex material response. Mechanics of Materials, 180, 104630. <a href="https://www.sciencedirect.com/science/article/pii/S0167663623000765">link</a></p>
+
+<p>Garcia‐Suarez, J., Cornet, A., Wattel, S., &amp; Molinari, J. F. (2023). Data‐driven 1D wave propagation for site response analysis. International Journal for Numerical and Analytical Methods in Geomechanics, 47(15), 2691-2705. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/nag.3596">link</a></p>
+
+<ul>
+  <li><strong>Tribology</strong></li>
+</ul>
+
+<p>Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces.</p>
+
+<p>Garcia-Suarez, J., Brink, T., &amp; Molinari, J. F. (2023). Breakdown of Reye’s theory in nanoscale wear. Journal of the Mechanics and Physics of Solids, 173, 105236. <a href="https://www.sciencedirect.com/science/article/pii/S0022509623000406">link</a></p>
+
+<ul>
+  <li><strong>Wave propagation in layered media</strong></li>
+</ul>
+
+<p>The goal is to comprehend how the mechanical properties of the layering of a certain system affect the propagation of waves in it. This can impact a number of (apparently) different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled “Harmonic decomposition of the trace of 1D transfer matrices in layered media”) could resolve open questions, e.g., how to “engineer” the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.</p>
+
+<p>Garcia-Suarez, J. (2022). Harmonic decomposition of the trace of 1D transfer matrices in layered media. Journal of the Mechanics and Physics of Solids, 163, 104830. <a href="https://www.sciencedirect.com/science/article/pii/S0022509622000461">link</a></p>
+
+<ul>
+  <li><strong>Seismic response of rock pinnacles</strong></li>
+</ul>
+
+<p>Understanding the mechanics of seismic response of rock towers (a certain kind of fragile geological feature) using FEM simulations along with structural engineering models, to later update seismic hazard estimations.</p>
+
+<p>Donnellan, A., Garcia‐Suarez, J., McPhillips, D., Asimaki, D., Goulet, C., Meng, X., Devine, S., &amp; Lyzenga, G. (2022). Toppling of a Trona Pinnacles Spire following the M w 5.5 Ridgecrest Aftershock of June 2020. Seismological Society of America, 93(3), 1768-1776. <a href="https://pubs.geoscienceworld.org/ssa/srl/article-abstract/93/3/1768/612853/Toppling-of-a-Trona-Pinnacles-Spire-following-the">link</a></p>
+
+<ul>
+  <li><strong>Site response analysis</strong></li>
+</ul>
+
+<p>Assessing ground deformation during earthquake events under idealized conditions, and how to define equivalent homogeneous properties and simple results that could be incorporated to seismic design codes.</p>
+
+<p>Garcia-Suarez, J., Seylabi, E., &amp; Asimaki, D. (2022). Application of ray methods to one-dimensional site response of inhomogeneous soil deposits. Géotechnique, 1-12. <a href="https://doi.org/10.1680/jgeot.21.00164">link</a></p>
+
+<!--
+- **Geophysics problems involving discrete particles: fault gouge**
+
+There are a number of recurrent themes in geophysics that can benefit enormously from a numerical framework able of capturing interaction between continuum and discrete media (evolution of fluvial sediments, glacial tills, etc). In particular, one of such problems is the mechanics of fault gouge: the capacity to simulate faithfully its evolution can bring about new insights on earthquake sources. 
+
+
+- **Application of path-independent integrals to soil-structure interaction**    
+
+My PhD work focused on studying the potential of the path-independent integrals of continuum mechanics to provide a new approach to problems in soil-structure interaction. I was chiefly interested in the problem of assessment of seismic increment of pressures on retaining walls.
+
+## Publications (as of 2022)
+
+### Peer-reviewed articles and PhD thesis
+
+1. Garcia-Suarez, J. (2022). Harmonic decomposition of the trace of 1D transfer matrices in layered media. Journal of the Mechanics and Physics of Solids, 163, 104830. [link](https://www.sciencedirect.com/science/article/pii/S0022509622000461)
+2. Garcia-Suarez, J., Seylabi, E., & Asimaki, D. (2022). Application of ray methods to one-dimensional site response of inhomogeneous soil deposits. Géotechnique, 1-12. [link](https://doi.org/10.1680/jgeot.21.00164)
+3. Garcia-Suarez, J., González-Carbajal, J., & Asimaki, D. (2022). Analytical 1D transfer functions for layered soils. Soil Dynamics and Earthquake Engineering, 163, 107532. [link](https://www.sciencedirect.com/science/article/pii/S0267726122003773)
+4. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Understanding the mechanisms of adhesive wear for heterogeneous materials through atomistic simulations. Extreme Mechanics Letters (in press). [link](https://doi.org/10.1016/j.eml.2022.101913)
+5. Voisin-Leprince, M., Garcia‐Suarez, J., Anciaux, G., & Molinari, J.-F. (2022). FEM-DEM bridging coupling for the modeling of gouge. International Journal for Numerical Methods in Engineering (accepted). [preprint link](https://engrxiv.org/preprint/view/2581)
+6. Subhash, G., Garcia‐Suarez, J., Cheenady, A., Bavdekar, S., Whittington, W., & Molinari, J.-F. (2022). Stress wave propagation through a 180° bend junction in a square cross-sectional bar. International Journal of Engineering Science, 180, 103748.. [link](https://doi.org/10.1016/j.ijengsci.2022.103748)
+7. Donnellan, A., Garcia‐Suarez, J., McPhillips, D., Asimaki, D., Goulet, C., Meng, X., Devine, S., & Lyzenga, G. (2022). Toppling of a Trona Pinnacles Spire following the M w 5.5 Ridgecrest Aftershock of June 2020. Seismological Society of America, 93(3), 1768-1776. [link](https://pubs.geoscienceworld.org/ssa/srl/article-abstract/93/3/1768/612853/Toppling-of-a-Trona-Pinnacles-Spire-following-the)
+8. Garcia-Suarez, J., Asimaki, D., & Ortiz, M. (2021). Applications of the J-integral to dynamical problems in geotechnical engineering. Journal of the Mechanics and Physics of Solids. [link](https://www.sciencedirect.com/science/article/pii/S002250962100051X)
+9. Garcia-Suarez, J., & Asimaki, D. (2020). On the fundamental resonant mode of inhomogeneous soil deposits. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726119314599)
+10. Garcia-Suarez, J., & Asimaki, D. (2020). Exact seismic response of smooth rigid retaining walls resting on stiff soil. International Journal for Numerical and Analytical Methods in Geomechanics. [link](https://onlinelibrary.wiley.com/doi/abs/10.1002/nag.3082)
+11. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Seismic harmonic response of inhomogeneous soil: scaling analysis. Géotechnique. [link](https://www.icevirtuallibrary.com/doi/abs/10.1680/jgeot.19.P.042)
+12. Garcia-Suarez, J., Seylabi, Elnaz E., & Asimaki, D. (2020). Linear one-dimensional site response analysis in the presence of stiffness-less free surface for certain power-law heterogeneities. Soil Dynamics and Earthquake Engineering. [link](https://www.sciencedirect.com/science/article/pii/S0267726120311568)
+13. Garcia-Suarez, J. (2020). Application of path-independent integrals to soil-structure interaction. Caltech PhD Thesis. [link](https://thesis.library.caltech.edu/13587/)
+
+
+### Preprints
+1. Garcia-Suarez, J., Cornet, A., Wattel, S., & Molinari, J.-F. (2022). Data-driven numerical site response. [preprint link](https://arxiv.org/abs/2209.12800) 
+2. Garcia-Suarez, J., Brink, T., & Molinari, J.-F. (2022). Breakdown of Reye's theory in nanoscale wear. [preprint link](https://arxiv.org/abs/2207.09561)
+
+### Recent research in poster format
+1. Wattel, S., Garcia‐Suarez, J., & Molinari, J.-F. (2022). Data-driven d-refinement: a proof-of-concept (IUTAM symposium on data-driven mechanics and surrogate modeling, October 26-28 2022, Arts et Métiers ParisTech, Paris, France). [link](https://figshare.com/articles/poster/Data-Driven_Refinement_for_linear_FEM_simulations/21395211)
+
+
+### Conference papers
+1. Garcia-Suarez, J., & Asimaki, D. (2018). A quasi-static displacement-based approximation of seismic earth pressures on rigid walls. In Geotechnical Earthquake Engineering and Soil Dynamics V Conference. American Society of Civil Engineers. [link](https://authors.library.caltech.edu/95709/)
+2. Asimaki, D., Garcia-Suarez, J., Kusanovic, D., Nguyen, K., &  Seylabi, E. (2019). Next generation reduced order models for soil-structure interaction. In Proceedings of the 7th International Conference on Earthquake Geotechnical Engineering. Asociazione Geotecnica Italiana. [link](https://books.google.com/books?hl=en&lr=&id=_Jq4DwAAQBAJ&oi=fnd&pg=PA138&dq=info:9fOivXcBMYUJ:scholar.google.com&ots=uGoTF5wc02&sig=yz3uraQxYVDCwSmh0D14nq1YxdM#v=onepage&q&f=false)
+-->
+
+<h2 id="teaching-experience">Teaching experience</h2>
+
+<p>I have been a teaching assistant for Prof. Asimaki’s class AM/CE 151a Dynamics and Vibrations (Fall 2017, Fall 2018 and Fall 2019).</p>
+
+<p>Moreover, I have had a chance to teach one special lecture on Dimensional Analysis (Prof. Asimaki’s class ME 12b Mechanics, Winter 2019) and another one on Dynamic Fracture Mechanics (Prof. Rosakis’ class Ae265a Static and Dynamic Failure of Brittle Solids and Interfaces, Fall 2019). During my time at EPFL, I have occasionally taught Continuum Mechanics lectures when Prof. Molinari was not available.</p>
+
+<h2 id="awards">Awards</h2>
+<ul>
+  <li>SNSF Ambizione Fellowship, 2023.</li>
+  <li>Demetriades-Tsafka-Kokkalis Prize in Seismo-Engineering, Prediction, and Protection, 2020.</li>
+  <li>Tyson Fellowship, 2019.</li>
+  <li>Registrar Office’s best TAs recognition (based on results of student surveys), Fall 2017.</li>
+  <li>Talentia Scholarship, 2015.</li>
+</ul>
+
+      </div>
+
+      <!-- Sección para la imagen alineada a la derecha -->
+      <div class="about-avatar">
+        <img src="/assets/images/avatar.jpg" alt="Mi imagen" class="avatar-rect">
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>&copy; 2024 Garcia-Suarez Homepage.</div>
+  </footer>
+</body>
+</html>
