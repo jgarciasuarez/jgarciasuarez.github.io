@@ -6,7 +6,7 @@ permalink: /about/
 
 ## Joaquin Garcia-Suarez
 
-As of January 2024, I am a SNSF Ambizione Fellow at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in applied and computational mathematics).
+I am a SNSF Ambizione Fellow at the [Computational Solid Mechanics Laboratory](https://www.epfl.ch/labs/lsms/), Prof. Molinari’s group at EPFL. I received a PhD in aeronautics from the Graduate Aerospace Laboratories at the California Institute of Technology ([GALCIT](https://galcit.caltech.edu/), minor in applied and computational mathematics).
 
 I am a mechanician working on topics pertaining to multiscale data-driven modeling of friction (mainly) and material deformation, tribology and interface phenomena, wave propagation, earthquake engineering... and the intersections thereof.
 
