@@ -6,7 +6,7 @@
 
   <!-- Google Fonts for a classic, scientific typography -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/main.css">
   <script>
     // JavaScript to toggle play/pause of the GIF
     function toggleGif(gifElement, staticSrc, gifSrc) {
@@ -22,31 +22,35 @@
   <header>
     <nav>
       <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-        <li><a href="{{ '/visual_portfolio/' | relative_url }}">Visual Portfolio</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/visual_portfolio/">Visual Portfolio</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="container">
     <main>
-      {{ content }}
+      <h1 id="visual-portfolio">Visual Portfolio</h1>
+
+<p>Welcome to my Visual Portfolio> I try to convey my research in many ways, and I do believe a picture is worth a thousand words. Find below a small sample of animations produced during the course of my work.</p>
+
 
       <!-- Section for the GIFs with titles -->
       <section>
-        <h2>Project Title 1</h2>
-        <img src="{{ '/assets/images/static_gif1.png' | relative_url }}" 
-             alt="Project 1 GIF" 
-             onclick="toggleGif(this, '/assets/images/static_gif1.png', '/assets/images/gif1.gif')" 
+        <h2>Data-driven wave propagation</h2>
+        <p> This GIF represents a 1D pulse propagating over a string. The first panel depicts the FEM solution, while the other two correspond to <a href="https://www.sciencedirect.com/science/article/pii/S0045782516300238">DDCM</a> solutions (which replace the material constitutive law by a finite discrete dataset) with different data volumes: insufficient data yields but noise, with enough data the DDCM solution is indistinguishable from the FEM one. For more info, check out <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/nag.3596" >our paper</a>.</p>
+        <img src="/assets/images/DD-1DSRA.gif" 
+             alt="Learning dynamic friction" 
+             onclick="toggleGif(this, '/assets/images/DD-1DSRA.gif', '/assets/DD-1DSRA.gif')" 
              style="cursor: pointer;" />
       </section>
 
       <section>
-        <h2>Project Title 2</h2>
-        <img src="{{ '/assets/images/static_gif1.png' | relative_url }}" 
+        <h2>Mulstiscale mechanics</h2>
+        <img src="/assets/images/static_gif1.png" 
              alt="Project 2 GIF" 
              onclick="toggleGif(this, '/assets/images/static_gif1.png', '/assets/images/gif1.gif')" 
              style="cursor: pointer;" />
@@ -54,7 +58,7 @@
 
       <section>
         <h2>Project Title 3</h2>
-        <img src="{{ '/assets/images/static_gif1.png' | relative_url }}" 
+        <img src="/assets/images/static_gif1.png" 
              alt="Project 3 GIF" 
              onclick="toggleGif(this, '/assets/images/static_gif1.png', '/assets/images/gif1.gif')" 
              style="cursor: pointer;" />
@@ -64,7 +68,7 @@
   </div>
 
   <footer>
-    <div>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+    <div>&copy; 2024 Garcia-Suarez Homepage. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
   </footer>
 </body>
 </html>
