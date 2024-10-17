@@ -40,10 +40,21 @@
 
       <!-- Section for the GIFs with titles -->
       <section>
+        <h2>Learning dynamic friction</h2>
+        <p>There is ongoing debate as to what functional form dynamic friction laws should take. For instance, rate-and-state (RSF) friction laws are popular but they come with limitations. 
+        Part of my work is focused in the use of recurrent neural networks (RNN) to "learn" better ways to represent friction. 
+        I first showed that RNN can reproduce and predict dynamic friction evolutions in simulated gouge experiments. </p>
+        <img src="/assets/images/static_gif1.png" 
+             alt="Learning dynamic friction" 
+             onclick="toggleGif(this, '/assets/images/test1static.png', '/assets/images/animation_1.gif')" 
+             style="cursor: pointer;" />
+      </section>
+      
+      <section>
         <h2>Data-driven wave propagation</h2>
         <p> This GIF represents a 1D pulse propagating over a string. The first panel depicts the FEM solution, while the other two correspond to <a href="https://www.sciencedirect.com/science/article/pii/S0045782516300238">DDCM</a> solutions (which replace the material constitutive law by a finite discrete dataset) with different data volumes: insufficient data yields but noise, with enough data the DDCM solution is indistinguishable from the FEM one. For more info, check out <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/nag.3596" >our paper</a>.</p>
         <img src="/assets/images/DD-1DSRA.gif" 
-             alt="Learning dynamic friction" 
+             alt="1D data-driven wave propagation" 
              onclick="toggleGif(this, '/assets/images/DD-1DSRA.gif', '/assets/DD-1DSRA.gif')" 
              style="cursor: pointer;" />
       </section>
