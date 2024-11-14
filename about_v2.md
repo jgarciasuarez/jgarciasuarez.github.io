@@ -12,7 +12,7 @@ I am a mechanician working on topics pertaining to multiscale data-driven modeli
 
 I approach problems as an engineer but without shying away from the theoretical and numerical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
-The tools I use to tackle problems are numerical methods, applied mathematics and data-based approaches. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my Github profile (just click the banner on the left); in general, each reposotory corresponds to one publication. 
+The tools I use to tackle problems are numerical methods, applied mathematics and data-based approaches. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my ([Github page](https://github.com/jgarciasuarez)); in general, each reposotory corresponds to one publication. 
 
 
 ## Research topics I’m currently interested in and relevant contributions:
@@ -29,9 +29,11 @@ Garcia‐Suarez, J., Cornet, A., Wattel, S., & Molinari, J. F. (2023). Data‐dr
 
 - **Tribology**
 
-Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces. 
+Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces. More recently also interaction between soft solids and lubricated interdaces.
 
 Garcia-Suarez, J., Brink, T., & Molinari, J. F. (2023). Breakdown of Reye’s theory in nanoscale wear. Journal of the Mechanics and Physics of Solids, 173, 105236. [link](https://www.sciencedirect.com/science/article/pii/S0022509623000406)
+
+Bilotto, J., Kolinski, J., Lecampion, B., Molinari, S., Subhash, G., Garcia-Suarez, J. (2024). Fluid-mediated impact of soft solids. Journal of Fluid Mechanics 997, p.A35. [link](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/fluidmediated-impact-of-soft-solids/E208CFA7E3181F48FB66DCE0DF20A182)
 
 - **Wave propagation in layered media**
 
