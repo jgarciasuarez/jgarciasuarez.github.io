@@ -32,7 +32,7 @@ Phenomenological constitutive laws have traditionally been used to model both fr
 
 ### Tribology
 
-Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces. More recently also interaction between soft solids and lubricated interdaces.
+Utilizing numerical simulations to capture the micro and nano phenomena that control the creation of wear debris and the emergence of friction during sliding of contacting surfaces. More recently also interaction between soft solids and lubricated interfaces.
 
 
 - Garcia-Suarez, J., Brink, T., & Molinari, J. F. (2023). Breakdown of Reye’s theory in nanoscale wear. Journal of the Mechanics and Physics of Solids, 173, 105236. [link](https://www.sciencedirect.com/science/article/pii/S0022509623000406)
@@ -113,7 +113,7 @@ My PhD work focused on studying the potential of the path-independent integrals 
 
 I have been a teaching assistant for Prof. Asimaki’s class AM/CE 151a Dynamics and Vibrations (Fall 2017, Fall 2018 and Fall 2019).
 
-Moreover, I have had a chance to teach one special lecture on Dimensional Analysis (Prof. Asimaki’s class ME 12b Mechanics, Winter 2019) and another one on Dynamic Fracture Mechanics (Prof. Rosakis’ class Ae265a Static and Dynamic Failure of Brittle Solids and Interfaces, Fall 2019). During my time at EPFL, I have occasionally taught Continuum Mechanics lectures when Prof. Molinari was not available.
+Moreover, I have had a chance to teach one special lecture on Dimensional Analysis (Prof. Asimaki’s class ME 12b Mechanics, Winter 2019) and another one on Dynamic Fracture Mechanics (Prof. Rosakis’ class Ae265a Static and Dynamic Failure of Brittle Solids and Interfaces, Fall 2019). During my time at EPFL, I have occasionally taught Continuum Mechanics lectures when Prof. Molinari was not available. In 2025, I'll begin teaching CIVIL425: Continuum Mechanics and Applications. 
 
 ## Awards
 - SNSF Ambizione Fellowship, 2023.
