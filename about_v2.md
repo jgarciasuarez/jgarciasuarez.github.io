@@ -12,7 +12,7 @@ I am a mechanician working on topics pertaining to multiscale data-driven modeli
 
 I approach problems as an engineer but without shying away from the theoretical and numerical aspects; in the words of [Prof. Hans Liepmann](https://oralhistories.library.caltech.edu/260/1/Liepmann%20OHO%20final.pdf): “understanding of fundamentals with an appreciation for applications”.
 
-The tools I use to tackle problems are numerical methods, applied mathematics and data-based approaches. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my [Github page](https://github.com/jgarciasuarez); in general, each reposotory corresponds to one publication. 
+The tools I use to tackle problems are numerical methods, applied mathematics and data-based approaches. You can find materials to reproduce almost every result I have ever published in the thematic repositories in my [Github page](https://github.com/jgarciasuarez); in general, each repository corresponds to one publication. 
 
 
 ## Research topics I’m currently interested in and relevant contributions:
@@ -21,7 +21,7 @@ For a comprehensive up-to-date list of publications, please visit my [Google Sch
 
 ### Data-driven: friction and mechanics
 
-Phenomenological constitutive laws have traditionally been used to model both frictional phenomena and material mechanical response, particularly for computational analysis. Event though some materials can be faithfully represented accurately in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether. 
+Phenomenological constitutive laws have traditionally been used to model both frictional phenomena and material mechanical response, particularly for computational analysis. Event though some materials can be faithfully represented in certain conditions, oftentimes complex behavior (damage, cyclic loadind, dissipation) is either not properly captured or represented at the expense of a large set of parameters that require painstaking calibration. The new data-driven computational mechanics paradigm presents an alternative that works directly with datasets (either experimental or mined from micromechanical simulations) thus avoiding both modeling biases and calibration altogether. 
 
 
 - Wattel, S., Molinari, J. F., Ortiz, M., & Garcia-Suarez, J. (2023). Mesh d-refinement: a data-based computational framework to account for complex material response. Mechanics of Materials, 180, 104630. [link](https://www.sciencedirect.com/science/article/pii/S0167663623000765)
@@ -43,7 +43,7 @@ Utilizing numerical simulations to capture the micro and nano phenomena that con
 
 ### Wave propagation in layered media
 
-The goal is to comprehend how the mechanical properties of the layering of a certain system affect the propagation of waves in it. This can impact a number of (apparently) different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as analog computers, in particular when it comes to efficient hardware to implement neural networks.
+The goal is to comprehend how the mechanical properties of the layering of a certain system affect the propagation of waves in it. This can impact a number of (apparently) different fields: for instance, it can help design dispersion relations in laminates, or it can allow assessing the influence of certain soil strata in seismic ground amplification. The knowledge of the exact form of the entries of the global transfer matrix (see publication titled "Harmonic decomposition of the trace of 1D transfer matrices in layered media") could resolve open questions, e.g., how to "engineer" the soil stratification to act as a seismic wave barrier. Moving forward, I would like to explore the performance of layered structures as (a) seismic barriers and (b) analog computers.
 
 
 - Garcia-Suarez, J. (2022). Harmonic decomposition of the trace of 1D transfer matrices in layered media. Journal of the Mechanics and Physics of Solids, 163, 104830. [link](https://www.sciencedirect.com/science/article/pii/S0022509622000461)
