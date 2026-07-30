@@ -35,8 +35,8 @@ Task states:
 - **Lint:** passing
 - **Automated tests:** 4 component tests and 25 Playwright route, responsive, navigation, and accessibility tests
   passing
-- **CI/CD:** GitHub Actions quality workflow configured for lint, component tests, Playwright tests, and production
-  build; remote execution awaits the next push
+- **CI/CD:** GitHub Actions quality workflow configured for lint, component tests, Playwright tests, production
+  build, and gated GitHub Pages deployment; remote deployment validation is in progress
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
 - **Content coverage audit:** completed; prioritized editorial gaps are documented in
   `context-in-text/content_gap_audit_2026-07-30.md`
@@ -147,7 +147,10 @@ Task states:
 - [x] Select GitHub Pages as the low-cost hosting target, with GitHub Actions as the only deployment controller.
 - [x] Make font delivery deterministic by self-hosting the official Inter variable font and its license.
 - [x] Configure Next.js to generate a trailing-slash static export in `frontend/out`.
-- [ ] Add the GitHub Pages deployment workflow after the target repository and Pages source are ready.
+- [~] Add and remotely validate the GitHub Pages deployment workflow.
+- [ ] Mirror `agentic_web_design` into `jgarciasuarez/jgarciasuarez.github.io` without modifying its legacy
+  `master` branch.
+- [ ] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions.
 - [ ] Configure production environment and deployment checks.
 - [ ] Perform a final content, browser, performance, and link audit.
 - [!] Publish the validated project through a private production deployment; awaiting explicit authorization to
@@ -177,6 +180,17 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — GitHub Pages Automation Steps 3–4 Started
+
+- Extended the existing quality workflow with a gated static-site packaging and GitHub Pages deployment stage.
+- Kept publication conditional on the repository being `jgarciasuarez/jgarciasuarez.github.io`, preventing the
+  source repository `jgarciasuarez/web` from accidentally publishing at the incompatible `/web` base path.
+- Preserved the existing personal-site `master` branch as the rollback source; the new application will be
+  introduced on `agentic_web_design`.
+- Added manual workflow dispatch support for controlled deployment and recovery.
+- Local workflow YAML parsing and whitespace validation passed. Remote branch mirroring, Pages source migration,
+  and the first hosted workflow run remain in progress.
 
 ### 2026-07-30 — GitHub Pages Preparation Steps 1–2 Completed
 
