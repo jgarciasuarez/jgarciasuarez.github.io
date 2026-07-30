@@ -237,6 +237,21 @@
   height: 2.45rem;
 }
 
+.centralLogo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0.28rem 0.4rem;
+  border: 1px solid color-mix(in srgb, var(--node-accent) 30%, transparent);
+  border-radius: 8px;
+  background: rgba(9, 20, 27, 0.62);
+}
+
+.centralLogo img {
+  width: 7rem;
+  height: auto;
+}
+
 .nodeLabel {
   overflow: hidden;
   color: color-mix(in srgb, var(--node-accent) 82%, white);

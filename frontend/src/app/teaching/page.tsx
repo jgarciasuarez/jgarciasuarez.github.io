@@ -60,6 +60,26 @@ export default function Teaching() {
           </section>
 
           <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Student Feedback</h2>
+            <div className={styles.feedbackGrid}>
+              <blockquote>
+                <p>
+                  “I am very thankful for Joaquin to put so much effort into
+                  guiding me through this course.”
+                </p>
+                <footer>Anonymous course feedback · EPFL</footer>
+              </blockquote>
+              <blockquote>
+                <p>
+                  “Joaquin is a natural teacher, with a deep understanding of the
+                  material and a knack for elucidating complexity.”
+                </p>
+                <footer>Anonymous course feedback · Caltech</footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Proposed Graduate Classes</h2>
             <div className={styles.coursesGrid}>
               
@@ -103,7 +123,7 @@ export default function Teaching() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className={styles.resourceType}>Student project · 2022</span>
+                <span className={styles.resourceType}>Student project · 2022 · Publication-linked</span>
                 <strong>Data-driven 1D site-response analysis</strong>
                 <span aria-hidden="true">↗</span>
               </a>
@@ -112,7 +132,7 @@ export default function Teaching() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className={styles.resourceType}>Student project · 2024</span>
+                <span className={styles.resourceType}>Student project · 2024 · Publication-linked</span>
                 <strong>Convergence of phase-space iterative solvers</strong>
                 <span aria-hidden="true">↗</span>
               </a>
@@ -144,6 +164,11 @@ export default function Teaching() {
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
+            <p className={styles.resourceOutcome}>
+              Two supervised projects highlighted here developed into
+              peer-reviewed publications, connecting mentoring directly with the
+              research programme.
+            </p>
           </section>
 
         </div>

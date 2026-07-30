@@ -41,6 +41,7 @@ interface Theme {
   heroImage: string;
   accent: string;
   subTopics: SubTopic[];
+  next: string;
   keyPubs: Publication[];
 }
 
@@ -53,7 +54,7 @@ const themes: Theme[] = [
     subtitle: 'Across Scales',
     description:
       'Interfaces set durability, feel, and failure: microscale wear dictates machinery lifetime; thin-film lubrication controls whether soft bodies make or avoid contact; frictional weakening governs rupture of geophysical and mechanical interfaces. Our work spans twelve orders of magnitude in length scales — from nanoscale molecular dynamics to geological-scale friction.',
-    heroImage: '/images/portfolio_contact.png',
+    heroImage: '/images/contact_across_scales_corrected.png',
     accent: '#00e5ff',
     subTopics: [
       {
@@ -69,7 +70,10 @@ const themes: Theme[] = [
         desc: 'Machine-learned constitutive models constrained by laboratory observations, blending recurrent neural networks with rate-and-state theory for geophysical fault rupture simulations.',
       },
     ],
+    next:
+      'Connect nanoscale wear laws to random rough-surface statistics, tune contact through shape, and extend compact lubrication models to viscoelastic and rough interfaces.',
     keyPubs: [
+      { authors: 'Garcia-Suarez', title: 'A matter of shape: contact area optimization in soft lubrication', journal: 'Tribology Letters', year: '2026', href: 'https://doi.org/10.1007/s11249-026-02108-1' },
       { authors: 'Garcia-Suarez, Brink, Molinari', title: 'Breakdown of Reye\'s theory in nanoscale wear', journal: 'J. Mech. Phys. Solids', year: '2023', href: 'https://doi.org/10.1016/j.jmps.2023.105236' },
       { authors: 'Bilotto, Kolinski, Lecampion, et al.', title: 'Fluid-mediated impact of soft solids', journal: 'J. Fluid Mechanics', year: '2024', href: 'https://doi.org/10.1017/jfm.2024.820' },
       { authors: 'Cortes, Garcia-Suarez', title: 'Data-driven dynamic friction models based on RNNs', journal: 'Appl. Comput. Geosci.', year: '2025', href: 'https://doi.org/10.1016/j.acags.2025.100249' },
@@ -99,6 +103,8 @@ const themes: Theme[] = [
         desc: 'Low-frequency bandgaps in engineered soil barriers for seismic wave attenuation — protecting structures from earthquake ground motion.',
       },
     ],
+    next:
+      'Extend the harmonic framework from 2×2 to 4×4 beam systems, then include viscoelastic layers, inclined waves, and fluid coupling for broadband absorbers.',
     keyPubs: [
       { authors: 'Garcia-Suarez', title: 'Harmonic decomposition of the trace of 1D transfer matrices in layered media', journal: 'J. Mech. Phys. Solids', year: '2022', href: 'https://doi.org/10.1016/j.jmps.2022.104830' },
       { authors: 'González-Carbajal, Lemm, Garcia-Suarez', title: 'On the lowest-frequency bandgap of 1D phononic crystals', journal: 'Eur. J. Mech. A/Solids', year: '2025', href: 'https://doi.org/10.1016/j.euromechsol.2024.105466' },
@@ -112,7 +118,7 @@ const themes: Theme[] = [
     subtitle: 'Enabling Themes I & II',
     description:
       'We develop computational tools as needed to address specific problems in interface mechanics and wave propagation — from physics-informed ML and GPU-bound optimization to mesh d-refinement strategies and phase-space iterative solvers.',
-    heroImage: '/images/DDCF_collage.png',
+    heroImage: '/images/DDCF_collage_corrected.png',
     accent: '#ff6b6b',
     subTopics: [
       {
@@ -128,6 +134,8 @@ const themes: Theme[] = [
         desc: 'Mesh d-refinement for complex material response, phase-space iterative solvers, and compact EHL simulation codes.',
       },
     ],
+    next:
+      'Turn compact Python solvers and differentiable models into scalable GPU workflows for inverse design, calibration, and multiscale simulation.',
     keyPubs: [
       { authors: 'Wattel, Molinari, Ortiz, Garcia-Suarez', title: 'Mesh d-refinement: a data-based computational framework', journal: 'Mech. of Materials', year: '2023', href: 'https://doi.org/10.1016/j.mechmat.2023.104630' },
       { authors: 'Cortes, Sangiorgio, Garcia-Suarez', title: 'Phase-space iterative solvers', journal: 'Computational Mechanics', year: '2025', href: 'https://doi.org/10.1007/s00466-025-02735-w' },
@@ -152,7 +160,7 @@ export default function Research() {
       {/* Scale bar */}
       <div className={styles.scaleBar}>
         <Image
-          src="/images/contact_across_scales.png"
+          src="/images/contact_across_scales_corrected.png"
           alt="Research spanning 12 orders of magnitude in length scales"
           width={1200}
           height={200}
@@ -207,12 +215,16 @@ export default function Research() {
                   </div>
                 ))}
               </div>
+              <div className={styles.nextDirection}>
+                <span>Current direction</span>
+                <p>{theme.next}</p>
+              </div>
             </div>
           </div>
 
           {/* Key publications */}
           <div className={styles.pubsSection}>
-            <h3 className={styles.pubsHeading}>Key Publications</h3>
+            <h3 className={styles.pubsHeading}>Selected Publications</h3>
             <ul className={styles.pubsList}>
               {theme.keyPubs.map((pub, k) => (
                 <li key={k} className={styles.pubItem}>
@@ -236,6 +248,61 @@ export default function Research() {
           {idx < themes.length - 1 && <div className={styles.divider} />}
         </section>
       ))}
+
+      <section className={styles.publicationArchive} aria-labelledby="publication-record">
+        <div>
+          <span className={styles.label}>Complete record</span>
+          <h2 id="publication-record">24 peer-reviewed articles</h2>
+          <p>
+            The thematic selection above highlights the work most closely connected
+            to the current programme. The complete, continuously maintained record
+            is available through ORCID and the downloadable CV.
+          </p>
+        </div>
+        <div className={styles.archiveLinks}>
+          <a
+            href="https://orcid.org/0000-0001-8830-4348"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View ORCID record ↗
+          </a>
+          <a href="/Joaquin_Garcia-Suarez_CV_May_2026.pdf" download>
+            Download complete CV
+          </a>
+        </div>
+      </section>
+
+      <section className={styles.foundation} aria-labelledby="foundation-heading">
+        <div className={styles.foundationIntro}>
+          <span className={styles.label}>Research foundation</span>
+          <h2 id="foundation-heading">Seismic & geotechnical mechanics</h2>
+          <p>
+            Earlier work in earthquake and geotechnical mechanics provides the
+            large-scale end of the portfolio: site-response prediction, retaining
+            structures, fracture integrals, and field-informed studies of
+            geomorphological resonances. That foundation continues to shape how
+            models are connected to observations.
+          </p>
+        </div>
+        <div className={styles.foundationLinks}>
+          <a href="https://doi.org/10.1002/nag.3596" target="_blank" rel="noreferrer">
+            <span>2023 · Site response</span>
+            <strong>Data-driven 1D wave propagation</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://doi.org/10.1016/j.jmps.2021.104353" target="_blank" rel="noreferrer">
+            <span>2021 · Fracture mechanics</span>
+            <strong>J-integrals in geotechnical dynamics</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://doi.org/10.1785/0120250073" target="_blank" rel="noreferrer">
+            <span>2025 · Field mechanics</span>
+            <strong>Resonance at the Trona Pinnacles</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
 
       {/* DDCF CTA */}
       <section className={styles.ddcfCta}>

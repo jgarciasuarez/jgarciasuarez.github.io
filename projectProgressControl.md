@@ -106,14 +106,14 @@ Task states:
 - [x] Compare the complete context documentation with the content implemented on all four primary routes.
 - [x] Document coverage, omissions, source conflicts, relevance, and inclusion recommendations in
   `context-in-text/content_gap_audit_2026-07-30.md`.
-- [ ] Correct stale embedded publication years in the Research and DDCF imagery.
-- [ ] Add the 2026 “A matter of shape” publication and a clear route to the complete publication record.
-- [ ] Add a compact technical-capabilities and verified research-software block.
-- [ ] Add teaching testimonials and surface publication-linked mentoring outcomes.
-- [ ] Place the official SNSF mark in the interactive central DDCF node, as required by `goal.md`.
-- [ ] Add the X profile directly to the Bio professional links.
-- [!] Decide whether to include the recommended research roadmap, seismic/geotechnical foundation, selective
-  recognition and leadership, and collaboration CTA before starting P2.
+- [x] Correct stale embedded publication years in the Research and DDCF imagery.
+- [x] Add the 2026 “A matter of shape” publication and a clear route to the complete publication record.
+- [x] Add a compact technical-capabilities and verified research-software block.
+- [x] Add teaching testimonials and surface publication-linked mentoring outcomes.
+- [x] Place the official SNSF mark in the interactive central DDCF node, as required by `goal.md`.
+- [x] Add the X profile directly to the Bio professional links.
+- [x] Implement the approved research roadmap, seismic/geotechnical foundation, selective recognition and
+  leadership, and collaboration CTA before starting P2.
 - [!] Keep the submitted HyperMech proposal unpublished until its outcome or preferred public wording is confirmed.
 
 ### P2 — Testing and Continuous Integration
@@ -168,6 +168,35 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — Pre-P2 Content Enrichment Completed
+
+- Completed content-audit points 1–5; automated testing and CI remain explicitly reserved for the next iteration.
+- Corrected the visible `JMPS (2022)` reference to `JMPS (2023)` and both visible `JFM (2025)` references to
+  `JFM (2024)` in new, non-destructive image variants:
+  - `frontend/public/images/contact_across_scales_corrected.png`
+  - `frontend/public/images/DDCF_collage_corrected.png`
+- Updated all visible Research, Home, and DDCF references to use the corrected figures while preserving the
+  original assets.
+- Added the 2026 Tribology Letters article “A matter of shape”, relabeled the curated records as selected
+  publications, and added direct routes to the complete ORCID and CV records.
+- Added a compact Home evidence block covering continuum mechanics, applied mathematics, numerical methods,
+  Python, C++, Wolfram Mathematica, high-performance/GPU workflows, the verified `soft-contact` repository, and
+  the DDCF Zenodo dataset.
+- Added two anonymized student testimonials and explicitly identified the two supervised projects that developed
+  into peer-reviewed publications.
+- Added a concise “Current direction” roadmap to each research pillar and a separate seismic/geotechnical
+  foundation block without introducing a fourth research pillar.
+- Added selective recognition, invited-talk, and scientific-programme leadership evidence, followed by a
+  collaboration and invited-seminar CTA.
+- Added the two explicit `goal.md` gaps: X is now present in the Bio professional links, and the official SNSF mark
+  is visible inside the central interactive DDCF node.
+- Clarified the Home publication metric as “24 peer-reviewed articles”.
+- Validation completed:
+  - ESLint passed with no warnings or errors.
+  - Next.js 16.2.12 production build and TypeScript validation passed.
+  - `/`, `/research`, `/teaching`, and `/ddcf` were generated successfully as static routes.
+  - The local development server remains active at `http://127.0.0.1:3000`.
 
 ### 2026-07-30 — Cross-Project Content Coverage Audit
 

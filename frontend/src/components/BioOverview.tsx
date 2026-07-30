@@ -1,4 +1,5 @@
 import {
+  AtSign,
   BookOpen,
   BriefcaseBusiness,
   Code2,
@@ -34,6 +35,12 @@ const profileLinks = [
     detail: "@jgarciasuarez",
     href: "https://github.com/jgarciasuarez",
     icon: Code2,
+  },
+  {
+    label: "X",
+    detail: "@jgs_research",
+    href: "https://x.com/jgs_research",
+    icon: AtSign,
   },
 ] as const;
 

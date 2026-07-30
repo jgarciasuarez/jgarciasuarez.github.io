@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   BrainCircuit,
   Cpu,
@@ -54,9 +55,20 @@ export default function DDCFNode({ data }: NodeProps<DDCFFlowNode>) {
         aria-label={`Open details for ${data.title}`}
       >
         <span className={styles.nodeTopline}>
-          <span className={styles.nodeIcon} aria-hidden="true">
-            <Icon size={data.central ? 24 : 20} strokeWidth={1.8} />
-          </span>
+          {data.central ? (
+            <span className={styles.centralLogo}>
+              <Image
+                src="/images/SNF_logo_standard_web_color_neg_e.png"
+                alt=""
+                width={128}
+                height={30}
+              />
+            </span>
+          ) : (
+            <span className={styles.nodeIcon} aria-hidden="true">
+              <Icon size={20} strokeWidth={1.8} />
+            </span>
+          )}
           <span className={styles.nodeLabel}>{data.label}</span>
         </span>
         <strong className={styles.nodeTitle}>{data.title}</strong>

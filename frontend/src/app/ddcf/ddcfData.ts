@@ -69,7 +69,7 @@ export const ddcfItems: Record<DDCFItemId, DDCFItem> = {
       "Multiscale simulation",
       "Differentiable mechanics",
     ],
-    image: "/images/DDCF_collage.png",
+    image: "/images/DDCF_collage_corrected.png",
     imageAlt:
       "Collage showing the experimental and computational scales studied in DDCF.",
     accent: "cyan",
