@@ -235,6 +235,24 @@
 .pubTitle {
   color: var(--text-primary);
   font-style: italic;
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--theme-accent, var(--accent-primary)) 45%,
+    transparent
+  );
+  text-underline-offset: 0.2em;
+}
+
+.pubTitle:hover {
+  color: var(--theme-accent, var(--accent-primary));
+  text-decoration: underline;
+}
+
+.pubTitle span {
+  margin-left: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-style: normal;
 }
 
 .pubJournal {

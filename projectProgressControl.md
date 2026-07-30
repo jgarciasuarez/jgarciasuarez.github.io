@@ -26,7 +26,7 @@ Task states:
 ## Current Verified State
 
 - **Branch:** `agentic_web_design`
-- **Remote tracking:** based on `origin/agentic_web_design`; the current branch has two local commits not yet pushed
+- **Remote tracking:** based on `origin/agentic_web_design`; current work includes local commits not yet pushed
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
@@ -81,12 +81,12 @@ Task states:
 
 ### P1 — Portfolio Content and Relevant Links
 
-- [ ] Expand Bio with a concise employment and industry-experience summary.
-- [ ] Add the requested Seville wording/wink from `goal.md`.
-- [ ] Add contact links for email, ORCID, academic website, GitHub, X, and downloadable CV.
-- [ ] Add DOI or official publication links to Research.
-- [ ] Add relevant teaching resources and student-project links.
-- [ ] Decide whether Teaching should remain text-only, as requested in `goal.md`, or retain its current image.
+- [x] Expand Bio with a concise employment and industry-experience summary.
+- [x] Add the requested Seville wording/wink from `goal.md`.
+- [x] Add contact links for email, ORCID, academic website, GitHub, X, and downloadable CV.
+- [x] Add DOI or official publication links to Research.
+- [x] Add relevant teaching resources and student-project links.
+- [x] Make Teaching text-only, following the explicit requirement in `goal.md`.
 
 ### P1 — Accessibility and SEO
 
@@ -293,3 +293,46 @@ Task states:
   - All application routes remained statically generated.
 - Retained the known `metadataBase` build notice as a documented SEO follow-up because the canonical production URL
   is not yet confirmed.
+
+### 2026-07-30 — Portfolio Content and Relevant Links P1 Started
+
+- Started the Bio, Research, Teaching, and contact-resource content pass.
+- Verified email, academic website, ORCID, employment, education, and industry history against the May 2026 CV.
+- Verified the public EPFL profile, CIVIL-425 coursebook, LSMS student-project index, and selected Infoscience
+  project records.
+- Selected the existing May 2026 CV PDF as the downloadable website version after checking its first-page rendering
+  and document metadata.
+- Resolved the Teaching visual decision in favor of text-only presentation, as explicitly requested in `goal.md`.
+
+### 2026-07-30 — Portfolio Content and Relevant Links P1 Completed
+
+- Added the reusable `BioOverview` component with:
+  - A profile summary based on the May 2026 CV.
+  - Current SNSF Ambizione leadership at EPFL.
+  - EPFL and Caltech academic trajectory.
+  - NextForce Engineering structural-design and FEM experience.
+  - The requested Seville wording: “the most beautiful city in the world, naturally”.
+- Added verified Bio and footer links for:
+  - `joaquin.garciasuarez@epfl.ch`.
+  - `https://jgarciasuarez.github.io/`.
+  - `https://orcid.org/0000-0001-8830-4348`.
+  - `https://github.com/jgarciasuarez`.
+  - `https://x.com/jgs_research`.
+- Published the existing nine-page May 2026 CV as
+  `frontend/public/Joaquin_Garcia-Suarez_CV_May_2026.pdf` and added download actions in Bio and Footer.
+- Added DOI links to all seven selected Research publications.
+- Made Teaching text-only by removing the solar-collector figure, following `goal.md`.
+- Added Teaching links to:
+  - The official EPFL CIVIL-425 coursebook.
+  - Four selected supervised-project records in EPFL Infoscience.
+  - The LSMS student-project index.
+- Updated the component inventory for the responsive Navigation, new BioOverview, and expanded Footer.
+- Validation:
+  - PDF metadata: the copied CV remains optimized and contains all nine pages.
+  - Teaching contains no image component.
+  - ESLint: passed with zero errors and zero warnings.
+  - Next.js production build and TypeScript: passed.
+  - All application routes remained statically generated.
+  - `git diff --check`: passed.
+- Retained the known `metadataBase` notice as the only build notice; it remains tied to the unresolved canonical
+  production URL.

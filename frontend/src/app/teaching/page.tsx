@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -50,22 +49,6 @@ export default function Teaching() {
                 I look for inspiration in my <strong>own experience</strong>. For example, a modular trough collector — a system I once designed in <strong>industry</strong> — known to display torsional vibrational modes when excited by wind, made for a perfect exam exercise in structural dynamics.
               </p>
             </div>
-            
-            {/* Example Image */}
-            <figure className={styles.figure}>
-              <div className={styles.figureImageWrap}>
-                <Image 
-                  src="/images/model_hw.png" 
-                  alt="Solar collectors as a dynamic torsional system excited by wind loads"
-                  fill
-                  sizes="(max-width: 900px) calc(100vw - 2rem), 700px"
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-              <figcaption className={styles.figcaption}>
-                <strong>Figure 1.</strong> Solar collectors as a dynamic torsional system excited by wind loads. (a) FEM model of a five-module parabolic solar collector (b) Scheme highlighting torsion degrees of freedom (c) Five-dof lumped torsional vibration model.
-              </figcaption>
-            </figure>
           </section>
 
           <section className={styles.section}>
@@ -88,6 +71,70 @@ export default function Teaching() {
                 </p>
               </div>
 
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Teaching & Project Resources</h2>
+            <p className={styles.resourceIntro}>
+              Official course information and a selection of supervised projects
+              connecting mechanics, computation, and student-led research.
+            </p>
+            <div className={styles.resourceList}>
+              <a
+                href="https://edu.epfl.ch/studyplan/en/master/mechanical-engineering/coursebook/continuum-mechanics-and-applications-CIVIL-425"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>Coursebook</span>
+                <strong>CIVIL-425 · Continuum Mechanics and Applications</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://infoscience.epfl.ch/handle/20.500.14299/194291"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>Student project · 2022</span>
+                <strong>Data-driven 1D site-response analysis</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://infoscience.epfl.ch/handle/20.500.14299/208527"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>Student project · 2024</span>
+                <strong>Convergence of phase-space iterative solvers</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://infoscience.epfl.ch/handle/20.500.14299/242739"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>Student project · 2025</span>
+                <strong>Physics-informed neural networks for friction</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://infoscience.epfl.ch/handle/20.500.14299/251312"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>Student project · 2025</span>
+                <strong>Neural networks and operators for friction</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.epfl.ch/labs/lsms/semester-and-master-projects/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={styles.resourceType}>EPFL · LSMS</span>
+                <strong>Current and former student projects</strong>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </section>
 

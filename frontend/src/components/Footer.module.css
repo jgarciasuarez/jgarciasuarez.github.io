@@ -22,6 +22,21 @@
   margin-bottom: 0;
 }
 
+.cvLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+  color: var(--accent-primary);
+  font-size: 0.72rem;
+  text-decoration: none;
+}
+
+.cvLink:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
 .highlight {
   color: var(--text-secondary);
   font-weight: 500;
@@ -29,7 +44,9 @@
 
 .socials {
   display: flex;
-  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
 }
 
 .socialLink {
@@ -40,7 +57,7 @@
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.68rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all var(--transition-normal);
@@ -70,6 +87,10 @@
     text-align: center;
   }
   .socials {
+    justify-content: center;
+  }
+
+  .cvLink {
     justify-content: center;
   }
 }

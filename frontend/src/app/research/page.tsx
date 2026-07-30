@@ -20,6 +20,7 @@ interface Publication {
   title: string;
   journal: string;
   year: string;
+  href: string;
 }
 
 interface Theme {
@@ -61,9 +62,9 @@ const themes: Theme[] = [
       },
     ],
     keyPubs: [
-      { authors: 'Garcia-Suarez, Brink, Molinari', title: 'Breakdown of Reye\'s theory in nanoscale wear', journal: 'J. Mech. Phys. Solids', year: '2023' },
-      { authors: 'Bilotto, Kolinski, Lecampion, et al.', title: 'Fluid-mediated impact of soft solids', journal: 'J. Fluid Mechanics', year: '2024' },
-      { authors: 'Cortes, Garcia-Suarez', title: 'Data-driven dynamic friction models based on RNNs', journal: 'Appl. Comput. Geosci.', year: '2025' },
+      { authors: 'Garcia-Suarez, Brink, Molinari', title: 'Breakdown of Reye\'s theory in nanoscale wear', journal: 'J. Mech. Phys. Solids', year: '2023', href: 'https://doi.org/10.1016/j.jmps.2023.105236' },
+      { authors: 'Bilotto, Kolinski, Lecampion, et al.', title: 'Fluid-mediated impact of soft solids', journal: 'J. Fluid Mechanics', year: '2024', href: 'https://doi.org/10.1017/jfm.2024.820' },
+      { authors: 'Cortes, Garcia-Suarez', title: 'Data-driven dynamic friction models based on RNNs', journal: 'Appl. Comput. Geosci.', year: '2025', href: 'https://doi.org/10.1016/j.acags.2025.100249' },
     ],
   },
   {
@@ -91,8 +92,8 @@ const themes: Theme[] = [
       },
     ],
     keyPubs: [
-      { authors: 'Garcia-Suarez', title: 'Harmonic decomposition of the trace of 1D transfer matrices in layered media', journal: 'J. Mech. Phys. Solids', year: '2022' },
-      { authors: 'González-Carbajal, Lemm, Garcia-Suarez', title: 'On the lowest-frequency bandgap of 1D phononic crystals', journal: 'Eur. J. Mech. A/Solids', year: '2025' },
+      { authors: 'Garcia-Suarez', title: 'Harmonic decomposition of the trace of 1D transfer matrices in layered media', journal: 'J. Mech. Phys. Solids', year: '2022', href: 'https://doi.org/10.1016/j.jmps.2022.104830' },
+      { authors: 'González-Carbajal, Lemm, Garcia-Suarez', title: 'On the lowest-frequency bandgap of 1D phononic crystals', journal: 'Eur. J. Mech. A/Solids', year: '2025', href: 'https://doi.org/10.1016/j.euromechsol.2024.105466' },
     ],
   },
   {
@@ -120,8 +121,8 @@ const themes: Theme[] = [
       },
     ],
     keyPubs: [
-      { authors: 'Wattel, Molinari, Ortiz, Garcia-Suarez', title: 'Mesh d-refinement: a data-based computational framework', journal: 'Mech. of Materials', year: '2023' },
-      { authors: 'Cortes, Sangiorgio, Garcia-Suarez', title: 'Phase-space iterative solvers', journal: 'Computational Mechanics', year: '2025' },
+      { authors: 'Wattel, Molinari, Ortiz, Garcia-Suarez', title: 'Mesh d-refinement: a data-based computational framework', journal: 'Mech. of Materials', year: '2023', href: 'https://doi.org/10.1016/j.mechmat.2023.104630' },
+      { authors: 'Cortes, Sangiorgio, Garcia-Suarez', title: 'Phase-space iterative solvers', journal: 'Computational Mechanics', year: '2025', href: 'https://doi.org/10.1007/s00466-025-02735-w' },
     ],
   },
 ];
@@ -208,7 +209,15 @@ export default function Research() {
               {theme.keyPubs.map((pub, k) => (
                 <li key={k} className={styles.pubItem}>
                   <span className={styles.pubAuthors}>{pub.authors}</span>
-                  <span className={styles.pubTitle}>“{pub.title}”</span>
+                  <a
+                    className={styles.pubTitle}
+                    href={pub.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${pub.title}, open DOI`}
+                  >
+                    “{pub.title}” <span aria-hidden="true">↗</span>
+                  </a>
                   <span className={styles.pubJournal}>{pub.journal}, {pub.year}</span>
                 </li>
               ))}

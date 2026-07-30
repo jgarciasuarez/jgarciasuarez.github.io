@@ -10,12 +10,13 @@
 ## Current Components Inventory
 | Component | File | CSS Module | Client? | Description |
 |---|---|---|---|---|
-| Navigation | `Navigation.tsx` | `Navigation.module.css` | No | Top nav bar with logo and page links. DDCF Hub link is highlighted with accent glow. |
+| Navigation | `Navigation.tsx` | `Navigation.module.css` | Yes | Sticky desktop navigation and accessible mobile menu with active-route indication, Escape dismissal, and visible keyboard focus. |
 | HeroSection | `HeroSection.tsx` | `HeroSection.module.css` | Yes | Full-height hero with animated particle canvas background, gradient name, role badge, tagline, and CTA buttons. |
+| BioOverview | `BioOverview.tsx` | `BioOverview.module.css` | No | Profile narrative, academic and industry trajectory, Seville note, verified professional links, and downloadable CV. |
 | StatsRibbon | `StatsRibbon.tsx` | `StatsRibbon.module.css` | No | 4-column grid showing key metrics (24 publications, CHF 830k SNSF grant, Ph.D. Caltech 2020, 3 research themes). |
 | ResearchPreview | `ResearchPreview.tsx` | `ResearchPreview.module.css` | Yes | 3-card grid previewing the three research themes. Each card has an extracted image, overlay gradient, hover lift effect, and per-card accent color via CSS custom property. |
 | EducationTimeline | `EducationTimeline.tsx` | `EducationTimeline.module.css` | No | Vertical timeline showing Ph.D. (Caltech 2020), M.S. (Caltech 2016), Ingeniero Industrial (Sevilla 2013). |
-| Footer | `Footer.tsx` | `Footer.module.css` | No | Footer with Seville/Lausanne origin note, GitHub and X social links (inline SVG icons), copyright. |
+| Footer | `Footer.tsx` | `Footer.module.css` | No | Footer with Seville/Lausanne note, email, website, ORCID, GitHub, X, downloadable CV, and copyright. |
 
 ## Design Patterns
 - **Glassmorphism**: Use the global `.glass-panel` utility class or `backdrop-filter: blur(12px)` with semi-transparent backgrounds.
@@ -26,6 +27,7 @@
 ## State
 - [x] Navigation created
 - [x] HeroSection created (with particle canvas)
+- [x] BioOverview created
 - [x] StatsRibbon created
 - [x] ResearchPreview created (with extracted images)
 - [x] EducationTimeline created
