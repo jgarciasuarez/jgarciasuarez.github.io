@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function DDCFPage() {
   return (
-    <main className={styles.page}>
+    <main id="main-content" className={styles.page}>
       <header className={styles.hero}>
         <div className={styles.heroMeta}>
           <span>EPFL · LSMS</span>

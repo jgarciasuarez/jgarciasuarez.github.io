@@ -26,7 +26,7 @@ Task states:
 ## Current Verified State
 
 - **Branch:** `agentic_web_design`
-- **Remote tracking:** based on `origin/agentic_web_design`; current P0 changes are local and uncommitted
+- **Remote tracking:** based on `origin/agentic_web_design`; the current branch has two local commits not yet pushed
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
@@ -69,15 +69,15 @@ Task states:
 - [x] Integrate the relevant DDCF figures already available in `public/images/`.
 - [x] Add subtle motion with `framer-motion` and support reduced-motion preferences.
 - [x] Obtain or confirm the final descriptive content for each DDCF subproject.
-- [!] Confirm which public grant amount should be displayed: the CV records CHF 830,128 while the SNSF Data Portal
-  records CHF 842,376.
+- [x] Use CHF 830,128 as the approved public grant amount, following the user's decision to select the lower of the
+  CV and SNSF Data Portal values.
 
 ### P1 — Responsive Navigation and Layout
 
-- [ ] Redesign the navigation for mobile widths; the DDCF link is currently clipped at 390 px.
-- [ ] Validate `/`, `/research`, `/teaching`, and `/ddcf` at mobile, tablet, laptop, and desktop widths.
-- [ ] Verify image legibility and typography at each breakpoint.
-- [ ] Confirm sticky and full-height sections behave correctly on short screens.
+- [x] Redesign the navigation for mobile widths; the DDCF link no longer clips at 390 px.
+- [x] Validate `/`, `/research`, `/teaching`, and `/ddcf` at mobile, tablet, laptop, and desktop widths.
+- [x] Verify image delivery, text containment, and absence of horizontal overflow at each breakpoint.
+- [x] Confirm sticky navigation and route layout behavior on short screens.
 
 ### P1 — Portfolio Content and Relevant Links
 
@@ -90,12 +90,14 @@ Task states:
 
 ### P1 — Accessibility and SEO
 
-- [ ] Add a semantic `<main>` landmark and a skip link.
-- [ ] Add visible keyboard focus styles and identify the active navigation item.
+- [x] Add a semantic `<main>` landmark and a skip link.
+- [x] Add visible keyboard focus styles and identify the active navigation item.
 - [ ] Mark decorative canvas content appropriately for assistive technologies.
 - [x] Respect `prefers-reduced-motion` for the DDCF canvas and dialogs.
 - [x] Add route-specific metadata for DDCF.
 - [ ] Add canonical URLs, Open Graph metadata, sitemap, robots, and structured data.
+- [ ] Set `metadataBase` after the canonical production URL is confirmed; local builds currently use the documented
+  localhost fallback for social-image URL resolution.
 
 ### P2 — Testing and Continuous Integration
 
@@ -112,8 +114,8 @@ Task states:
 - [ ] Review unused MDX, Lucide, React Flow, and Framer Motion dependencies after DDCF implementation.
 - [ ] Review unused images and remove or integrate them.
 - [ ] Optimize large raster assets and verify production delivery sizes.
-- [ ] Add a responsive `sizes` value to the filled `model_hw.png` image.
-- [ ] Review eager loading for the above-the-fold `contact_across_scales.png` LCP image.
+- [x] Add a responsive `sizes` value to the filled `model_hw.png` image.
+- [x] Eager-load the above-the-fold `contact_across_scales.png` LCP image and provide responsive sizes.
 - [ ] Remove unused starter SVGs and unused `src/app/page.module.css`.
 
 ### P2 — Deployment Readiness
@@ -250,3 +252,44 @@ Task states:
 - Prepared the private production-publication task.
 - Publication is paused before source transfer because exporting the complete repository to the hosting provider
   requires explicit user authorization. No repository content has been sent to that host.
+
+### 2026-07-30 — Grant Amount Decision and Responsive P1 Started
+
+- Resolved the DDCF grant-amount decision: the approved public value is CHF 830,128, the lower of the two documented
+  values.
+- Started the responsive navigation and layout P1 across all four primary routes.
+- Included active-route indication, keyboard focus, and mobile navigation behavior in the implementation scope.
+
+### 2026-07-30 — Responsive Navigation and Layout P1 Completed
+
+- Replaced the clipped single-row mobile navigation with an accessible menu below 720 px.
+- Added:
+  - A 44 × 44 px menu control with explicit expanded state.
+  - Escape-key and backdrop dismissal.
+  - Background-scroll locking while the menu is open.
+  - Active-route styling and `aria-current="page"`.
+  - Visible keyboard focus styles.
+  - A sticky, translucent navigation bar with reduced-motion handling.
+- Added a skip link and a semantic `main#main-content` landmark to every primary route.
+- Reduced the global mobile page gutter from 2 rem to 1 rem.
+- Applied the approved CHF 830,128 grant amount to the DDCF project facts and funding acknowledgement.
+- Corrected responsive image-delivery warnings:
+  - Added `sizes` to `model_hw.png`.
+  - Added responsive `sizes` and eager loading to `contact_across_scales.png`.
+  - Preserved the SNSF logo at its intrinsic aspect ratio.
+- Responsive validation covered `/`, `/research`, `/teaching`, and `/ddcf` at:
+  - Mobile: 390 × 844.
+  - Tablet: 768 × 900.
+  - Laptop: 1024 × 768.
+  - Desktop: 1440 × 900.
+- Validation results:
+  - No horizontal overflow in any of the 16 route-and-size combinations.
+  - All expected images loaded after viewport traversal.
+  - Every route exposed `main#main-content`.
+  - The mobile menu stayed inside the viewport and opened and closed with Escape on every route.
+  - Sticky navigation, active DDCF route state, and a 1280 × 720 short viewport were verified.
+  - ESLint: passed with zero errors and zero warnings.
+  - Next.js production build and TypeScript: passed.
+  - All application routes remained statically generated.
+- Retained the known `metadataBase` build notice as a documented SEO follow-up because the canonical production URL
+  is not yet confirmed.

@@ -180,8 +180,9 @@ export default function DDCFHub() {
           />
         </div>
         <p>
-          Funded by the Swiss National Science Foundation through an Ambizione
-          grant, hosted at EPFL’s Laboratory for Computational Solid Mechanics.
+          Funded by the Swiss National Science Foundation through a CHF 830,128
+          Ambizione grant, hosted at EPFL’s Laboratory for Computational Solid
+          Mechanics.
         </p>
         <a href={officialProjectUrl} target="_blank" rel="noreferrer">
           Grant 216341

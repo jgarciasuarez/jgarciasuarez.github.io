@@ -44,6 +44,7 @@ export const sharedResources = [
 export const projectFacts = [
   ["Funding scheme", "SNSF Ambizione"],
   ["Grant number", "216341"],
+  ["Grant amount", "CHF 830,128"],
   ["Project period", "1 January 2024 – 31 December 2027"],
   ["Host institution", "EPFL · LSMS"],
   ["Disciplines", "Mechanical and Civil Engineering"],

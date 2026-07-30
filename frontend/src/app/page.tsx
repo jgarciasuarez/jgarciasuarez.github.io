@@ -5,11 +5,11 @@ import EducationTimeline from '@/components/EducationTimeline';
 
 export default function Home() {
   return (
-    <>
+    <main id="main-content">
       <HeroSection />
       <StatsRibbon />
       <ResearchPreview />
       <EducationTimeline />
-    </>
+    </main>
   );
 }

@@ -14,7 +14,7 @@ unless a later user-approved revision supersedes it.
 - Describe recurrent neural-network and automatic-differentiation results as demonstrated work.
 - Describe neural operators, GPU acceleration, and broader differentiable-physics applications as active research
   directions.
-- Do not display a grant amount until the discrepancy recorded under “Open Content Decision” has been resolved.
+- Display CHF 830,128 as the approved public grant amount.
 - Preserve the official project title and grant number exactly.
 
 ## Central Node
@@ -49,6 +49,7 @@ automatic differentiation for physics-constrained training and gradient-based op
 
 - Funding scheme: SNSF Ambizione
 - Grant number: 216341
+- Grant amount: CHF 830,128
 - Project period: 1 January 2024 – 31 December 2027
 - Host institution: EPFL, Laboratory for Computational Solid Mechanics (LSMS)
 - Disciplines: Mechanical Engineering and Civil Engineering
@@ -222,7 +223,8 @@ not scientific captions.
 - SNSF Data Portal, grant 216341
 - Cortes and Garcia-Suarez, “Data-Driven Dynamic Friction Models based on Recurrent Neural Networks”
 
-## Open Content Decision
+## Resolved Content Decision
 
 The May 2026 CV records the SNSF amount as CHF 830,128, while the current SNSF Data Portal records an approved amount
-of CHF 842,376. The DDCF hub must not display either figure until the preferred public value is confirmed.
+of CHF 842,376. On 30 July 2026, the user selected the lower value. The approved public amount for this website is
+therefore CHF 830,128.

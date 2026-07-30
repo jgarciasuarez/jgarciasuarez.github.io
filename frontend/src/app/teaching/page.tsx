@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Teaching() {
   return (
-    <div className={styles.page}>
+    <main id="main-content" className={styles.page}>
       {/* Header */}
       <header className={styles.header}>
         <span className={styles.label}>Teaching Portfolio</span>
@@ -58,6 +58,7 @@ export default function Teaching() {
                   src="/images/model_hw.png" 
                   alt="Solar collectors as a dynamic torsional system excited by wind loads"
                   fill
+                  sizes="(max-width: 900px) calc(100vw - 2rem), 700px"
                   style={{ objectFit: 'contain' }}
                 />
               </div>
@@ -154,6 +155,6 @@ export default function Teaching() {
         </aside>
 
       </div>
-    </div>
+    </main>
   );
 }

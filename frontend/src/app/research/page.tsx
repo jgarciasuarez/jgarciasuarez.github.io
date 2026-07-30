@@ -130,7 +130,7 @@ const themes: Theme[] = [
 
 export default function Research() {
   return (
-    <div className={styles.page}>
+    <main id="main-content" className={styles.page}>
       {/* Header */}
       <header className={styles.header}>
         <span className={styles.label}>Research Portfolio</span>
@@ -142,7 +142,15 @@ export default function Research() {
 
       {/* Scale bar */}
       <div className={styles.scaleBar}>
-        <Image src="/images/contact_across_scales.png" alt="Research spanning 12 orders of magnitude in length scales" width={1200} height={200} className={styles.scaleImage} />
+        <Image
+          src="/images/contact_across_scales.png"
+          alt="Research spanning 12 orders of magnitude in length scales"
+          width={1200}
+          height={200}
+          sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1200px) calc(100vw - 4rem), 1200px"
+          loading="eager"
+          className={styles.scaleImage}
+        />
       </div>
 
       {/* Themes */}
@@ -225,6 +233,6 @@ export default function Research() {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

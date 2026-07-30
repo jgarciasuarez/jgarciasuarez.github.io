@@ -353,8 +353,6 @@
 
 .snsfLogo {
   display: block;
-  width: 213px;
-  height: auto;
   object-fit: contain;
 }
 
@@ -678,10 +676,6 @@
 
   .fundingStrip a {
     justify-self: start;
-  }
-
-  .snsfLogo {
-    width: min(213px, 100%);
   }
 
   .dialogBackdrop {
