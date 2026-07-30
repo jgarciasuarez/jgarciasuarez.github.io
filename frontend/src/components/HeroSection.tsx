@@ -12,12 +12,16 @@ export default function HeroSection() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationId: number;
+    let animationId: number | undefined;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const particles: { x: number; y: number; vx: number; vy: number; size: number; alpha: number }[] = [];
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
+      if (reduceMotion && particles.length > 0) {
+        draw();
+      }
     };
     resize();
     window.addEventListener('resize', resize);
@@ -37,12 +41,14 @@ export default function HeroSection() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
+        if (!reduceMotion) {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = canvas.width;
+          if (p.x > canvas.width) p.x = 0;
+          if (p.y < 0) p.y = canvas.height;
+          if (p.y > canvas.height) p.y = 0;
+        }
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(0, 229, 255, ${p.alpha})`;
@@ -65,22 +71,30 @@ export default function HeroSection() {
           }
         }
       }
-      animationId = requestAnimationFrame(draw);
+      if (!reduceMotion) {
+        animationId = requestAnimationFrame(draw);
+      }
     };
     draw();
 
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationId !== undefined) {
+        cancelAnimationFrame(animationId);
+      }
       window.removeEventListener('resize', resize);
     };
   }, []);
 
   return (
     <section className={styles.hero}>
-      <canvas ref={canvasRef} className={styles.particleCanvas} />
+      <canvas
+        ref={canvasRef}
+        className={styles.particleCanvas}
+        aria-hidden="true"
+      />
       <div className={styles.content}>
         <div className={styles.badge}>
-          <span className={styles.badgeDot} />
+          <span className={styles.badgeDot} aria-hidden="true" />
           SNSF Ambizione Fellow · EPFL
         </div>
         <h1 className={styles.name}>
@@ -95,7 +109,7 @@ export default function HeroSection() {
           <a href="/ddcf" className={styles.btnSecondary}>DDCF Project →</a>
         </div>
       </div>
-      <div className={styles.heroGlow} />
+      <div className={styles.heroGlow} aria-hidden="true" />
     </section>
   );
 }

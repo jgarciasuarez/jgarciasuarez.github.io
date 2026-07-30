@@ -4,6 +4,14 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Teaching Portfolio | Joaquin Garcia-Suarez',
   description: 'Teaching philosophy, mentoring experience, and proposed graduate classes.',
+  alternates: {
+    canonical: '/teaching',
+  },
+  openGraph: {
+    title: 'Teaching Portfolio | Joaquin Garcia-Suarez',
+    description: 'Teaching philosophy, mentoring experience, and proposed graduate classes.',
+    url: '/teaching',
+  },
 };
 
 export default function Teaching() {

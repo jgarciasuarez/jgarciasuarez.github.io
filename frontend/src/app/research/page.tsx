@@ -6,6 +6,14 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Research Portfolio | Joaquin Garcia-Suarez',
   description: 'Three interconnected research themes spanning interface mechanics across scales, wave propagation in heterogeneous media, and computational methods development.',
+  alternates: {
+    canonical: '/research',
+  },
+  openGraph: {
+    title: 'Research Portfolio | Joaquin Garcia-Suarez',
+    description: 'Research spanning interface mechanics, wave propagation in heterogeneous media, and computational methods.',
+    url: '/research',
+  },
 };
 
 /* ── Data ─────────────────────────────────────────── */

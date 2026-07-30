@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "DDCF | Data-Driven Computational Friction",
   description:
     "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.",
+  alternates: {
+    canonical: "/ddcf",
+  },
+  openGraph: {
+    title: "DDCF | Data-Driven Computational Friction",
+    description:
+      "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.",
+    url: "/ddcf",
+  },
 };
 
 export default function DDCFPage() {

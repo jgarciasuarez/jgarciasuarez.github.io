@@ -92,12 +92,12 @@ Task states:
 
 - [x] Add a semantic `<main>` landmark and a skip link.
 - [x] Add visible keyboard focus styles and identify the active navigation item.
-- [ ] Mark decorative canvas content appropriately for assistive technologies.
+- [x] Mark decorative canvas content appropriately for assistive technologies.
 - [x] Respect `prefers-reduced-motion` for the DDCF canvas and dialogs.
 - [x] Add route-specific metadata for DDCF.
-- [ ] Add canonical URLs, Open Graph metadata, sitemap, robots, and structured data.
-- [ ] Set `metadataBase` after the canonical production URL is confirmed; local builds currently use the documented
-  localhost fallback for social-image URL resolution.
+- [x] Add canonical URLs, Open Graph metadata, sitemap, robots, and structured data.
+- [x] Set `metadataBase` with the verified academic website as a configurable fallback until the final production
+  domain is confirmed.
 
 ### P2 — Testing and Continuous Integration
 
@@ -151,6 +151,34 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — Accessibility and SEO P1 Started
+
+- Started the remaining accessibility and SEO work.
+- Selected `https://jgarciasuarez.github.io` as the verified canonical fallback, with `NEXT_PUBLIC_SITE_URL` reserved
+  for the final production origin.
+- Included reduced-motion handling for the decorative home particle canvas in the accessibility scope.
+
+### 2026-07-30 — Accessibility and SEO P1 Completed
+
+- Added route-specific canonical URLs and Open Graph URLs for `/`, `/research`, `/teaching`, and `/ddcf`.
+- Set `metadataBase` to the verified academic website by default and added `frontend/.env.example` so a final
+  production origin can be supplied through `NEXT_PUBLIC_SITE_URL`.
+- Added:
+  - A generated `robots.txt` allowing public crawling.
+  - A generated `sitemap.xml` covering all four primary routes.
+  - JSON-LD structured data describing the portfolio website and Joaquin Garcia-Suarez as a person.
+- Marked the home particle canvas, badge marker, and glow as decorative for assistive technologies.
+- Stopped particle movement when `prefers-reduced-motion: reduce` is active while retaining a static visual.
+- Validation:
+  - ESLint: passed with zero errors and zero warnings.
+  - Next.js production build and TypeScript: passed.
+  - Static generation: passed for ten outputs, including `/robots.txt` and `/sitemap.xml`.
+  - Generated HTML contains the expected absolute canonical and Open Graph URL on all four primary routes.
+  - Generated `robots.txt` and `sitemap.xml` contain the configured canonical origin and all primary routes.
+  - Local server: restarted successfully; `/` returns HTTP 200 and both crawler resources are reachable.
+  - `git diff --check`: passed.
+- Completed P1 “Accessibility and SEO”.
 
 ### 2026-07-30 — Repository Audit and Process Baseline
 
