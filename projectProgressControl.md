@@ -26,7 +26,8 @@ Task states:
 ## Current Verified State
 
 - **Branch:** `agentic_web_design`
-- **Remote tracking:** based on `origin/agentic_web_design`; current work includes local commits not yet pushed
+- **Remote tracking:** `agentic_web_design` is synchronized with both `jgarciasuarez/web` and the deployment
+  repository `jgarciasuarez/jgarciasuarez.github.io`
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
@@ -35,8 +36,8 @@ Task states:
 - **Lint:** passing
 - **Automated tests:** 4 component tests and 25 Playwright route, responsive, navigation, and accessibility tests
   passing
-- **CI/CD:** GitHub Actions quality workflow configured for lint, component tests, Playwright tests, production
-  build, and gated GitHub Pages deployment; remote deployment validation is in progress
+- **CI/CD:** GitHub Actions quality, testing, static build, and Pages artifact packaging pass remotely; final Pages
+  deployment is blocked only by the repository's legacy `master` publishing restriction
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
 - **Content coverage audit:** completed; prioritized editorial gaps are documented in
   `context-in-text/content_gap_audit_2026-07-30.md`
@@ -147,10 +148,11 @@ Task states:
 - [x] Select GitHub Pages as the low-cost hosting target, with GitHub Actions as the only deployment controller.
 - [x] Make font delivery deterministic by self-hosting the official Inter variable font and its license.
 - [x] Configure Next.js to generate a trailing-slash static export in `frontend/out`.
-- [~] Add and remotely validate the GitHub Pages deployment workflow.
-- [ ] Mirror `agentic_web_design` into `jgarciasuarez/jgarciasuarez.github.io` without modifying its legacy
+- [x] Add and remotely validate the GitHub Pages deployment workflow through artifact packaging.
+- [x] Mirror `agentic_web_design` into `jgarciasuarez/jgarciasuarez.github.io` without modifying its legacy
   `master` branch.
-- [ ] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions.
+- [!] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions. The available
+  Git credential can push code but does not have the administrative Pages permission required for this setting.
 - [ ] Configure production environment and deployment checks.
 - [ ] Perform a final content, browser, performance, and link audit.
 - [!] Publish the validated project through a private production deployment; awaiting explicit authorization to
@@ -181,7 +183,7 @@ Task states:
 
 ## Change Log
 
-### 2026-07-30 — GitHub Pages Automation Steps 3–4 Started
+### 2026-07-30 — GitHub Pages Automation Steps 3–4 Prepared
 
 - Extended the existing quality workflow with a gated static-site packaging and GitHub Pages deployment stage.
 - Kept publication conditional on the repository being `jgarciasuarez/jgarciasuarez.github.io`, preventing the
@@ -189,8 +191,18 @@ Task states:
 - Preserved the existing personal-site `master` branch as the rollback source; the new application will be
   introduced on `agentic_web_design`.
 - Added manual workflow dispatch support for controlled deployment and recovery.
-- Local workflow YAML parsing and whitespace validation passed. Remote branch mirroring, Pages source migration,
-  and the first hosted workflow run remain in progress.
+- Mirrored `agentic_web_design` to both `jgarciasuarez/web` and
+  `jgarciasuarez/jgarciasuarez.github.io`; the existing personal-site `master` branch remains unchanged at
+  `dbd06a54b795483e020702ef2b2f18e53fd4626e`.
+- Remote workflow run `30565700639` completed the full quality job and the Pages artifact build successfully.
+- The final `deploy-pages` job was correctly reached but GitHub rejected it with: “Invalid deployment branch and
+  no branch protection rules set in the environment. Deployments are only allowed from master.”
+- Confirmed through the Pages API that the live site remains healthy and configured with `build_type: legacy`,
+  source `master` at `/`.
+- Attempting to switch `build_type` to `workflow` returned HTTP 404 because the available collaborator credential
+  lacks administrative Pages access. No force push or change to the live legacy site was made.
+- Remaining administrative action: an owner must select **Settings → Pages → Build and deployment → Source:
+  GitHub Actions**. Re-running the existing workflow will then complete the publication without a local machine.
 
 ### 2026-07-30 — GitHub Pages Preparation Steps 1–2 Completed
 
