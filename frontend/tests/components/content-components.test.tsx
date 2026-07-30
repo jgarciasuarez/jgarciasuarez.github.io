@@ -23,10 +23,10 @@ describe("portfolio evidence components", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("Demetriades–Tsafka–Kokkalis Prize")).toBeInTheDocument();
 
-    expect(screen.getByRole("link", { name: /soft-contact/i })).toHaveAttribute(
-      "href",
-      "https://github.com/jgarciasuarez/soft-contact",
-    );
+    expect(screen.queryByRole("link", { name: /soft-contact/i })).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /Explore the full GitHub profile/i }),
+    ).toHaveAttribute("href", "https://github.com/jgarciasuarez");
     expect(
       screen.getByRole("link", { name: /DDCF research data/i }),
     ).toHaveAttribute("href", "https://zenodo.org/records/13341474");

@@ -1,32 +1,37 @@
-# Root Agent Instructions (Project Brain)
+# Frontend Agent Instructions
 
-## Core Directives
-1. **Framework**: Next.js (App Router).
-2. **Language**: TypeScript.
-3. **Styling**: Vanilla CSS / CSS Modules ONLY. Do NOT use TailwindCSS.
-4. **Design Concept**: Professional, slick, dark-themed academic portfolio.
-5. **Context**: See `../../summaryContext.md` and `../../ModernWebPage.md` in the grandparent directory for the user's background, research, and project rationale.
+## Technical constraints
 
-## Documentation Hierarchy
-Agents MUST read the local `agent_instructions.md` when entering a subdirectory:
-- `src/app/agent_instructions.md`: Routing, page layouts, metadata, implementation status.
-- `src/app/ddcf/agent_instructions.md`: Specifics for the interactive React Flow hub.
-- `src/components/agent_instructions.md`: Component inventory with descriptions, design patterns, and status.
-- `src/styles/agent_instructions.md`: Full design token reference (colors, spacing, typography, transitions).
+1. Use Next.js App Router, React, and TypeScript.
+2. Use CSS Modules and `src/app/globals.css`; do not introduce Tailwind CSS.
+3. Preserve static-export compatibility. Production output must be generated in `out/`.
+4. Keep visible content traceable to the repository-level `context-in-text/` sources.
+5. Record every material change and new task in `../projectProgressControl.md`.
 
-## Images & Assets
-- Extracted PNG images from PDF figures live in `../../context/figures/extracted/`.
-- Web-ready images for the Next.js app are copied to `public/images/`.
-- Current images in `public/images/`: `contact_across_scales.png`, `portfolio_waves.png`, `DDCF_collage.png`, `friction_scales.png`, `panel_DDCF_v2.png`, `waves_panels.png`.
+## Source hierarchy
 
-## Project State (Checklist)
-- [x] Initialized Next.js with App Router.
-- [x] Created agent documentation hierarchy.
-- [x] Define global design system in `src/app/globals.css`.
-- [x] Convert assets from `../../context/` to web-optimized formats.
-- [x] Home page fully implemented (Hero, Stats, Research Preview, Education Timeline, Footer).
-- [x] Research page detailed implementation.
-- [x] Teaching page detailed implementation.
-- [ ] DDCF page React Flow interactive hub.
+- `../context-in-text/CV_May_2026-1.md`: biography, dates, metrics, publications, teaching, and mentoring.
+- `../context-in-text/research_statement_4_Carlson.md`: research narrative.
+- `../context-in-text/teaching_statement_4_Carlson.md`: teaching narrative.
+- `../context-in-text/goal.md`: product and design requirements.
+- `../projectProgressControl.md`: verified implementation state, decisions, backlog, and validation.
 
-**Always update this checklist and the relevant subdirectory agent_instructions.md as milestones are completed.**
+Use only the verified sources listed above for portfolio content.
+
+## Current state
+
+- [x] Home/Bio route implemented.
+- [x] Research route implemented.
+- [x] Teaching route implemented.
+- [x] Interactive DDCF React Flow hub implemented.
+- [x] Responsive navigation, accessibility, SEO, component tests, browser tests, and CI implemented.
+- [x] GitHub Pages-compatible static export implemented.
+- [!] GitHub Pages source switch requires repository-administrator permission.
+
+## Delivery rules
+
+- Run `npm run lint`, `npm run test:component`, `npm run test:e2e`, `npm run build`, and
+  `npm run validate:export` for production-facing changes.
+- Keep only visitor-facing files in `public/`; source and archival figures belong in the repository-level
+  `context/` directories.
+- Do not expose the submitted HyperMech proposal until its outcome or approved public wording is available.

@@ -5,20 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/serve-static.mjs",
     "lint": "eslint",
-    "test": "npm run test:component && npm run test:e2e",
+    "validate:export": "node scripts/validate-static-export.mjs",
+    "test": "npm run test:component && npm run build && npm run validate:export && npm run test:e2e",
     "test:component": "vitest run",
     "test:component:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:report": "playwright show-report",
-    "test:ci": "npm run lint && npm run test:component && npm run test:e2e && npm run build"
+    "test:ci": "npm run lint && npm run test:component && npm run build && npm run validate:export && npm run test:e2e"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.2.12",
-    "@types/mdx": "^2.0.14",
     "@xyflow/react": "^12.11.2",
     "framer-motion": "^12.43.0",
     "lucide-react": "^1.28.0",

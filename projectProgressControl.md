@@ -31,13 +31,15 @@ Task states:
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
+- **Static export:** 78 files / 7.39 MiB, below the automated 12 MiB budget
 - **TypeScript:** passing through `next build`
 - **Local route check:** all four routes respond successfully; `/ddcf` returns HTTP 200 after the current implementation
 - **Lint:** passing
 - **Automated tests:** 4 component tests and 25 Playwright route, responsive, navigation, and accessibility tests
   passing
-- **CI/CD:** GitHub Actions quality, testing, static build, and Pages artifact packaging pass remotely; final Pages
-  deployment is blocked only by the repository's legacy `master` publishing restriction
+- **CI/CD:** GitHub Actions runs lint, component tests, a production static build, export/link validation, and
+  Playwright against the built artifact before packaging Pages; final deployment is blocked only by the
+  repository's legacy `master` publishing restriction
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
 - **Content coverage audit:** completed; prioritized editorial gaps are documented in
   `context-in-text/content_gap_audit_2026-07-30.md`
@@ -128,20 +130,25 @@ Task states:
 
 ### P2 — Documentation, Dependencies, and Assets
 
-- [ ] Reconcile stale route checklists in `frontend/src/app/agent_instructions.md`.
-- [ ] Remove references to missing `summaryContext.md` and `ModernWebPage.md`.
-- [ ] Replace the generic Next.js README with project-specific setup and architecture documentation.
-- [ ] Review unused MDX, Lucide, React Flow, and Framer Motion dependencies after DDCF implementation.
+- [x] Reconcile stale route checklists in `frontend/src/app/agent_instructions.md`.
+- [x] Remove references to missing `summaryContext.md` and `ModernWebPage.md`.
+- [x] Replace the generic Next.js README with project-specific setup and architecture documentation.
+- [x] Review unused MDX, Lucide, React Flow, and Framer Motion dependencies after DDCF implementation. Removed the
+  four unused MDX packages; retained Lucide, React Flow, and Framer Motion because they are actively imported.
 - [!] Resolve the three high-severity production advisories reported by `npm audit --omit=dev` for transitive
-  `postcss` and `sharp` versions. npm currently proposes an unsafe breaking downgrade to Next.js 9, so do not run
-  `npm audit fix --force`; re-evaluate against a compatible Next.js/sharp update.
-- [ ] Review unused images and remove or integrate them.
-- [~] Optimize large raster assets and verify production delivery sizes.
+  `postcss` and `sharp` versions. Next.js 16.2.12 remains the latest stable release and pins the affected
+  dependencies; npm still proposes an unsafe downgrade to Next.js 9.3.3. The deployed site is static and does not
+  execute these packages at request time, so retain the supported dependency graph and re-evaluate on the next
+  compatible Next.js release.
+- [x] Review unused images and remove or integrate them.
+- [x] Optimize large raster assets and verify production delivery sizes.
 - [x] Serve WebP variants of the four heaviest referenced scientific figures, reducing their combined transfer
   size from 4,362,574 bytes to 772,102 bytes (82.3%) while preserving the corrected PNG sources.
 - [x] Add a responsive `sizes` value to the filled `model_hw.png` image.
 - [x] Eager-load the above-the-fold `contact_across_scales.png` LCP image and provide responsive sizes.
-- [ ] Remove unused starter SVGs and unused `src/app/page.module.css`.
+- [x] Remove unused starter SVGs and unused `src/app/page.module.css`.
+- [!] Restore a direct `soft-contact` software link only if a public repository URL is confirmed. The documented
+  GitHub URL currently returns 404 and was removed from the public interface.
 
 ### P2 — Deployment Readiness
 
@@ -153,10 +160,14 @@ Task states:
   `master` branch.
 - [!] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions. The available
   Git credential can push code but does not have the administrative Pages permission required for this setting.
-- [ ] Configure production environment and deployment checks.
-- [ ] Perform a final content, browser, performance, and link audit.
-- [!] Publish the validated project through a private production deployment; awaiting explicit authorization to
-  copy the repository to the hosting provider's private source repository.
+- [x] Pause automatic Pages deployment while the source switch is blocked; pushes still validate and package the
+  site, while the final deploy job requires a deliberate GitHub `workflow_dispatch`.
+- [x] Configure the production origin and automated pre-deployment export checks.
+- [~] Perform a final content, browser, performance, and link audit. Local routes, responsive layouts,
+  accessibility, internal references, external URLs, 404 behavior, static caching, and artifact size are verified;
+  repeat the production-only checks after Pages is enabled.
+- [!] Publish the validated project through GitHub Pages; awaiting repository-administrator access to change the
+  publishing source from legacy `master` to GitHub Actions.
 
 ## Completed Work
 
@@ -182,6 +193,55 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — Documentation, Dependency, Asset, and Pre-Deployment Cleanup Completed
+
+- Replaced the generic Next.js README with project-specific installation, architecture, content-source,
+  static-export, testing, environment, and GitHub delivery documentation.
+- Reconciled the frontend and App Router agent instructions with all four completed routes, the real
+  `context-in-text/` source hierarchy, current validation requirements, and the Pages permission gate.
+- Removed the unused `@mdx-js/loader`, `@mdx-js/react`, `@next/mdx`, and `@types/mdx` packages and refreshed the
+  npm lockfile. Confirmed Lucide, React Flow, and Framer Motion remain active application dependencies.
+- Re-ran `npm audit --omit=dev` against the official registry:
+  - Three high-severity findings remain through Next.js 16.2.12's pinned PostCSS and Sharp dependencies.
+  - Next.js 16.2.12 is still the latest stable release.
+  - npm proposes an invalid breaking downgrade to Next.js 9.3.3, so no forced fix or unsupported transitive
+    override was applied.
+  - The exported GitHub Pages site has no request-time Node.js runtime and processes no untrusted build inputs,
+    limiting the findings to the trusted build environment until an official compatible update is available.
+- Removed exact public duplicates of figures already preserved in `context/figures/extracted/`, moved the two
+  corrected PNG source files into `context/figures/web-corrected/`, and removed the duplicated `public/og.png`,
+  starter SVGs, and unused root CSS Module.
+- Reduced visitor-facing `public/` content from 13,267,436 bytes to 1,594,911 bytes (88.0%) and the generated
+  static export from 19,422,898 bytes to 7,750,373 bytes (60.1%).
+- Replaced the incompatible `next start` command with a dependency-free static export server supporting route
+  indexes, 404 responses, MIME types, HEAD requests, and immutable caching for hashed Next assets.
+- Added an export validator that checks:
+  - Required routes, metadata resources, CV, WebP figures, and bundled Inter font.
+  - Correct canonical URLs, sitemap, robots, and every local `href`/`src`.
+  - Absence of retired assets and external Google Fonts.
+  - Absence of symlinks and compliance with a 12 MiB Pages artifact budget.
+- Updated Playwright to test the production-like static export instead of the development server. This avoids a
+  reproduced Next.js 16.2.12 Turbopack panic under concurrent cold `/ddcf` requests and makes the browser suite
+  exercise the same artifact that GitHub Pages will receive.
+- Audited 29 external URLs. The only genuine 404 was the documented `soft-contact` repository, which is no longer
+  public; its card was removed while retaining the verified GitHub profile and DDCF dataset links. DOI publisher
+  403 responses and EPFL rate-limit 429 responses were retained because their canonical targets remain valid.
+- Updated GitHub Actions so both the quality and Pages packaging paths validate the static export, and browser
+  tests run only after the production artifact is built.
+- Paused the blocked final Pages job behind manual GitHub workflow dispatch. Regular pushes continue to run the
+  complete quality and artifact build without producing an expected deployment failure; once an administrator
+  enables GitHub Actions as the Pages source, one manual run completes publication.
+- Final validation:
+  - Clean `npm ci` installation passed from the updated lockfile.
+  - ESLint passed.
+  - Vitest passed: 2 files, 4 tests.
+  - Next.js 16.2.12 production build and TypeScript validation passed; all routes are static.
+  - Export validation passed: 78 files, 7.39 MiB.
+  - Static server smoke tests returned 200 for all routes and generated resources, 404 for a missing route, and
+    immutable caching for hashed assets.
+  - Playwright passed: 25 route, responsive, navigation, and accessibility tests.
+  - GitHub Actions workflow YAML parsed successfully.
 
 ### 2026-07-30 — GitHub Pages Automation Steps 3–4 Prepared
 

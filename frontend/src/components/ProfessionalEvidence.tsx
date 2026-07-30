@@ -22,12 +22,6 @@ const capabilities = [
 
 const softwareLinks = [
   {
-    label: "Research software",
-    title: "soft-contact",
-    detail: "Compact tools for soft-contact and lubrication research.",
-    href: "https://github.com/jgarciasuarez/soft-contact",
-  },
-  {
     label: "Companion dataset",
     title: "DDCF research data",
     detail: "A citable dataset supporting data-driven friction work.",

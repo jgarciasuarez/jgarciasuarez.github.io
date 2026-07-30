@@ -1,39 +1,29 @@
-# Routing & Pages Agent Instructions
+# App Router Instructions
 
 ## Directives
-1. **App Router**: This project uses Next.js 13+ App Router. All pages must be defined in `page.tsx` files within their respective route directories.
-2. **Layouts**: Use `layout.tsx` for shared UI. The root layout includes `<Navigation />` at the top and `<Footer />` at the bottom, wrapping all page content inside a `.container` div.
-3. **SEO**: Every page must use the Next.js Metadata API to inject proper title and description tags relevant to the researcher's work.
-4. **Structure**: 
-   - `/` → Home/Bio page (assembled from `HeroSection`, `StatsRibbon`, `ResearchPreview`, `EducationTimeline`).
-   - `/research` → Research Portfolio (scaffolded, pending detailed implementation).
-   - `/teaching` → Teaching Portfolio (scaffolded, pending detailed implementation).
-   - `/ddcf` → Data-Driven Computational Friction interactive hub (scaffolded, pending React Flow implementation).
-5. **Data/Content**: Extract text from `../../summaryContext.md` for page content.
 
-## Page Implementation Status
-| Route | Status | Components Used |
+1. Define routes with `page.tsx` files and shared UI with `layout.tsx`.
+2. Preserve the root Navigation, main-content landmark, Footer, skip link, metadata, and structured data.
+3. Keep every route statically exportable; do not introduce request-time server features.
+4. Use route metadata and the helpers in `src/lib/site.ts` for canonical URLs.
+5. Source factual copy from the repository-level `context-in-text/` files documented in
+   `../../../projectProgressControl.md`.
+
+## Implemented routes
+
+| Route | Purpose | Status |
 |---|---|---|
-| `/` (Home) | ✅ Complete | HeroSection, StatsRibbon, ResearchPreview, EducationTimeline |
-| `/research` | ✅ Complete | Full research portfolio with three themes, sub-topics, key publications, and a DDCF CTA |
-| `/teaching` | ✅ Complete | Teaching philosophy, methods, graduate classes, experience timeline, and mentorship stats |
-| `/ddcf` | 🟡 Scaffolded | Placeholder for React Flow canvas |
+| `/` | Biography, evidence, metrics, research preview, education, and collaboration | Complete |
+| `/research` | Three research themes, current directions, foundation, recognition, and publications | Complete |
+| `/teaching` | Philosophy, methods, experience, mentoring evidence, and proposed courses | Complete |
+| `/ddcf` | Interactive Data-Driven Computational Friction project hub | Complete |
 
-## Root Layout Structure
-```
-<html>
-  <body>
-    <div className="container">
-      <Navigation />
-      {children}    ← page content injected here
-      <Footer />
-    </div>
-  </body>
-</html>
-```
+## Generated resources
 
-## State
-- [x] Home page fully implemented with 4 component sections
-- [ ] Research page needs detailed implementation
-- [ ] Teaching page needs detailed implementation
-- [ ] DDCF page needs React Flow integration
+- `/robots.txt` from `robots.ts`.
+- `/sitemap.xml` from `sitemap.ts`.
+- `/opengraph-image.png` from the route image file.
+- `/404.html` through static export.
+
+All four routes, generated resources, canonical URLs, and the export size are checked by
+`scripts/validate-static-export.mjs`.
