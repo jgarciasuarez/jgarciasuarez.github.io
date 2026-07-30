@@ -242,6 +242,8 @@ Task states:
     immutable caching for hashed assets.
   - Playwright passed: 25 route, responsive, navigation, and accessibility tests.
   - GitHub Actions workflow YAML parsed successfully.
+  - Remote workflow run `30567940320` passed both `quality` and `build-pages`; `deploy-pages` was skipped as
+    intended while the administrative Pages setting remains paused.
 
 ### 2026-07-30 — GitHub Pages Automation Steps 3–4 Prepared
 
