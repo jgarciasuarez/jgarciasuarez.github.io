@@ -152,6 +152,17 @@ Task states:
 
 ## Change Log
 
+### 2026-07-30 — CV Download Button Visual Adjustment Completed
+
+- Reduced the prominence of the Bio CV download button.
+- Replaced its primary cyan treatment with the subdued violet used by the Seville accent.
+- Preserved a clear hover state using the same violet family.
+- Validation:
+  - ESLint: passed with zero errors and zero warnings.
+  - Next.js production build and TypeScript: passed.
+  - Static generation: passed for all ten outputs.
+  - Local development server: remains active and compiled the CSS change successfully.
+
 ### 2026-07-30 — Accessibility and SEO P1 Started
 
 - Started the remaining accessibility and SEO work.
