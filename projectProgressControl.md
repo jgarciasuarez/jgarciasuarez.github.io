@@ -122,7 +122,8 @@ Task states:
 - [ ] Make font delivery deterministic or document the Google Fonts network requirement.
 - [ ] Configure production environment and deployment checks.
 - [ ] Perform a final content, browser, performance, and link audit.
-- [~] Publish the validated project through a private production deployment.
+- [!] Publish the validated project through a private production deployment; awaiting explicit authorization to
+  copy the repository to the hosting provider's private source repository.
 
 ## Completed Work
 
@@ -246,5 +247,6 @@ Task states:
 - Added the social card to the application and configured site-specific Open Graph and X metadata.
 - Created the Sites project association and recorded only its non-secret project identifier in
   `frontend/.openai/hosting.json`.
-- Started the private production-publication task; final status remains pending until the exact validated source is
-  versioned and deployed.
+- Prepared the private production-publication task.
+- Publication is paused before source transfer because exporting the complete repository to the hosting provider
+  requires explicit user authorization. No repository content has been sent to that host.
