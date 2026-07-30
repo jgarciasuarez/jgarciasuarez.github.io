@@ -158,6 +158,8 @@ Task states:
 - [x] Add and remotely validate the GitHub Pages deployment workflow through artifact packaging.
 - [x] Mirror `agentic_web_design` into `jgarciasuarez/jgarciasuarez.github.io` without modifying its legacy
   `master` branch.
+- [x] Preserve the complete legacy website in the dedicated `legacy-site-2026` branch, pointing to the unchanged
+  `master` commit `dbd06a54b795483e020702ef2b2f18e53fd4626e`.
 - [!] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions. The available
   Git credential can push code but does not have the administrative Pages permission required for this setting.
 - [x] Pause automatic Pages deployment while the source switch is blocked; pushes still validate and package the
@@ -193,6 +195,13 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — Legacy Website Branch Preserved
+
+- Created `legacy-site-2026` in `jgarciasuarez/jgarciasuarez.github.io` as an exact branch copy of the existing
+  `master` commit `dbd06a54b795483e020702ef2b2f18e53fd4626e`.
+- Kept `master` unchanged and left it as the active GitHub Pages source, so the currently published website was
+  not replaced or interrupted.
 
 ### 2026-07-30 — Documentation, Dependency, Asset, and Pre-Deployment Cleanup Completed
 
