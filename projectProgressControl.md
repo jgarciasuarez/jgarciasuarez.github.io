@@ -36,6 +36,8 @@ Task states:
 - **Automated tests:** not implemented
 - **CI/CD:** not configured
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
+- **Content coverage audit:** completed; prioritized editorial gaps are documented in
+  `context-in-text/content_gap_audit_2026-07-30.md`
 
 ## Prioritized Backlog
 
@@ -99,6 +101,21 @@ Task states:
 - [x] Set `metadataBase` with the verified academic website as a configurable fallback until the final production
   domain is confirmed.
 
+### P1 — Content Coverage Decision Gate Before P2
+
+- [x] Compare the complete context documentation with the content implemented on all four primary routes.
+- [x] Document coverage, omissions, source conflicts, relevance, and inclusion recommendations in
+  `context-in-text/content_gap_audit_2026-07-30.md`.
+- [ ] Correct stale embedded publication years in the Research and DDCF imagery.
+- [ ] Add the 2026 “A matter of shape” publication and a clear route to the complete publication record.
+- [ ] Add a compact technical-capabilities and verified research-software block.
+- [ ] Add teaching testimonials and surface publication-linked mentoring outcomes.
+- [ ] Place the official SNSF mark in the interactive central DDCF node, as required by `goal.md`.
+- [ ] Add the X profile directly to the Bio professional links.
+- [!] Decide whether to include the recommended research roadmap, seismic/geotechnical foundation, selective
+  recognition and leadership, and collaboration CTA before starting P2.
+- [!] Keep the submitted HyperMech proposal unpublished until its outcome or preferred public wording is confirmed.
+
 ### P2 — Testing and Continuous Integration
 
 - [ ] Add component and route smoke tests.
@@ -151,6 +168,28 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — Cross-Project Content Coverage Audit
+
+- Compared the May 2026 CV, research statement, teaching statement, project goal, DDCF specification, supervised
+  project records, figure notes, and supporting bibliography with all content implemented on `/`, `/research`,
+  `/teaching`, and `/ddcf`.
+- Created `context-in-text/content_gap_audit_2026-07-30.md` with a coverage matrix and prioritized recommendations.
+- Confirmed strong coverage of the core identity, three research pillars, teaching narrative, and DDCF programme.
+- Identified the highest-value missing signals:
+  - Latest 2026 research output and a route to the complete publication record.
+  - Technical capabilities and verified research software.
+  - Teaching testimonials and publication-linked mentoring outcomes.
+  - The forward research programme and the seismic/geotechnical foundation.
+  - Selective recognition, invited talks, and leadership.
+- Identified an explicit `goal.md` gap: the SNSF logo is on the DDCF page but not inside the central interactive node.
+- Identified an explicit Bio gap: X is available in the Footer but not in the Bio links requested by `goal.md`.
+- Identified stale publication years embedded in three visible images and added their correction ahead of new
+  content work.
+- Kept low-value or time-sensitive CV material out of the recommended public surface, including the full student
+  roster, full service lists, society memberships, peer-review lists, and the unresolved submitted HyperMech
+  proposal.
+- No public website copy or layout was changed during this audit.
 
 ### 2026-07-30 — CV Download Button Visual Adjustment Completed
 
