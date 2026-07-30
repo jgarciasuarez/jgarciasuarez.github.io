@@ -17,7 +17,7 @@ const themes: ThemeCard[] = [
   {
     title: 'Interface Mechanics',
     subtitle: 'Across Scales',
-    description: 'From nanoscale wear and molecular dynamics to geological-scale friction — bridging nine orders of magnitude.',
+    description: 'From nanoscale wear and molecular dynamics to geological-scale friction — bridging twelve orders of magnitude.',
     image: '/images/contact_across_scales.png',
     href: '/research',
     accent: 'var(--accent-primary)',

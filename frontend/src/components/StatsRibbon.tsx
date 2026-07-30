@@ -7,7 +7,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { value: '24', label: 'Publications' },
-  { value: '~1M CHF', label: 'SNSF Ambizione Grant' },
+  { value: 'CHF 830k', label: 'SNSF Ambizione Grant' },
   { value: 'Ph.D.', label: 'Caltech, 2020' },
   { value: '3', label: 'Research Themes' },
 ];

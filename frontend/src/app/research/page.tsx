@@ -92,7 +92,7 @@ const themes: Theme[] = [
     ],
     keyPubs: [
       { authors: 'Garcia-Suarez', title: 'Harmonic decomposition of the trace of 1D transfer matrices in layered media', journal: 'J. Mech. Phys. Solids', year: '2022' },
-      { authors: 'González-Carbajal, Lemm, Garcia-Suarez', title: 'On the lowest-frequency bandgap of 1D phononic crystals', journal: 'Eur. J. Mech. A/Solids', year: '2024' },
+      { authors: 'González-Carbajal, Lemm, Garcia-Suarez', title: 'On the lowest-frequency bandgap of 1D phononic crystals', journal: 'Eur. J. Mech. A/Solids', year: '2025' },
     ],
   },
   {
@@ -121,7 +121,7 @@ const themes: Theme[] = [
     ],
     keyPubs: [
       { authors: 'Wattel, Molinari, Ortiz, Garcia-Suarez', title: 'Mesh d-refinement: a data-based computational framework', journal: 'Mech. of Materials', year: '2023' },
-      { authors: 'Cortes, Sangiorgio, Garcia-Suarez', title: 'Phase-space iterative solvers', journal: 'Submitted to Comput. Mech.', year: '2024' },
+      { authors: 'Cortes, Sangiorgio, Garcia-Suarez', title: 'Phase-space iterative solvers', journal: 'Computational Mechanics', year: '2025' },
     ],
   },
 ];
@@ -200,7 +200,7 @@ export default function Research() {
               {theme.keyPubs.map((pub, k) => (
                 <li key={k} className={styles.pubItem}>
                   <span className={styles.pubAuthors}>{pub.authors}</span>
-                  <span className={styles.pubTitle}>"{pub.title}"</span>
+                  <span className={styles.pubTitle}>“{pub.title}”</span>
                   <span className={styles.pubJournal}>{pub.journal}, {pub.year}</span>
                 </li>
               ))}
