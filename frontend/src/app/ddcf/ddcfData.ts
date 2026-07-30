@@ -69,7 +69,7 @@ export const ddcfItems: Record<DDCFItemId, DDCFItem> = {
       "Multiscale simulation",
       "Differentiable mechanics",
     ],
-    image: "/images/DDCF_collage_corrected.png",
+    image: "/images/DDCF_collage_corrected.webp",
     imageAlt:
       "Collage showing the experimental and computational scales studied in DDCF.",
     accent: "cyan",
@@ -115,7 +115,7 @@ export const ddcfItems: Record<DDCFItemId, DDCFItem> = {
       "Multiple sampling frequencies",
       "Laboratory-to-crustal generalization",
     ],
-    image: "/images/datasets.png",
+    image: "/images/datasets.webp",
     imageAlt:
       "Dataset visualisation for learning relationships between loading histories and friction responses.",
     accent: "blue",

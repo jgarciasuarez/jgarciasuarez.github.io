@@ -54,7 +54,7 @@ const themes: Theme[] = [
     subtitle: 'Across Scales',
     description:
       'Interfaces set durability, feel, and failure: microscale wear dictates machinery lifetime; thin-film lubrication controls whether soft bodies make or avoid contact; frictional weakening governs rupture of geophysical and mechanical interfaces. Our work spans twelve orders of magnitude in length scales — from nanoscale molecular dynamics to geological-scale friction.',
-    heroImage: '/images/contact_across_scales_corrected.png',
+    heroImage: '/images/contact_across_scales_corrected.webp',
     accent: '#00e5ff',
     subTopics: [
       {
@@ -87,7 +87,7 @@ const themes: Theme[] = [
     subtitle: 'Heterogeneous Media',
     description:
       'Layered media underpin photonic, phononic and acoustic devices requiring robust bandgap placement and broadband transmission or absorption. We develop a physics-agnostic prediction framework exploiting the Lie-group structure of transfer matrices — one mathematical framework, many wave physics.',
-    heroImage: '/images/portfolio_waves.png',
+    heroImage: '/images/portfolio_waves.webp',
     accent: '#a983ff',
     subTopics: [
       {
@@ -118,7 +118,7 @@ const themes: Theme[] = [
     subtitle: 'Enabling Themes I & II',
     description:
       'We develop computational tools as needed to address specific problems in interface mechanics and wave propagation — from physics-informed ML and GPU-bound optimization to mesh d-refinement strategies and phase-space iterative solvers.',
-    heroImage: '/images/DDCF_collage_corrected.png',
+    heroImage: '/images/DDCF_collage_corrected.webp',
     accent: '#ff6b6b',
     subTopics: [
       {
@@ -160,7 +160,7 @@ export default function Research() {
       {/* Scale bar */}
       <div className={styles.scaleBar}>
         <Image
-          src="/images/contact_across_scales_corrected.png"
+          src="/images/contact_across_scales_corrected.webp"
           alt="Research spanning 12 orders of magnitude in length scales"
           width={1200}
           height={200}

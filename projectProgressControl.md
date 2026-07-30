@@ -135,15 +135,19 @@ Task states:
   `postcss` and `sharp` versions. npm currently proposes an unsafe breaking downgrade to Next.js 9, so do not run
   `npm audit fix --force`; re-evaluate against a compatible Next.js/sharp update.
 - [ ] Review unused images and remove or integrate them.
-- [ ] Optimize large raster assets and verify production delivery sizes.
+- [~] Optimize large raster assets and verify production delivery sizes.
+- [x] Serve WebP variants of the four heaviest referenced scientific figures, reducing their combined transfer
+  size from 4,362,574 bytes to 772,102 bytes (82.3%) while preserving the corrected PNG sources.
 - [x] Add a responsive `sizes` value to the filled `model_hw.png` image.
 - [x] Eager-load the above-the-fold `contact_across_scales.png` LCP image and provide responsive sizes.
 - [ ] Remove unused starter SVGs and unused `src/app/page.module.css`.
 
 ### P2 — Deployment Readiness
 
-- [ ] Select and document the hosting target.
-- [ ] Make font delivery deterministic or document the Google Fonts network requirement.
+- [x] Select GitHub Pages as the low-cost hosting target, with GitHub Actions as the only deployment controller.
+- [x] Make font delivery deterministic by self-hosting the official Inter variable font and its license.
+- [x] Configure Next.js to generate a trailing-slash static export in `frontend/out`.
+- [ ] Add the GitHub Pages deployment workflow after the target repository and Pages source are ready.
 - [ ] Configure production environment and deployment checks.
 - [ ] Perform a final content, browser, performance, and link audit.
 - [!] Publish the validated project through a private production deployment; awaiting explicit authorization to
@@ -173,6 +177,28 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — GitHub Pages Preparation Steps 1–2 Completed
+
+- Configured Next.js with `output: "export"`, trailing-slash routes, and unoptimized static image delivery so
+  `npm run build` now produces a GitHub Pages-compatible site in `frontend/out`.
+- Declared the generated `robots.txt` and `sitemap.xml` routes as static, as required by Next.js 16 for static
+  export mode.
+- Removed the production-build dependency on Google Fonts by adding the official Inter 4.66 variable WOFF2 file,
+  retaining its SIL Open Font License, and loading it through `next/font/local`.
+- Added visually verified WebP variants for the four largest referenced scientific figures and updated Home,
+  Research, and DDCF to serve them. Their combined browser payload fell from 4,362,574 bytes to 772,102 bytes,
+  an 82.3% reduction; corrected PNG sources remain available for future asset curation.
+- Validation completed:
+  - ESLint passed.
+  - Vitest passed: 2 files, 4 tests.
+  - Playwright passed: 25 route, responsive, and accessibility tests.
+  - Next.js 16.2.12 generated all application routes, `robots.txt`, `sitemap.xml`, and the Open Graph image as
+    static content without fetching Google Fonts.
+  - A standalone static HTTP server returned HTTP 200 for `/`, `/research/`, `/teaching/`, `/ddcf/`,
+    `/robots.txt`, and `/sitemap.xml`; the exported HTML referenced the bundled Inter font and WebP figures.
+- GitHub repository migration, Pages configuration, and the deployment workflow remain deliberately pending for
+  the next steps.
 
 ### 2026-07-30 — P2 Automated Quality Gate Completed
 
