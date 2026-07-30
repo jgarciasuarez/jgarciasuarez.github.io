@@ -8,11 +8,11 @@
   
   --text-primary: #f8f9fa;
   --text-secondary: #a0aabf;
-  --text-muted: #647087;
+  --text-muted: #8996aa;
   
   /* Accents */
   --accent-primary: #00e5ff; /* Neon Cyan */
-  --accent-secondary: #7e57c2; /* Deep Purple */
+  --accent-secondary: #a983ff; /* Accessible Violet */
   --accent-glow: rgba(0, 229, 255, 0.2);
   
   /* Status/Semantic */

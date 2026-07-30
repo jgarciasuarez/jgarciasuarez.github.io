@@ -88,7 +88,7 @@ const themes: Theme[] = [
     description:
       'Layered media underpin photonic, phononic and acoustic devices requiring robust bandgap placement and broadband transmission or absorption. We develop a physics-agnostic prediction framework exploiting the Lie-group structure of transfer matrices — one mathematical framework, many wave physics.',
     heroImage: '/images/portfolio_waves.png',
-    accent: '#7e57c2',
+    accent: '#a983ff',
     subTopics: [
       {
         title: 'Acoustics',
@@ -196,6 +196,7 @@ export default function Research() {
                 alt={`${theme.title} research visual`}
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
+                loading={idx === 0 ? 'eager' : 'lazy'}
                 style={{ objectFit: 'contain' }}
                 className={styles.themeImage}
               />

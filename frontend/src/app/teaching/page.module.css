@@ -117,7 +117,7 @@
 
 .feedbackGrid footer {
   margin-top: 1rem;
-  color: #7f8ba0;
+  color: #8996aa;
   font-family: var(--font-mono);
   font-size: 0.58rem;
   letter-spacing: 0.05em;
@@ -199,7 +199,7 @@
 }
 
 .resourceType {
-  color: #7f8ba0;
+  color: #8996aa;
   font-family: var(--font-mono);
   font-size: 0.58rem;
   letter-spacing: 0.04em;

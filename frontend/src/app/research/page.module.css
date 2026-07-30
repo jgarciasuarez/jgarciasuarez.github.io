@@ -69,7 +69,7 @@
   font-weight: 900;
   line-height: 1;
   color: var(--theme-accent, var(--accent-primary));
-  opacity: 0.25;
+  opacity: 0.75;
   letter-spacing: -0.05em;
   min-width: 60px;
 }
@@ -378,7 +378,7 @@
 }
 
 .foundationLinks span:first-child {
-  color: #7f8ba0;
+  color: #8996aa;
   font-family: var(--font-mono);
   font-size: 0.58rem;
   letter-spacing: 0.04em;

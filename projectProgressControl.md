@@ -33,8 +33,10 @@ Task states:
 - **TypeScript:** passing through `next build`
 - **Local route check:** all four routes respond successfully; `/ddcf` returns HTTP 200 after the current implementation
 - **Lint:** passing
-- **Automated tests:** not implemented
-- **CI/CD:** not configured
+- **Automated tests:** 4 component tests and 25 Playwright route, responsive, navigation, and accessibility tests
+  passing
+- **CI/CD:** GitHub Actions quality workflow configured for lint, component tests, Playwright tests, and production
+  build; remote execution awaits the next push
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
 - **Content coverage audit:** completed; prioritized editorial gaps are documented in
   `context-in-text/content_gap_audit_2026-07-30.md`
@@ -118,10 +120,10 @@ Task states:
 
 ### P2 — Testing and Continuous Integration
 
-- [ ] Add component and route smoke tests.
-- [ ] Add responsive end-to-end checks for the four primary routes.
-- [ ] Add accessibility checks.
-- [ ] Add CI that runs lint, tests, and production build.
+- [x] Add component and route smoke tests.
+- [x] Add responsive end-to-end checks for the four primary routes.
+- [x] Add accessibility checks.
+- [x] Add CI that runs lint, tests, and production build.
 
 ### P2 — Documentation, Dependencies, and Assets
 
@@ -129,6 +131,9 @@ Task states:
 - [ ] Remove references to missing `summaryContext.md` and `ModernWebPage.md`.
 - [ ] Replace the generic Next.js README with project-specific setup and architecture documentation.
 - [ ] Review unused MDX, Lucide, React Flow, and Framer Motion dependencies after DDCF implementation.
+- [!] Resolve the three high-severity production advisories reported by `npm audit --omit=dev` for transitive
+  `postcss` and `sharp` versions. npm currently proposes an unsafe breaking downgrade to Next.js 9, so do not run
+  `npm audit fix --force`; re-evaluate against a compatible Next.js/sharp update.
 - [ ] Review unused images and remove or integrate them.
 - [ ] Optimize large raster assets and verify production delivery sizes.
 - [x] Add a responsive `sizes` value to the filled `model_hw.png` image.
@@ -168,6 +173,41 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-30 — P2 Automated Quality Gate Completed
+
+- Added Vitest, React Testing Library, Playwright, and axe-core as development dependencies while preserving the
+  npm lockfile.
+- Added four component tests covering:
+  - Verified publication and grant metrics.
+  - Verified software, dataset, and recognition links.
+  - Active-route semantics in the primary navigation.
+  - Mobile-menu open, Escape dismissal, and focus restoration.
+- Added 25 Chromium E2E tests covering:
+  - HTTP rendering and primary content for `/`, `/research`, `/teaching`, and `/ddcf`.
+  - Horizontal-overflow protection for all four routes at 390, 768, 1280, and 1536 px widths.
+  - Visibility of all primary navigation routes in the mobile menu.
+  - Automated WCAG 2 A/AA and WCAG 2.1 A/AA scans on all four routes.
+- The first accessibility run exposed insufficient contrast in muted copy and the secondary violet. Raised the
+  shared muted color, introduced an accessible violet, corrected remaining local muted colors, and increased the
+  visibility of Research theme numbers. The complete accessibility suite then passed with zero automatically
+  detectable violations.
+- Added eager loading to the first Research theme image after the browser suite identified it as an LCP candidate.
+- Added `.github/workflows/quality.yml` to run dependency installation, Chromium setup, lint, component tests,
+  route/responsive/accessibility tests, and the production build on pull requests and pushes to
+  `agentic_web_design`. Failed runs retain the Playwright report for seven days.
+- Added local scripts for component watch mode, E2E execution/reporting, the complete test suite, and the CI quality
+  gate.
+- Final validation:
+  - ESLint passed.
+  - Vitest passed: 2 files, 4 tests.
+  - Playwright passed: 25 tests.
+  - Next.js 16.2.12 production build and TypeScript validation passed; all four primary routes were generated.
+  - GitHub Actions workflow YAML parsed successfully.
+- `npm audit --omit=dev` reported three high-severity production advisories through the current Next.js transitive
+  `postcss` and `sharp` versions. The proposed forced fix is a breaking downgrade to Next.js 9 and was deliberately
+  not applied; a compatible framework/dependency update is now tracked separately.
+- Deployment and the separate P2 documentation/dependency cleanup remain outside this testing iteration.
 
 ### 2026-07-30 — Pre-P2 Content Enrichment Completed
 

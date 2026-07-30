@@ -127,7 +127,7 @@
 .trajectoryMeta {
   display: block;
   margin-bottom: 0.3rem;
-  color: #748198;
+  color: #8996aa;
   font-size: 0.56rem;
 }
 
@@ -193,7 +193,7 @@
 .links small {
   overflow: hidden;
   margin-top: 0.12rem;
-  color: #6f7c91;
+  color: #8996aa;
   font-size: 0.6rem;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -202,7 +202,7 @@
 .externalIcon {
   flex: 0 0 auto;
   margin-left: auto;
-  color: #647087;
+  color: #8996aa;
 }
 
 @media (max-width: 900px) {
