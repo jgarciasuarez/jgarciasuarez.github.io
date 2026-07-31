@@ -239,6 +239,10 @@ Task states:
   - Playwright: 29 of 29 tests passed.
   - Browser audit at 1280 × 720: the viewer remained within the viewport, focused its close control, and rendered
     the 3,368 × 2,382 DDCF collage with `object-fit: contain`.
+  - GitHub Actions run `30626609021`: quality, Pages packaging, and Pages deployment passed for commit
+    `b9881fcbe98e2033b72a52df363062a3812794b0`.
+  - Published staging audit at 1280 × 720: the full-image viewer stayed within 32 px viewport margins, rendered the
+    complete collage with `object-fit: contain`, and returned focus to the labelled image trigger when closed.
 
 ### 2026-07-31 — DDCF Dialog Overflow Regression Fixed
 
