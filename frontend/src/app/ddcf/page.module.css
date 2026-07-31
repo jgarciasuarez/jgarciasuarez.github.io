@@ -407,8 +407,10 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-rows: minmax(0, 1fr);
   width: min(1080px, 100%);
   max-height: min(820px, calc(100vh - 4rem));
+  max-height: min(820px, calc(100dvh - 4rem));
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--node-accent) 34%, transparent);
   border-radius: 24px;
@@ -445,7 +447,7 @@
 
 .dialogMedia {
   position: relative;
-  min-height: 520px;
+  min-height: 0;
   overflow: hidden;
   background: #0d1016;
 }
@@ -475,8 +477,17 @@
 }
 
 .dialogContent {
+  min-width: 0;
+  min-height: 0;
   padding: clamp(2.2rem, 5vw, 4.25rem);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.dialogContent:focus-visible {
+  outline: 2px solid var(--node-accent);
+  outline-offset: -4px;
 }
 
 .dialogKicker {

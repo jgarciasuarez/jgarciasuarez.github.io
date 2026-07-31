@@ -117,7 +117,12 @@ export default function DDCFDialog({
               <span className={styles.dialogEyebrow}>{item.label}</span>
             </div>
 
-            <div className={styles.dialogContent}>
+            <div
+              className={styles.dialogContent}
+              role="region"
+              aria-label={`${item.title} details content`}
+              tabIndex={0}
+            >
               <p className={styles.dialogKicker}>
                 {item.id === "ddcf" ? "Project overview" : "Research direction"}
               </p>

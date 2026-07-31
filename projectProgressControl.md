@@ -36,7 +36,8 @@ Task states:
 - **TypeScript:** passing through `next build`
 - **Local route check:** all four routes respond successfully; `/ddcf` returns HTTP 200 after the current implementation
 - **Lint:** passing
-- **Automated tests:** 4 component tests and 25 Playwright route, responsive, navigation, and accessibility tests
+- **Automated tests:** 4 component tests and 27 Playwright route, responsive, navigation, dialog-interaction, and
+  accessibility tests
   passing
 - **CI/CD:** GitHub Actions runs lint, component tests, a production static build, export/link validation, and
   Playwright against the built artifact before packaging Pages; final deployment is blocked only by the
@@ -88,6 +89,8 @@ Task states:
 - [x] Validate `/`, `/research`, `/teaching`, and `/ddcf` at mobile, tablet, laptop, and desktop widths.
 - [x] Verify image delivery, text containment, and absence of horizontal overflow at each breakpoint.
 - [x] Confirm sticky navigation and route layout behavior on short screens.
+- [x] Keep every DDCF detail dialog within the available viewport and make overflowing content reachable by
+  keyboard, pointer wheel, and touch at desktop and mobile widths.
 
 ### P1 — Portfolio Content and Relevant Links
 
@@ -207,6 +210,29 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-31 — DDCF Dialog Overflow Regression Fixed
+
+- Reproduced the reported failure on the published staging site at 1280 × 720.
+- Measured a 656 px-high dialog whose content column retained a 1,333 px intrinsic height. The grid item could not
+  shrink, while the parent dialog clipped the excess with `overflow: hidden`, leaving no usable scroll surface.
+- Constrained the dialog's grid row and allowed its media and content children to shrink inside the available
+  dynamic viewport height.
+- Made the content column the explicit scroll surface with contained overscroll and stable scrollbar space.
+- Added a named, keyboard-focusable content region and a visible focus treatment so keyboard users can scroll the
+  complete description.
+- Preserved the existing full-dialog mobile scroll pattern below 850 px.
+- Added Playwright regression coverage that opens all five DDCF dialogs at 1280 × 720 and verifies:
+  - The content column remains inside the visible dialog.
+  - Keyboard and pointer-wheel scrolling reach the end of overflowing content.
+  - Escape closes each dialog and restores focus to its originating node.
+  - The complete central-project content and final resource remain reachable at 390 × 844.
+- Validation:
+  - ESLint: passed with zero errors and zero warnings.
+  - Component tests: 2 files / 4 tests passed.
+  - Staging production build and TypeScript: passed.
+  - Static export validation: passed for 78 files / 7.39 MiB with staging canonical and noindex policy.
+  - Playwright: 27 of 27 tests passed.
 
 ### 2026-07-31 — Carlos GitHub Pages Staging Published
 
