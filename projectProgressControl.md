@@ -41,6 +41,8 @@ Task states:
 - **CI/CD:** GitHub Actions runs lint, component tests, a production static build, export/link validation, and
   Playwright against the built artifact before packaging Pages; final deployment is blocked only by the
   repository's legacy `master` publishing restriction
+- **Staging:** `https://carloschd24.github.io` is published from GitHub Actions with staging canonicals and
+  search-engine indexing disabled
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
 - **Content coverage audit:** completed; prioritized editorial gaps are documented in
   `context-in-text/content_gap_audit_2026-07-30.md`
@@ -168,7 +170,7 @@ Task states:
 - [x] Validate both a noindex staging export and an indexable production export before configuring Carlos Pages.
 - [x] Mirror `agentic_web_design` into `CarlosCHD24/CarlosCHD24.github.io`, configure the staging repository
   variables, and make the branch the repository default.
-- [ ] Switch Carlos Pages from the legacy `main` source to GitHub Actions and publish the validated noindex staging
+- [x] Switch Carlos Pages from the legacy `main` source to GitHub Actions and publish the validated noindex staging
   site at `https://carloschd24.github.io`.
 - [!] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions. The available
   Git credential can push code but does not have the administrative Pages permission required for this setting.
@@ -205,6 +207,27 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-31 — Carlos GitHub Pages Staging Published
+
+- Changed `CarlosCHD24/CarlosCHD24.github.io` from legacy branch publishing to GitHub Actions.
+- Enabled `PAGES_DEPLOY_ENABLED` only after Pages reported `build_type: workflow`; retained
+  `SITE_URL=https://carloschd24.github.io` and `SITE_INDEXING=false`.
+- Manually dispatched workflow run `30624151922`. Quality, Pages packaging, and deployment all completed
+  successfully, publishing commit `95e8c446469520d9710cdb80bcf0adeb3a2d713d`.
+- Verified the live staging site:
+  - `/`, `/research/`, `/teaching/`, and `/ddcf/` return HTTP 200 with the expected headings and one semantic main
+    landmark.
+  - Canonical and Open Graph origins use `https://carloschd24.github.io`.
+  - Every primary route emits `noindex, nofollow`; `robots.txt` disallows all crawling and does not advertise a
+    sitemap.
+  - The CV, sitemap, and robots resources return their correct content types; a missing route returns HTTP 404.
+  - Browser inspection found no console errors, warnings, or horizontal overflow.
+- Deleted the obsolete remote `main` branch after successful publication. Its original commit
+  `d370ae9ff9ae220f63ffdfe09c09c84e1bcea7c9` remains recoverable from
+  `legacy-site-before-agentic-2026`.
+- Confirmed `agentic_web_design` remains the default branch and Pages remains healthy in workflow mode after the
+  old branch was removed.
 
 ### 2026-07-31 — Carlos Staging Repository Prepared
 
