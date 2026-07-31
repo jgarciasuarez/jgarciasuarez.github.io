@@ -26,8 +26,9 @@ Task states:
 ## Current Verified State
 
 - **Branch:** `agentic_web_design`
-- **Remote tracking:** `agentic_web_design` is synchronized with both `jgarciasuarez/web` and the deployment
-  repository `jgarciasuarez/jgarciasuarez.github.io`
+- **Remote tracking:** `agentic_web_design` is synchronized with `jgarciasuarez/web`, the production deployment
+  repository `jgarciasuarez/jgarciasuarez.github.io`, and the staging repository
+  `CarlosCHD24/CarlosCHD24.github.io`
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
@@ -165,7 +166,7 @@ Task states:
 - [x] Make the Pages workflow portable across the Carlos staging and Joaquin production repositories using
   repository-controlled site origin, indexing, and deployment gates.
 - [x] Validate both a noindex staging export and an indexable production export before configuring Carlos Pages.
-- [ ] Mirror `agentic_web_design` into `CarlosCHD24/CarlosCHD24.github.io`, configure the staging repository
+- [x] Mirror `agentic_web_design` into `CarlosCHD24/CarlosCHD24.github.io`, configure the staging repository
   variables, and make the branch the repository default.
 - [ ] Switch Carlos Pages from the legacy `main` source to GitHub Actions and publish the validated noindex staging
   site at `https://carloschd24.github.io`.
@@ -204,6 +205,24 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-31 — Carlos Staging Repository Prepared
+
+- Added `CarlosCHD24/CarlosCHD24.github.io` as the `staging` Git remote and synchronized
+  `agentic_web_design` at commit `6e4d4b3e72217e4963cb892e5a3f2cbe56f6e7c0`.
+- Configured the staging repository variables as:
+  - `SITE_URL=https://carloschd24.github.io`.
+  - `SITE_INDEXING=false`.
+  - `PAGES_DEPLOY_ENABLED=false`.
+- GitHub Actions run `30623706409` passed the complete quality suite and Pages artifact packaging in the Carlos
+  repository; `deploy-pages` was skipped by the disabled gate.
+- Changed the Carlos repository default branch from `main` to `agentic_web_design` only after the remote preflight
+  passed.
+- Verified that Pages remains in legacy mode and still publishes the unchanged `main` commit
+  `d370ae9ff9ae220f63ffdfe09c09c84e1bcea7c9`. The same commit remains recoverable from
+  `legacy-site-before-agentic-2026`.
+- The next step remains explicit: switch Carlos Pages to GitHub Actions and then enable the deployment gate. No
+  published website changed during this preparation step.
 
 ### 2026-07-31 — Portable Staging Configuration and Local Validation Completed
 
