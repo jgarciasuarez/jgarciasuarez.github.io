@@ -228,6 +228,9 @@ Task states:
   - Playwright passed all 25 route, responsive, navigation, and accessibility checks against the staging export.
   - The Joaquin production build passed TypeScript and static generation; its 78-file, 7.39 MiB export validated
     with `https://jgarciasuarez.github.io` canonicals and indexable crawler behavior.
+  - Final Node 24-compatible remote preflight passed on `jgarciasuarez/web` in run `30623325476`.
+  - Final Pages packaging passed on `jgarciasuarez/jgarciasuarez.github.io` in run `30623326957`; `deploy-pages`
+    was skipped by the disabled repository gate, and the legacy live site remained untouched.
 
 ### 2026-07-30 — Legacy Website Branch Preserved
 
