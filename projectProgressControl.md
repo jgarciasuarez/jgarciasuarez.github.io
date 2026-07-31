@@ -233,6 +233,10 @@ Task states:
   - Staging production build and TypeScript: passed.
   - Static export validation: passed for 78 files / 7.39 MiB with staging canonical and noindex policy.
   - Playwright: 27 of 27 tests passed.
+  - GitHub Actions run `30625455264`: quality, Pages packaging, and Pages deployment passed for commit
+    `22b172c7d6d09f105f6d3e663dffa341f4214959`.
+  - Published staging audit at 1280 × 720: the 654 px content viewport remains inside the 656 px dialog, exposes
+    its complete 1,333 px scrollable content, and no longer gets clipped by the parent grid.
 
 ### 2026-07-31 — Carlos GitHub Pages Staging Published
 
