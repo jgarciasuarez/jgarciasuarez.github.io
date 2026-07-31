@@ -36,7 +36,7 @@ Task states:
 - **TypeScript:** passing through `next build`
 - **Local route check:** all four routes respond successfully; `/ddcf` returns HTTP 200 after the current implementation
 - **Lint:** passing
-- **Automated tests:** 4 component tests and 27 Playwright route, responsive, navigation, dialog-interaction, and
+- **Automated tests:** 4 component tests and 29 Playwright route, responsive, navigation, dialog-interaction, and
   accessibility tests
   passing
 - **CI/CD:** GitHub Actions runs lint, component tests, a production static build, export/link validation, and
@@ -91,6 +91,8 @@ Task states:
 - [x] Confirm sticky navigation and route layout behavior on short screens.
 - [x] Keep every DDCF detail dialog within the available viewport and make overflowing content reachable by
   keyboard, pointer wheel, and touch at desktop and mobile widths.
+- [x] Make all five DDCF scientific images clickable and expose their complete, uncropped content in an accessible
+  full-viewport viewer.
 
 ### P1 — Portfolio Content and Relevant Links
 
@@ -210,6 +212,33 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-31 — DDCF Full-Image Viewer Completed
+
+- Audited the five DDCF dialog images and confirmed that the shared `object-fit: cover` treatment hid substantial
+  scientific content, particularly in the panoramic friction, neural-operator, and GPU figures.
+- Preserved the cropped image treatment as the visual dialog cover while converting the complete media surface
+  into a labelled image-viewer control with a visible enlargement affordance.
+- Added a full-viewport mode inside the existing accessible dialog rather than nesting a second modal.
+- Rendered expanded images with `object-fit: contain`, their original aspect ratio, a dark neutral stage, and the
+  existing descriptive alternative text as a visible caption.
+- Added hierarchical dismissal and focus management:
+  - The first Escape or backdrop action returns from the full image to project details.
+  - A subsequent Escape closes the project details.
+  - Closing the image restores focus to its originating media control.
+  - Opening the image places focus on its dedicated close control.
+- Added responsive sizing with `vh` and `dvh` fallbacks so the viewer remains fully inside desktop and mobile
+  viewports.
+- Added Playwright coverage for all five images, natural image loading, `contain` rendering, viewport containment,
+  focus restoration, Escape behavior, mobile dimensions, and WCAG A/AA checks with the viewer open.
+- Validation:
+  - ESLint: passed with zero errors and zero warnings.
+  - Component tests: 2 files / 4 tests passed.
+  - Staging production build and TypeScript: passed.
+  - Static export validation: passed for 78 files / 7.39 MiB with staging canonical and noindex policy.
+  - Playwright: 29 of 29 tests passed.
+  - Browser audit at 1280 × 720: the viewer remained within the viewport, focused its close control, and rendered
+    the 3,368 × 2,382 DDCF collage with `object-fit: contain`.
 
 ### 2026-07-31 — DDCF Dialog Overflow Regression Fixed
 
