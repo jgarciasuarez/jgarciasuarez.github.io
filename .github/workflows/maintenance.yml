@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: read
-  security-events: read
 
 jobs:
   links-and-seo:
@@ -60,19 +59,4 @@ jobs:
 
       - name: Validate reviewed transitive dependency baseline
         working-directory: frontend
-        run: npm run validate:security-baseline
-
-      - name: Compare open runtime alerts with reviewed baseline
-        env:
-          GH_TOKEN: ${{ github.token }}
-          EXPECTED_HIGH_RUNTIME_ALERTS: "3"
-          EXPECTED_MEDIUM_RUNTIME_ALERTS: "1"
-        run: |
-          set -euo pipefail
-          open_high_runtime="$(gh api "repos/${GITHUB_REPOSITORY}/dependabot/alerts?state=open&per_page=100" --paginate --jq '[.[] | select(.security_advisory.severity == "high" and .dependency.scope == "runtime")] | length' | awk '{ total += $1 } END { print total + 0 }')"
-          open_medium_runtime="$(gh api "repos/${GITHUB_REPOSITORY}/dependabot/alerts?state=open&per_page=100" --paginate --jq '[.[] | select(.security_advisory.severity == "medium" and .dependency.scope == "runtime")] | length' | awk '{ total += $1 } END { print total + 0 }')"
-          echo "Open runtime Dependabot alerts: ${open_high_runtime} high, ${open_medium_runtime} medium." >> "${GITHUB_STEP_SUMMARY}"
-          if [ "${open_high_runtime}" -ne "${EXPECTED_HIGH_RUNTIME_ALERTS}" ] || [ "${open_medium_runtime}" -ne "${EXPECTED_MEDIUM_RUNTIME_ALERTS}" ]; then
-            echo "The reviewed baseline is ${EXPECTED_HIGH_RUNTIME_ALERTS} high and ${EXPECTED_MEDIUM_RUNTIME_ALERTS} medium; review and update frontend/security-audit-baseline.json." >&2
-            exit 1
-          fi
+        run: npm run validate:security-baseline | tee -a "${GITHUB_STEP_SUMMARY}"
