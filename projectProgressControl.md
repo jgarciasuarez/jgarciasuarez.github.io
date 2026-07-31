@@ -160,10 +160,19 @@ Task states:
   `master` branch.
 - [x] Preserve the complete legacy website in the dedicated `legacy-site-2026` branch, pointing to the unchanged
   `master` commit `dbd06a54b795483e020702ef2b2f18e53fd4626e`.
+- [x] Preserve the existing Carlos Pages template in `legacy-site-before-agentic-2026`, pointing to the unchanged
+  `main` commit `d370ae9ff9ae220f63ffdfe09c09c84e1bcea7c9` before preparing the staging site.
+- [x] Make the Pages workflow portable across the Carlos staging and Joaquin production repositories using
+  repository-controlled site origin, indexing, and deployment gates.
+- [x] Validate both a noindex staging export and an indexable production export before configuring Carlos Pages.
+- [ ] Mirror `agentic_web_design` into `CarlosCHD24/CarlosCHD24.github.io`, configure the staging repository
+  variables, and make the branch the repository default.
+- [ ] Switch Carlos Pages from the legacy `main` source to GitHub Actions and publish the validated noindex staging
+  site at `https://carloschd24.github.io`.
 - [!] Switch the existing GitHub Pages publishing source from legacy `master` to GitHub Actions. The available
   Git credential can push code but does not have the administrative Pages permission required for this setting.
-- [x] Pause automatic Pages deployment while the source switch is blocked; pushes still validate and package the
-  site, while the final deploy job requires a deliberate GitHub `workflow_dispatch`.
+- [x] Gate Pages deployment behind the repository variable `PAGES_DEPLOY_ENABLED`; pushes still validate and
+  package the site, while neither staging nor production can deploy until its owner explicitly enables the gate.
 - [x] Configure the production origin and automated pre-deployment export checks.
 - [~] Perform a final content, browser, performance, and link audit. Local routes, responsive layouts,
   accessibility, internal references, external URLs, 404 behavior, static caching, and artifact size are verified;
@@ -195,6 +204,28 @@ Task states:
 - [x] Git branch confirmed clean and synchronized before the current work.
 
 ## Change Log
+
+### 2026-07-31 — Portable Staging Configuration and Local Validation Completed
+
+- Preserved the existing `CarlosCHD24/CarlosCHD24.github.io` template in
+  `legacy-site-before-agentic-2026`. The backup and `main` both point to the verified source commit
+  `d370ae9ff9ae220f63ffdfe09c09c84e1bcea7c9`.
+- Added environment-controlled search indexing. Staging exports emit `noindex, nofollow` metadata and a blocking
+  `robots.txt`; production exports opt into indexing and advertise the generated sitemap.
+- Made the static export validator derive its expected canonical URLs and crawler behavior from the same build
+  environment as Next.js.
+- Generalized the Pages workflow for the Carlos staging and Joaquin production repositories using `SITE_URL`,
+  `SITE_INDEXING`, and the fail-closed `PAGES_DEPLOY_ENABLED` repository gate.
+- Kept `jgarciasuarez/web` outside the deployment allowlist and left both live Pages configurations unchanged.
+- Validation completed:
+  - Workflow YAML and whitespace validation passed.
+  - ESLint passed.
+  - Vitest passed: 2 files, 4 tests.
+  - The Carlos staging build passed TypeScript and static generation; its 78-file, 7.39 MiB export validated with
+    `https://carloschd24.github.io` canonicals and noindex behavior.
+  - Playwright passed all 25 route, responsive, navigation, and accessibility checks against the staging export.
+  - The Joaquin production build passed TypeScript and static generation; its 78-file, 7.39 MiB export validated
+    with `https://jgarciasuarez.github.io` canonicals and indexable crawler behavior.
 
 ### 2026-07-30 — Legacy Website Branch Preserved
 

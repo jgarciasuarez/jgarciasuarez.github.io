@@ -1,9 +1,19 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, siteUrl } from "@/lib/site";
+import { absoluteUrl, siteIndexingEnabled, siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
+  if (!siteIndexingEnabled) {
+    return {
+      rules: {
+        userAgent: "*",
+        disallow: "/",
+      },
+      host: siteUrl.origin,
+    };
+  }
+
   return {
     rules: {
       userAgent: "*",

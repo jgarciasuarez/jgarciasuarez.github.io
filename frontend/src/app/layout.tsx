@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { siteUrl } from "@/lib/site";
+import { siteIndexingEnabled, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = localFont({
@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: siteIndexingEnabled,
+    follow: siteIndexingEnabled,
   },
   openGraph: {
     title: "Joaquin Garcia-Suarez | Data-Driven Computational Friction",

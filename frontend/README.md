@@ -78,8 +78,9 @@ When changing factual content, reconcile it with:
 
 ## Configuration
 
-`NEXT_PUBLIC_SITE_URL` controls canonical, Open Graph, sitemap, robots, and structured-data origins. It defaults to
-`https://jgarciasuarez.github.io`; `.env.example` documents the production value.
+`NEXT_PUBLIC_SITE_URL` controls canonical, Open Graph, sitemap, robots, and structured-data origins. `SITE_INDEXING`
+is deliberately opt-in: staging builds use `false`, while the final production repository uses `true`.
+`.env.example` documents the safe local defaults.
 
 The build uses `output: "export"` and `trailingSlash: true`. Features that require a Next.js server, including
 Server Actions, request-time cookies, dynamic route handlers, and the default image optimizer, must not be added
@@ -87,10 +88,19 @@ without changing the hosting architecture.
 
 ## GitHub delivery
 
-`.github/workflows/quality.yml` runs the complete quality gate. In
-`jgarciasuarez/jgarciasuarez.github.io`, a successful push to `agentic_web_design` also builds a GitHub Pages
-artifact and attempts deployment.
+`.github/workflows/quality.yml` runs the complete quality gate. The Pages repositories use three repository
+variables: `SITE_URL`, `SITE_INDEXING`, and `PAGES_DEPLOY_ENABLED`. Both the Carlos staging repository and the
+Joaquin production repository can package Pages artifacts, but deployment occurs only when the last variable is
+explicitly set to `true`.
 
-The deployment source is currently paused: a repository administrator must change **Settings → Pages → Source**
-from legacy `master` publishing to **GitHub Actions**. The workflow and artifact build are already validated; no
-local machine is required once that setting is available.
+| Repository | `SITE_URL` | `SITE_INDEXING` | `PAGES_DEPLOY_ENABLED` |
+| --- | --- | --- | --- |
+| `CarlosCHD24/CarlosCHD24.github.io` | `https://carloschd24.github.io` | `false` | `true` when staging is approved |
+| `jgarciasuarez/jgarciasuarez.github.io` | `https://jgarciasuarez.github.io` | `true` | `true` only after the Pages source switch |
+
+Missing variables fail safely: the canonical origin falls back to the Joaquin URL, indexing remains disabled, and
+no deployment is attempted.
+
+The Joaquin production source remains paused: its owner must change **Settings → Pages → Source** from legacy
+`master` publishing to **GitHub Actions** and enable the deployment variable. The workflow and artifact build are
+already validated; no local machine is required once those settings are available.

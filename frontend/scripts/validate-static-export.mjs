@@ -3,7 +3,12 @@ import { join, relative, resolve } from "node:path";
 
 const outputDirectory = resolve(process.cwd(), "out");
 const maximumBytes = 12 * 1024 * 1024;
-const canonicalOrigin = "https://jgarciasuarez.github.io";
+const canonicalOrigin = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    "https://jgarciasuarez.github.io",
+).origin;
+const siteIndexingEnabled =
+  process.env.SITE_INDEXING?.trim().toLowerCase() === "true";
 
 const requiredFiles = [
   "index.html",
@@ -114,6 +119,12 @@ for (const [routeFile, canonicalUrl] of routeCanonicals) {
   if (!html.includes(canonicalUrl)) {
     throw new Error(`Canonical URL ${canonicalUrl} is missing from ${routeFile}`);
   }
+  if (siteIndexingEnabled && html.includes('content="noindex, nofollow"')) {
+    throw new Error(`Indexable export contains noindex metadata in ${routeFile}`);
+  }
+  if (!siteIndexingEnabled && !html.includes('content="noindex, nofollow"')) {
+    throw new Error(`Staging export is missing noindex metadata in ${routeFile}`);
+  }
   if (html.includes("fonts.googleapis.com") || html.includes("fonts.gstatic.com")) {
     throw new Error(`External Google Fonts dependency found in ${routeFile}`);
   }
@@ -141,8 +152,12 @@ for (const canonicalUrl of routeCanonicals.values()) {
 }
 
 const robots = await readFile(join(outputDirectory, "robots.txt"), "utf8");
-if (!robots.includes(`${canonicalOrigin}/sitemap.xml`)) {
-  throw new Error("robots.txt does not reference the production sitemap");
+if (siteIndexingEnabled) {
+  if (!robots.includes("Allow: /") || !robots.includes(`${canonicalOrigin}/sitemap.xml`)) {
+    throw new Error("Indexable robots.txt does not allow crawling or reference the sitemap");
+  }
+} else if (!robots.includes("Disallow: /") || robots.includes("Sitemap:")) {
+  throw new Error("Staging robots.txt must block crawling and omit the sitemap declaration");
 }
 
 const result = await inspectDirectory(outputDirectory);
@@ -156,5 +171,5 @@ if (result.bytes > maximumBytes) {
 }
 
 console.log(
-  `Static export validated: ${result.files} files, ${(result.bytes / 1024 / 1024).toFixed(2)} MiB`,
+  `Static export validated for ${canonicalOrigin} (${siteIndexingEnabled ? "indexable" : "noindex"}): ${result.files} files, ${(result.bytes / 1024 / 1024).toFixed(2)} MiB`,
 );

@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+env:
+  NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://jgarciasuarez.github.io' }}
+  SITE_INDEXING: ${{ vars.SITE_INDEXING || 'false' }}
+
 jobs:
   quality:
     runs-on: ubuntu-latest
@@ -63,7 +67,8 @@ jobs:
   build-pages:
     if: >-
       github.event_name != 'pull_request' &&
-      github.repository == 'jgarciasuarez/jgarciasuarez.github.io'
+      (github.repository == 'CarlosCHD24/CarlosCHD24.github.io' ||
+      github.repository == 'jgarciasuarez/jgarciasuarez.github.io')
     needs: quality
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -94,8 +99,6 @@ jobs:
         run: npm ci
 
       - name: Build static site
-        env:
-          NEXT_PUBLIC_SITE_URL: https://jgarciasuarez.github.io
         run: npm run build
 
       - name: Validate static export
@@ -108,8 +111,10 @@ jobs:
 
   deploy-pages:
     if: >-
-      github.event_name == 'workflow_dispatch' &&
-      github.repository == 'jgarciasuarez/jgarciasuarez.github.io'
+      vars.PAGES_DEPLOY_ENABLED == 'true' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      (github.repository == 'CarlosCHD24/CarlosCHD24.github.io' ||
+      github.repository == 'jgarciasuarez/jgarciasuarez.github.io')
     needs: build-pages
     runs-on: ubuntu-latest
     timeout-minutes: 10
