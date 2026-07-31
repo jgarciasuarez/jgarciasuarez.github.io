@@ -216,6 +216,8 @@ Task states:
   environment as Next.js.
 - Generalized the Pages workflow for the Carlos staging and Joaquin production repositories using `SITE_URL`,
   `SITE_INDEXING`, and the fail-closed `PAGES_DEPLOY_ENABLED` repository gate.
+- Updated the official checkout, Node setup, artifact, and Pages actions to their current Node 24-compatible major
+  versions after the first remote preflight exposed GitHub's Node 20 deprecation warning.
 - Kept `jgarciasuarez/web` outside the deployment allowlist and left both live Pages configurations unchanged.
 - Validation completed:
   - Workflow YAML and whitespace validation passed.
