@@ -32,16 +32,17 @@ Task states:
 - **Framework:** Next.js 16.2.12, React 19, TypeScript, App Router, CSS Modules
 - **Implemented routes:** `/`, `/research`, `/teaching`, `/ddcf`
 - **Production build:** passing
-- **Static export:** 78 files / 7.39 MiB, below the automated 12 MiB budget
+- **Static export:** 78 files / 7.41 MiB, below the automated 12 MiB budget
 - **TypeScript:** passing through `next build`
 - **Local route check:** all four routes respond successfully; `/ddcf` returns HTTP 200 after the current implementation
 - **Lint:** passing
 - **Automated tests:** 4 component tests and 29 Playwright route, responsive, navigation, dialog-interaction, and
   accessibility tests
   passing
-- **CI/CD:** GitHub Actions runs lint, component tests, a production static build, export/link validation, and
-  Playwright against the built artifact before packaging Pages; final deployment is blocked only by the
-  repository's legacy `master` publishing restriction
+- **CI/CD:** GitHub Actions runs lint, component tests, staging and production SEO builds, structured-data/export
+  validation, the reviewed dependency-security baseline, and Playwright before packaging Pages. A weekly
+  maintenance workflow repeats the production SEO validation, checks external links, and compares the open
+  Dependabot alert count with the reviewed baseline
 - **Staging:** `https://carloschd24.github.io` is published from GitHub Actions with staging canonicals and
   search-engine indexing disabled
 - **DDCF status:** interactive React Flow hub implemented, production-built, and locally reachable
@@ -136,6 +137,24 @@ Task states:
 - [x] Add accessibility checks.
 - [x] Add CI that runs lint, tests, and production build.
 
+### P2 — Social Metadata, SEO, and Automatic Maintenance
+
+- [x] Visually review the 1536 × 1024 Open Graph card for legibility, content accuracy, and consistency with the
+  DDCF visual language.
+- [x] Emit complete route-specific Open Graph and X card metadata, including the social image and alternative text,
+  on all four primary routes.
+- [x] Validate the Person and WebSite JSON-LD graph, including identity, EPFL affiliation, email, canonical URL, and
+  verified profile links.
+- [x] Enforce `noindex, nofollow` on the Carlos staging build and independently validate `index, follow` for the
+  Joaquin production build.
+- [x] Add weekly Dependabot version updates for npm and GitHub Actions on `agentic_web_design`.
+- [x] Add a weekly production-mode SEO, structured-data, and external-link maintenance workflow.
+- [x] Record and automatically compare the reviewed runtime security baseline: three high alerts and one medium
+  alert affecting the transitive `postcss` and `sharp` versions pinned by Next.js 16.2.12.
+- [!] Activate the same scheduled maintenance and Dependabot configuration in the Joaquin repositories after the
+  owner makes `agentic_web_design` the production/default branch. GitHub reads scheduled workflows and
+  `.github/dependabot.yml` from the repository default branch.
+
 ### P2 — Documentation, Dependencies, and Assets
 
 - [x] Reconcile stale route checklists in `frontend/src/app/agent_instructions.md`.
@@ -143,11 +162,11 @@ Task states:
 - [x] Replace the generic Next.js README with project-specific setup and architecture documentation.
 - [x] Review unused MDX, Lucide, React Flow, and Framer Motion dependencies after DDCF implementation. Removed the
   four unused MDX packages; retained Lucide, React Flow, and Framer Motion because they are actively imported.
-- [!] Resolve the three high-severity production advisories reported by `npm audit --omit=dev` for transitive
-  `postcss` and `sharp` versions. Next.js 16.2.12 remains the latest stable release and pins the affected
-  dependencies; npm still proposes an unsafe downgrade to Next.js 9.3.3. The deployed site is static and does not
-  execute these packages at request time, so retain the supported dependency graph and re-evaluate on the next
-  compatible Next.js release.
+- [!] Resolve the three high-severity runtime advisories affecting transitive `postcss` and `sharp` versions. A
+  fourth medium-severity `postcss` advisory is also tracked. Next.js 16.2.12 remains the reviewed framework version
+  and pins the affected dependencies; the deployed site is static and does not execute these packages at request
+  time, so retain the supported dependency graph and re-evaluate on the next compatible Next.js release. The local
+  lockfile baseline and GitHub Dependabot alert count now fail CI if this reviewed state changes.
 - [x] Review unused images and remove or integrate them.
 - [x] Optimize large raster assets and verify production delivery sizes.
 - [x] Serve WebP variants of the four heaviest referenced scientific figures, reducing their combined transfer
@@ -747,3 +766,37 @@ Task states:
   - `git diff --check`: passed.
 - Retained the known `metadataBase` notice as the only build notice; it remains tied to the unresolved canonical
   production URL.
+
+### 2026-07-31 — Social Metadata, SEO, and Automatic Maintenance
+
+- Reviewed the existing Open Graph artwork at its native 1536 × 1024 resolution. The title, DDCF network motif,
+  funding context, contrast, and safe spacing remain legible and accurate; no artwork change was required.
+- Centralized social metadata and added a complete Open Graph and X card to Home, Research, Teaching, and DDCF.
+  Every route now supplies its own title, description, canonical URL, shared image dimensions, and descriptive
+  image alternative text.
+- Expanded static-export validation to parse every route's Open Graph, X card, robots directive, canonical URL, and
+  Schema.org JSON-LD graph. It also verifies the actual PNG signature and 1536 × 1024 dimensions.
+- Reconciled the public Person data with the project context and the current EPFL profile: Joaquin Garcia-Suarez,
+  EPFL affiliation, Ambizione research role, public email, canonical site, ORCID, GitHub, X, and EPFL profiles.
+- Normalized sitemap URLs to the trailing-slash URLs generated by the static export.
+- Added `.github/dependabot.yml` for weekly npm and GitHub Actions updates targeting `agentic_web_design`.
+- Added the weekly `Maintenance` workflow to build and validate indexable production metadata, test published
+  external links, and compare live Dependabot runtime alerts with the reviewed security baseline.
+- Enabled Dependabot alerts and security updates in the Carlos staging repository. Its reviewed inventory is three
+  high runtime alerts (`postcss` ×2, `sharp` ×1) and one medium runtime alert (`postcss` ×1).
+- Added a lockfile-backed security baseline that fails when Next.js, `postcss`, `sharp`, severity counts, or the
+  reviewed advisory inventory changes without a new review.
+- External-link validation found 21 reachable URLs, two DOI endpoints that return access-restricted HTTP 403 to
+  automation, and zero broken links.
+- Validation completed before publication:
+  - YAML parsing: passed for Dependabot, Quality, and Maintenance configurations.
+  - ESLint: passed with zero errors and zero warnings.
+  - Security baseline: passed for three high and one medium reviewed runtime advisories.
+  - Staging export: passed with `https://carloschd24.github.io` canonicals and `noindex, nofollow`.
+  - Production export: passed with `https://jgarciasuarez.github.io` canonicals and `index, follow`.
+  - Component tests: 4 passed.
+  - Playwright route, responsive, dialog, image-viewer, and accessibility tests: 29 passed.
+  - `git diff --check`: passed.
+- Portability constraint: Carlos uses `agentic_web_design` as its default branch, so the new automations can run in
+  staging immediately. The Joaquin source and Pages repositories still use other default branches; activation there
+  remains an owner action for the migration meeting.

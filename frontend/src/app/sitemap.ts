@@ -3,7 +3,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const lastModified = new Date("2026-07-30");
+const lastModified = new Date("2026-07-31");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -14,19 +14,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: absoluteUrl("/research"),
+      url: absoluteUrl("/research/"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: absoluteUrl("/teaching"),
+      url: absoluteUrl("/teaching/"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: absoluteUrl("/ddcf"),
+      url: absoluteUrl("/ddcf/"),
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,

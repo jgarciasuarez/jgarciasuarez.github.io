@@ -1,0 +1,36 @@
+{
+  "reviewedAt": "2026-07-31",
+  "openHighSeverityRuntimeAdvisories": 3,
+  "openMediumSeverityRuntimeAdvisories": 1,
+  "reviewedAlerts": [
+    {
+      "ghsa": "GHSA-r28c-9q8g-f849",
+      "package": "postcss",
+      "severity": "high"
+    },
+    {
+      "ghsa": "GHSA-6g55-p6wh-862q",
+      "package": "postcss",
+      "severity": "high"
+    },
+    {
+      "ghsa": "GHSA-f88m-g3jw-g9cj",
+      "package": "sharp",
+      "severity": "high"
+    },
+    {
+      "ghsa": "GHSA-qx2v-qp2m-jg93",
+      "package": "postcss",
+      "severity": "medium"
+    }
+  ],
+  "framework": {
+    "name": "next",
+    "version": "16.2.12"
+  },
+  "transitivePackages": {
+    "postcss": "8.4.31",
+    "sharp": "0.34.5"
+  },
+  "context": "The static export has no request-time Next.js or Sharp server. Re-review this baseline whenever Dependabot changes the alert count or any pinned version changes."
+}

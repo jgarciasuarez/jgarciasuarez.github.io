@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
+import { createSocialMetadata } from '@/lib/socialMetadata';
 import styles from './page.module.css';
 
+const pageTitle = 'Teaching Portfolio | Joaquin Garcia-Suarez';
+const pageDescription = 'Teaching philosophy, mentoring experience, and proposed graduate classes.';
+
 export const metadata: Metadata = {
-  title: 'Teaching Portfolio | Joaquin Garcia-Suarez',
-  description: 'Teaching philosophy, mentoring experience, and proposed graduate classes.',
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: '/teaching',
   },
-  openGraph: {
-    title: 'Teaching Portfolio | Joaquin Garcia-Suarez',
-    description: 'Teaching philosophy, mentoring experience, and proposed graduate classes.',
+  ...createSocialMetadata({
+    title: pageTitle,
+    description: pageDescription,
     url: '/teaching',
-  },
+  }),
 };
 
 export default function Teaching() {

@@ -1,19 +1,23 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { createSocialMetadata } from '@/lib/socialMetadata';
 import styles from './page.module.css';
 
+const pageTitle = 'Research Portfolio | Joaquin Garcia-Suarez';
+const pageDescription = 'Research spanning interface mechanics, wave propagation in heterogeneous media, and computational methods.';
+
 export const metadata: Metadata = {
-  title: 'Research Portfolio | Joaquin Garcia-Suarez',
+  title: pageTitle,
   description: 'Three interconnected research themes spanning interface mechanics across scales, wave propagation in heterogeneous media, and computational methods development.',
   alternates: {
     canonical: '/research',
   },
-  openGraph: {
-    title: 'Research Portfolio | Joaquin Garcia-Suarez',
-    description: 'Research spanning interface mechanics, wave propagation in heterogeneous media, and computational methods.',
+  ...createSocialMetadata({
+    title: pageTitle,
+    description: pageDescription,
     url: '/research',
-  },
+  }),
 };
 
 /* ── Data ─────────────────────────────────────────── */

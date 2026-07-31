@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { siteIndexingEnabled, siteUrl } from "@/lib/site";
+import { createSocialMetadata } from "@/lib/socialMetadata";
 import "./globals.css";
 
 const inter = localFont({
@@ -24,21 +25,12 @@ export const metadata: Metadata = {
     index: siteIndexingEnabled,
     follow: siteIndexingEnabled,
   },
-  openGraph: {
+  ...createSocialMetadata({
     title: "Joaquin Garcia-Suarez | Data-Driven Computational Friction",
     description:
       "Academic portfolio and interactive DDCF research hub connecting friction physics, data-driven mechanics, and multiscale simulation.",
-    type: "website",
     url: "/",
-    siteName: "Joaquin Garcia-Suarez",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "DDCF | Data-Driven Computational Friction",
-    description:
-      "Explore the SNSF Ambizione project connecting friction physics, data-driven mechanics, and multiscale simulation.",
-  },
+  }),
 };
 
 const structuredData = {

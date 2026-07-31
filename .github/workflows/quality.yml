@@ -52,6 +52,15 @@ jobs:
       - name: Validate static export
         run: npm run validate:export
 
+      - name: Validate reviewed transitive dependency baseline
+        run: npm run validate:security-baseline
+
+      - name: Validate indexable production SEO mode
+        env:
+          NEXT_PUBLIC_SITE_URL: https://jgarciasuarez.github.io
+          SITE_INDEXING: "true"
+        run: npm run build && npm run validate:export
+
       - name: Route, responsive, and accessibility tests
         run: npm run test:e2e
 

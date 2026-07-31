@@ -9,6 +9,16 @@ const canonicalOrigin = new URL(
 ).origin;
 const siteIndexingEnabled =
   process.env.SITE_INDEXING?.trim().toLowerCase() === "true";
+const socialImagePath = "/opengraph-image.png";
+const socialImageAlt =
+  "DDCF research network connecting computational friction, interface mechanics, and data-driven modeling.";
+const expectedSameAs = [
+  "https://jgarciasuarez.github.io/",
+  "https://orcid.org/0000-0001-8830-4348",
+  "https://github.com/jgarciasuarez",
+  "https://x.com/jgs_research",
+  "https://people.epfl.ch/joaquin.garciasuarez",
+];
 
 const requiredFiles = [
   "index.html",
@@ -27,9 +37,44 @@ const requiredFiles = [
 
 const routeCanonicals = new Map([
   ["index.html", `${canonicalOrigin}/`],
-  ["research/index.html", `${canonicalOrigin}/research`],
-  ["teaching/index.html", `${canonicalOrigin}/teaching`],
-  ["ddcf/index.html", `${canonicalOrigin}/ddcf`],
+  ["research/index.html", `${canonicalOrigin}/research/`],
+  ["teaching/index.html", `${canonicalOrigin}/teaching/`],
+  ["ddcf/index.html", `${canonicalOrigin}/ddcf/`],
+]);
+
+const routeSocialMetadata = new Map([
+  [
+    "index.html",
+    {
+      title: "Joaquin Garcia-Suarez | Data-Driven Computational Friction",
+      description:
+        "Academic portfolio and interactive DDCF research hub connecting friction physics, data-driven mechanics, and multiscale simulation.",
+    },
+  ],
+  [
+    "research/index.html",
+    {
+      title: "Research Portfolio | Joaquin Garcia-Suarez",
+      description:
+        "Research spanning interface mechanics, wave propagation in heterogeneous media, and computational methods.",
+    },
+  ],
+  [
+    "teaching/index.html",
+    {
+      title: "Teaching Portfolio | Joaquin Garcia-Suarez",
+      description:
+        "Teaching philosophy, mentoring experience, and proposed graduate classes.",
+    },
+  ],
+  [
+    "ddcf/index.html",
+    {
+      title: "DDCF | Data-Driven Computational Friction",
+      description:
+        "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.",
+    },
+  ],
 ]);
 
 const forbiddenFiles = [
@@ -68,6 +113,70 @@ async function localReferenceExists(reference) {
   }
 
   return false;
+}
+
+function getMetaContent(html, attribute, value) {
+  for (const [tag] of html.matchAll(/<meta\b[^>]*>/g)) {
+    const attributes = Object.fromEntries(
+      [...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map((match) => [
+        match[1],
+        match[2],
+      ]),
+    );
+    if (attributes[attribute] === value) {
+      return attributes.content;
+    }
+  }
+  return undefined;
+}
+
+function requireMeta(html, routeFile, attribute, name, expected) {
+  const actual = getMetaContent(html, attribute, name);
+  if (actual?.trim() !== expected) {
+    throw new Error(
+      `${routeFile} has invalid ${name}: expected ${expected}, received ${actual ?? "missing"}`,
+    );
+  }
+}
+
+function validateStructuredData(html, routeFile) {
+  const match = html.match(
+    /<script type="application\/ld\+json">([^<]+)<\/script>/,
+  );
+  if (!match) {
+    throw new Error(`JSON-LD is missing from ${routeFile}`);
+  }
+
+  const data = JSON.parse(match[1]);
+  if (data["@context"] !== "https://schema.org" || !Array.isArray(data["@graph"])) {
+    throw new Error(`JSON-LD context or graph is invalid in ${routeFile}`);
+  }
+
+  const website = data["@graph"].find((entry) => entry["@type"] === "WebSite");
+  const person = data["@graph"].find((entry) => entry["@type"] === "Person");
+  const rootUrl = `${canonicalOrigin}/`;
+
+  if (
+    website?.["@id"] !== `${canonicalOrigin}/#website` ||
+    website?.url !== rootUrl ||
+    website?.publisher?.["@id"] !== `${canonicalOrigin}/#person` ||
+    website?.inLanguage !== "en"
+  ) {
+    throw new Error(`WebSite JSON-LD is invalid in ${routeFile}`);
+  }
+
+  if (
+    person?.["@id"] !== `${canonicalOrigin}/#person` ||
+    person?.name !== "Joaquin Garcia-Suarez" ||
+    person?.url !== rootUrl ||
+    person?.email !== "mailto:joaquin.garciasuarez@epfl.ch" ||
+    person?.jobTitle !== "SNSF Ambizione Fellow" ||
+    person?.worksFor?.name !== "EPFL" ||
+    person?.worksFor?.url !== "https://www.epfl.ch/" ||
+    JSON.stringify(person?.sameAs) !== JSON.stringify(expectedSameAs)
+  ) {
+    throw new Error(`Person JSON-LD or verified personal data is invalid in ${routeFile}`);
+  }
 }
 
 async function inspectDirectory(directory) {
@@ -129,6 +238,41 @@ for (const [routeFile, canonicalUrl] of routeCanonicals) {
     throw new Error(`External Google Fonts dependency found in ${routeFile}`);
   }
 
+  const social = routeSocialMetadata.get(routeFile);
+  requireMeta(html, routeFile, "property", "og:title", social.title);
+  requireMeta(html, routeFile, "property", "og:description", social.description);
+  requireMeta(html, routeFile, "property", "og:url", canonicalUrl);
+  requireMeta(html, routeFile, "property", "og:site_name", "Joaquin Garcia-Suarez");
+  requireMeta(html, routeFile, "property", "og:locale", "en_US");
+  requireMeta(html, routeFile, "property", "og:type", "website");
+  requireMeta(html, routeFile, "property", "og:image:width", "1536");
+  requireMeta(html, routeFile, "property", "og:image:height", "1024");
+  requireMeta(html, routeFile, "property", "og:image:alt", socialImageAlt);
+  requireMeta(html, routeFile, "name", "twitter:card", "summary_large_image");
+  requireMeta(html, routeFile, "name", "twitter:title", social.title);
+  requireMeta(html, routeFile, "name", "twitter:description", social.description);
+  requireMeta(html, routeFile, "name", "twitter:image:alt", socialImageAlt);
+
+  for (const [attribute, name] of [
+    ["property", "og:image"],
+    ["name", "twitter:image"],
+  ]) {
+    const imageUrl = getMetaContent(html, attribute, name);
+    if (!imageUrl?.startsWith(`${canonicalOrigin}${socialImagePath}`)) {
+      throw new Error(`${routeFile} has an invalid ${name} URL: ${imageUrl ?? "missing"}`);
+    }
+  }
+
+  const robotsMeta = getMetaContent(html, "name", "robots");
+  const expectedRobots = siteIndexingEnabled ? "index, follow" : "noindex, nofollow";
+  if (robotsMeta !== expectedRobots) {
+    throw new Error(
+      `${routeFile} has invalid robots metadata: expected ${expectedRobots}, received ${robotsMeta ?? "missing"}`,
+    );
+  }
+
+  validateStructuredData(html, routeFile);
+
   const references = html.matchAll(/(?:href|src)="([^"]+)"/g);
   for (const [, reference] of references) {
     if (
@@ -142,6 +286,15 @@ for (const [routeFile, canonicalUrl] of routeCanonicals) {
       throw new Error(`Broken local reference in ${routeFile}: ${reference}`);
     }
   }
+}
+
+const socialImage = await readFile(join(outputDirectory, "opengraph-image.png"));
+if (
+  socialImage.toString("ascii", 1, 4) !== "PNG" ||
+  socialImage.readUInt32BE(16) !== 1536 ||
+  socialImage.readUInt32BE(20) !== 1024
+) {
+  throw new Error("Open Graph image must be the validated 1536 × 1024 PNG asset");
 }
 
 const sitemap = await readFile(join(outputDirectory, "sitemap.xml"), "utf8");

@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
+import { createSocialMetadata } from "@/lib/socialMetadata";
 import DDCFHub from "./DDCFHub";
 import styles from "./page.module.css";
 import "@xyflow/react/dist/style.css";
 
+const pageTitle = "DDCF | Data-Driven Computational Friction";
+const pageDescription =
+  "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.";
+
 export const metadata: Metadata = {
-  title: "DDCF | Data-Driven Computational Friction",
-  description:
-    "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical: "/ddcf",
   },
-  openGraph: {
-    title: "DDCF | Data-Driven Computational Friction",
-    description:
-      "Explore the SNSF Ambizione project connecting data-driven constitutive modeling, neural operators, GPU acceleration, and automatic differentiation.",
+  ...createSocialMetadata({
+    title: pageTitle,
+    description: pageDescription,
     url: "/ddcf",
-  },
+  }),
 };
 
 export default function DDCFPage() {
